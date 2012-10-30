@@ -1,0 +1,13 @@
+﻿<div id="deck-view">
+    <div id="deck" class="glass-panel deck">
+        <div class="window">
+            <h1>Player deck</h1>
+        </div>
+        
+        <ul data-bind="foreach: cards">
+            <li class="card" data-bind="drag: {value: $parent.dragging}">
+                <img data-bind="attr: {src: image}"/>
+            </li>
+        </ul>
+    </div>
+</div>

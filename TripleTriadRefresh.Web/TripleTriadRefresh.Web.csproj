@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D779A76-7DE6-4652-8449-AC9C5C2859AF}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TripleTriadRefresh.Web</RootNamespace>
+    <AssemblyName>TripleTriadRefresh.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeApp_Data>false</ExcludeApp_Data>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin, Version=4.48.4489.28432, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxMin.4.48.4489.28432\lib\net20\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Combres">
+      <HintPath>..\packages\combres.2.2.2.6\lib\net40\Combres.dll</HintPath>
+    </Reference>
+    <Reference Include="Combres.Mvc">
+      <HintPath>..\packages\combres.mvc.2.2.2.6\lib\net40\Combres.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="dotless.Core">
+      <HintPath>..\packages\dotless.1.3.0.2\lib\dotless.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EcmaScript.NET.modified">
+      <HintPath>..\packages\YUICompressor.NET.1.7.1.0\lib\net35\EcmaScript.NET.modified.dll</HintPath>
+    </Reference>
+    <Reference Include="Fasterflect">
+      <HintPath>..\packages\fasterflect.2.1.0\lib\net40\Fasterflect.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.11\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.10\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivator, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebActivator.1.5.1\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor">
+      <HintPath>..\packages\YUICompressor.NET.1.7.1.0\lib\net35\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\Combres.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="App_Data\combres.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\combres_full_with_annotation.xml" />
+    <Content Include="scripts\app\app.js">
+      <DependentUpon>app.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="scripts\app\app.ts" />
+    <TypeScriptCompile Include="scripts\ui\button.ts" />
+    <TypeScriptCompile Include="scripts\dto\game.ts" />
+    <TypeScriptCompile Include="scripts\app\game-service.ts" />
+    <Content Include="scripts\app\game-service.js">
+      <DependentUpon>game-service.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="scripts\dto\card.ts" />
+    <TypeScriptCompile Include="scripts\app\view-factory.ts" />
+    <Content Include="scripts\app\view-factory.js">
+      <DependentUpon>view-factory.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\dto\card.js">
+      <DependentUpon>card.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="scripts\dto\game-list-item.ts" />
+    <Content Include="scripts\dto\game-list-item.js">
+      <DependentUpon>game-list-item.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\dto\game.js">
+      <DependentUpon>game.ts</DependentUpon>
+    </Content>
+    <None Include="scripts\jquery-1.8.2.intellisense.js" />
+    <TypeScriptCompile Include="scripts\dto\player.ts" />
+    <TypeScriptCompile Include="scripts\dto\hand.ts" />
+    <Content Include="scripts\dto\hand.js">
+      <DependentUpon>hand.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\dto\player.js">
+      <DependentUpon>player.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\jquery-1.8.2.js" />
+    <Content Include="scripts\jquery-1.8.2.min.js" />
+    <Content Include="scripts\knockout-2.2.0.debug.js" />
+    <Content Include="scripts\knockout-2.2.0.js" />
+    <Content Include="scripts\knockout-2.2.d.ts" />
+    <Content Include="scripts\knockoutmapping-2.0.d.ts" />
+    <Content Include="scripts\koExternalTemplateEngine_all.min.js" />
+    <Content Include="scripts\ui\button.js">
+      <DependentUpon>button.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\app\common.js" />
+    <TypeScriptCompile Include="scripts\app\game-hub.d.ts" />
+    <Content Include="scripts\app\fb.js" />
+    <Content Include="scripts\ui\menu.js">
+      <DependentUpon>menu.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\ui\view.js">
+      <DependentUpon>view.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="scripts\ui\view\deck-view.ts" />
+    <Content Include="scripts\ui\view\deck-view.js">
+      <DependentUpon>deck-view.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\ui\view\games-view.js">
+      <DependentUpon>games-view.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="scripts\ui\view\games-view.ts" />
+    <TypeScriptCompile Include="scripts\ui\view\game-view.ts" />
+    <Content Include="scripts\ui\view\game-view.js">
+      <DependentUpon>game-view.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\jquery-ui-1.8.22.custom.min.js" />
+    <Content Include="scripts\jquery.animate-enhanced.min.js" />
+    <Content Include="scripts\jquery.d.ts" />
+    <Content Include="scripts\jquery.signalR-0.5.3.min.js" />
+    <Content Include="scripts\jqueryui.d.ts" />
+    <Content Include="scripts\knockoutmapping-2.0.js" />
+    <Content Include="scripts\koExternalTemplateEngine_all.js" />
+    <Content Include="scripts\purl.d.ts" />
+    <Content Include="scripts\purl.js" />
+    <Content Include="scripts\underscore.browser.d.ts" />
+    <Content Include="scripts\underscore.js" />
+    <Content Include="scripts\underscore.min.js" />
+    <Content Include="scripts\underscore.string.d.ts" />
+    <Content Include="scripts\underscore.string.js" />
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Cards\cards.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Images\Cards\back.jpg" />
+    <Content Include="Images\Cards\TTAbaddon.png" />
+    <Content Include="Images\Cards\TTAbyssWorm.png" />
+    <Content Include="Images\Cards\TTAdamantoise.png" />
+    <Content Include="Images\Cards\TTAlexander.png" />
+    <Content Include="Images\Cards\TTAnacondaur.png" />
+    <Content Include="Images\Cards\TTAngelo.png" />
+    <Content Include="Images\Cards\TTArmadodo.png" />
+    <Content Include="Images\Cards\TTBahamut.png" />
+    <Content Include="Images\Cards\TTBehemoth.png" />
+    <Content Include="Images\Cards\TTBelhelmel.png" />
+    <Content Include="Images\Cards\TTBGH251F2.png" />
+    <Content Include="Images\Cards\TTBiggsWedge.png" />
+    <Content Include="Images\Cards\TTBiteBug.png" />
+    <Content Include="Images\Cards\TTBlitz.png" />
+    <Content Include="Images\Cards\TTBlobra.png" />
+    <Content Include="Images\Cards\TTBloodSoul.png" />
+    <Content Include="Images\Cards\TTBlueDragon.png" />
+    <Content Include="Images\Cards\TTBomb.png" />
+    <Content Include="Images\Cards\TTBuel.png" />
+    <Content Include="Images\Cards\TTCactaur.png" />
+    <Content Include="Images\Cards\TTCarbuncle.png" />
+    <Content Include="Images\Cards\TTCaterchipillar.png" />
+    <Content Include="Images\Cards\TTCatoblepas.png" />
+    <Content Include="Images\Cards\TTCerberus.png" />
+    <Content Include="Images\Cards\TTChimera.png" />
+    <Content Include="Images\Cards\TTChocobo.png" />
+    <Content Include="Images\Cards\TTChubbyChocobo.png" />
+    <Content Include="Images\Cards\TTCockatrice.png" />
+    <Content Include="Images\Cards\TTCreeps.png" />
+    <Content Include="Images\Cards\TTDeathClaw.png" />
+    <Content Include="Images\Cards\TTDiablos.png" />
+    <Content Include="Images\Cards\TTDoomtrain.png" />
+    <Content Include="Images\Cards\TTEdea.png" />
+    <Content Include="Images\Cards\TTEden.png" />
+    <Content Include="Images\Cards\TTElastoid.png" />
+    <Content Include="Images\Cards\TTElnoyle.png" />
+    <Content Include="Images\Cards\TTElvoret.png" />
+    <Content Include="Images\Cards\TTFastitocalon.png" />
+    <Content Include="Images\Cards\TTFastitocalonF.png" />
+    <Content Include="Images\Cards\TTForbidden.png" />
+    <Content Include="Images\Cards\TTFujinRaijin.png" />
+    <Content Include="Images\Cards\TTFunguar.png" />
+    <Content Include="Images\Cards\TTGargantua.png" />
+    <Content Include="Images\Cards\TTGayla.png" />
+    <Content Include="Images\Cards\TTGeezard.png" />
+    <Content Include="Images\Cards\TTGerogero.png" />
+    <Content Include="Images\Cards\TTGesper.png" />
+    <Content Include="Images\Cards\TTGilgamesh.png" />
+    <Content Include="Images\Cards\TTGIM47N.png" />
+    <Content Include="Images\Cards\TTGlacialEye.png" />
+    <Content Include="Images\Cards\TTGranaldo.png" />
+    <Content Include="Images\Cards\TTGrandMantis.png" />
+    <Content Include="Images\Cards\TTGrat.png" />
+    <Content Include="Images\Cards\TTGrendel.png" />
+    <Content Include="Images\Cards\TTHexadragon.png" />
+    <Content Include="Images\Cards\TTIfrit.png" />
+    <Content Include="Images\Cards\TTIguion.png" />
+    <Content Include="Images\Cards\TTImp.png" />
+    <Content Include="Images\Cards\TTIronGiant.png" />
+    <Content Include="Images\Cards\TTIrvine.png" />
+    <Content Include="Images\Cards\TTJelleye.png" />
+    <Content Include="Images\Cards\TTJumboCactaur.png" />
+    <Content Include="Images\Cards\TTKiros.png" />
+    <Content Include="Images\Cards\TTKrysta.png" />
+    <Content Include="Images\Cards\TTLaguna.png" />
+    <Content Include="Images\Cards\TTLeviathan.png" />
+    <Content Include="Images\Cards\TTMalboro.png" />
+    <Content Include="Images\Cards\TTMesmerize.png" />
+    <Content Include="Images\Cards\TTMiniMog.png" />
+    <Content Include="Images\Cards\TTMinotaur.png" />
+    <Content Include="Images\Cards\TTMobileType8.png" />
+    <Content Include="Images\Cards\TTNORG.png" />
+    <Content Include="Images\Cards\TTOchu.png" />
+    <Content Include="Images\Cards\TTOdin.png" />
+    <Content Include="Images\Cards\TTOilboyle.png" />
+    <Content Include="Images\Cards\TTPandemona.png" />
+    <Content Include="Images\Cards\TTPhoenix.png" />
+    <Content Include="Images\Cards\TTPropagator.png" />
+    <Content Include="Images\Cards\TTPuPu.png" />
+    <Content Include="Images\Cards\TTQuezacotl.png" />
+    <Content Include="Images\Cards\TTQuistis.png" />
+    <Content Include="Images\Cards\TTRedBat.png" />
+    <Content Include="Images\Cards\TTRedGiant.png" />
+    <Content Include="Images\Cards\TTRinoa.png" />
+    <Content Include="Images\Cards\TTRubyDragon.png" />
+    <Content Include="Images\Cards\TTSacred.png" />
+    <Content Include="Images\Cards\TTSAM08G.png" />
+    <Content Include="Images\Cards\TTSeifer.png" />
+    <Content Include="Images\Cards\TTSelphie.png" />
+    <Content Include="Images\Cards\TTShiva.png" />
+    <Content Include="Images\Cards\TTSiren.png" />
+    <Content Include="Images\Cards\TTSnowLion.png" />
+    <Content Include="Images\Cards\TTSphinxaur.png" />
+    <Content Include="Images\Cards\TTSquall.png" />
+    <Content Include="Images\Cards\TTThrustaevis.png" />
+    <Content Include="Images\Cards\TTTiamat.png" />
+    <Content Include="Images\Cards\TTTonberry.png" />
+    <Content Include="Images\Cards\TTTonberryKing.png" />
+    <Content Include="Images\Cards\TTTorama.png" />
+    <Content Include="Images\Cards\TTTrauma.png" />
+    <Content Include="Images\Cards\TTTRexaur.png" />
+    <Content Include="Images\Cards\TTTriFace.png" />
+    <Content Include="Images\Cards\TTTriPoint.png" />
+    <Content Include="Images\Cards\TTTurtapod.png" />
+    <Content Include="Images\Cards\TTUltimaWeapon.png" />
+    <Content Include="Images\Cards\TTVysage.png" />
+    <Content Include="Images\Cards\TTWard.png" />
+    <Content Include="Images\Cards\TTWendigo.png" />
+    <Content Include="Images\Cards\TTX-ATM092.png" />
+    <Content Include="Images\Cards\TTZell.png" />
+    <Content Include="Images\Elements\Tripletriad-earth.png" />
+    <Content Include="Images\Elements\Tripletriad-fire.png" />
+    <Content Include="Images\Elements\Tripletriad-holy.png" />
+    <Content Include="Images\Elements\Tripletriad-ice.png" />
+    <Content Include="Images\Elements\Tripletriad-poison.png" />
+    <Content Include="Images\Elements\Tripletriad-thunder.png" />
+    <Content Include="Images\Elements\Tripletriad-water.png" />
+    <Content Include="Images\Elements\Tripletriad-wind.png" />
+    <Content Include="Images\loader1.gif" />
+    <Content Include="Images\Triple_Triad_board.png" />
+    <Content Include="styles\common.css" />
+    <Content Include="styles\game.css" />
+    <Content Include="templates\deck-view.html" />
+    <Content Include="templates\game-view.html" />
+    <Content Include="TripleTriadRefresh.Publish.xml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ttf.db" />
+    <Content Include="templates\game-list-view.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TripleTriadRefresh.Server\TripleTriadRefresh.Server.csproj">
+      <Project>{38F564BB-2014-4AC3-9223-318D4BFF071A}</Project>
+      <Name>TripleTriadRefresh.Server</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Game\Game.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="scripts\ui\menu.ts" />
+    <TypeScriptCompile Include="scripts\ui\view.ts" />
+    <Content Include="scripts\jquery.signalR-0.5.3.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="combres.readme" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>54674</DevelopmentServerPort>
+          <DevelopmentServerVPath>/tripletriadrefresh</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54674/tripletriadrefresh/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://local.gnatonski.com:54674/tripletriadrefresh/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="AfterBuild">
+  </Target> -->
+  <PropertyGroup>
+    <OnBeforePackageUsingManifest>AddCustomSkipRules</OnBeforePackageUsingManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Target Name="AddCustomSkipRules">
+    <ItemGroup>
+      <MsDeploySkipRules Include="SkipDeleteAppData">
+        <SkipAction>Delete</SkipAction>
+        <ObjectName>filePath</ObjectName>
+        <AbsolutePath>$(_Escaped_PackageTempDir)\\App_Data\\.*</AbsolutePath>
+        <XPath>
+        </XPath>
+      </MsDeploySkipRules>
+      <MsDeploySkipRules Include="SkipDeleteAppData">
+        <SkipAction>Delete</SkipAction>
+        <ObjectName>dirPath</ObjectName>
+        <AbsolutePath>$(_Escaped_PackageTempDir)\\App_Data\\.*</AbsolutePath>
+        <XPath>
+        </XPath>
+      </MsDeploySkipRules>
+    </ItemGroup>
+  </Target>
+  <Target Name="BeforeBuild">
+    <Exec Command="&quot;$(PROGRAMFILES)\Microsoft SDKs\TypeScript\0.8.0.0\tsc&quot; -target ES5 @(TypeScriptCompile ->'&quot;%(fullpath)&quot;', ' ')" />
+  </Target>
+</Project>

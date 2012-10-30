@@ -1,0 +1,56 @@
+﻿@using Combres
+<!DOCTYPE html>
+<html>
+<head>
+@{
+    var baseUri = new Uri(HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Authority);
+    var rel = HttpContext.Current.Request.ApplicationPath;
+    if (!rel.EndsWith("/"))
+    {
+        rel += "/";
+    }
+    var relUri = new Uri(rel, UriKind.Relative);
+    Uri uri = new Uri(baseUri, relUri);
+}
+    <link rel="home" id="ApplicationRoot" href="@uri.ToString()" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Html.Raw(WebExtensions.CombresLink("siteCss"))
+    @Html.Raw(WebExtensions.CombresLink("libJs"))
+    <script src="@Url.Content("~/app/hubs")" type="text/javascript"></script>
+    @Html.Raw(WebExtensions.CombresLink("commonJs"))
+    @Html.Raw(WebExtensions.CombresLink("uiJs"))
+    @Html.Raw(WebExtensions.CombresLink("appJs"))
+</head>
+<body>
+    <div id="fb-root"></div>
+    <div data-bind="loadingWhen: authInitializing" class="content">
+        <div id="main" style="opacity: 0">
+            <div class="glass-panel to-left" id="fb-panel">
+                <!-- ko ifnot: isLoggedIn -->
+                <div class="fb-login-button" data-show-faces="false" data-width="180"></div>
+                <!-- /ko -->
+                <!-- ko if: isLoggedIn -->
+                <img id="user-pic" data-bind="attr: {src: userPicture}"/>
+                <!-- /ko -->
+            </div>
+            <div class="glass-panel to-left" id="user-panel">
+                <input type="button" data-bind="" value="Standings"/>
+                <input type="button" data-bind="click: showGames" value="Games"/>
+                <input type="button" data-bind="click: showCards" value="Cards"/>
+            </div>
+            <!-- ko if: view() -->
+            <div class="glass-panel to-left" id="game-panel" data-bind="foreach: view().menu().items">
+                <!-- ko ifnot: $data.hidden -->
+               <input type="button" data-bind="click: action, value: name"/>
+               <!-- /ko -->
+            </div>
+            <div style="clear:left;"></div>
+            <div>
+                @RenderBody()
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</body>
+</html>

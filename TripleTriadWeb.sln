@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C41CCCA1-E6C0-4C83-B295-479D5F4BB63F}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripleTriadRefresh.Data", "TripleTriadRefresh.Data\TripleTriadRefresh.Data.csproj", "{2CA7C91F-E12C-4F3F-92FA-1C48EFE5A856}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripleTriadRefresh.Web", "TripleTriadRefresh.Web\TripleTriadRefresh.Web.csproj", "{1D779A76-7DE6-4652-8449-AC9C5C2859AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripleTriadRefresh.Server", "TripleTriadRefresh.Server\TripleTriadRefresh.Server.csproj", "{38F564BB-2014-4AC3-9223-318D4BFF071A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{F9945701-351A-497B-B415-9E373A50992C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CStoTS", "CStoTS\CStoTS.csproj", "{FF992EF4-9A62-4AB4-951A-C1F09A992367}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CA7C91F-E12C-4F3F-92FA-1C48EFE5A856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CA7C91F-E12C-4F3F-92FA-1C48EFE5A856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CA7C91F-E12C-4F3F-92FA-1C48EFE5A856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CA7C91F-E12C-4F3F-92FA-1C48EFE5A856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D779A76-7DE6-4652-8449-AC9C5C2859AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D779A76-7DE6-4652-8449-AC9C5C2859AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D779A76-7DE6-4652-8449-AC9C5C2859AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D779A76-7DE6-4652-8449-AC9C5C2859AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F564BB-2014-4AC3-9223-318D4BFF071A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F564BB-2014-4AC3-9223-318D4BFF071A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F564BB-2014-4AC3-9223-318D4BFF071A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F564BB-2014-4AC3-9223-318D4BFF071A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF992EF4-9A62-4AB4-951A-C1F09A992367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF992EF4-9A62-4AB4-951A-C1F09A992367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF992EF4-9A62-4AB4-951A-C1F09A992367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF992EF4-9A62-4AB4-951A-C1F09A992367}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF992EF4-9A62-4AB4-951A-C1F09A992367} = {F9945701-351A-497B-B415-9E373A50992C}
+	EndGlobalSection
+EndGlobal

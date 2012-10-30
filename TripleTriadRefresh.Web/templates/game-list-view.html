@@ -1,0 +1,25 @@
+﻿<div id="game-list-view">
+    <div id="games" class="glass-panel">
+        <div class="window">
+            <h1>Open games</h1>
+        </div>
+        <div class="window" data-bind="foreach: games">
+            <div>
+                <span data-bind="text: FirstName"></span>
+                (<span data-bind="text: FirstHandStr"></span>)
+                <!-- ko if: SecondName -->
+                <span>VS</span>
+                <span data-bind="text: SecondName"></span>
+                (<span data-bind="text: SecondHandStr"></span>)
+                <!-- /ko -->
+                <!-- ko if: CanJoin -->
+                <input type="button" data-bind="click: $parent.joinGame, enable: CanJoin" value="Join"/>
+                <!-- /ko -->
+                <!-- ko if: WinnerName -->
+                <span >Winner: </span>
+                <span data-bind="text: WinnerName"></span>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>

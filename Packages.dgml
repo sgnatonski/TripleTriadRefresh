@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="TripleTriadWeb" Label="TripleTriadWeb" Category="Project" />
+    <Node Id="Castle.Core 3.1.0" Label="Castle.Core 3.1.0" Category="Package" />
+    <Node Id="CommonServiceLocator 1.0" Label="CommonServiceLocator 1.0" Category="Package" />
+    <Node Id="CommonServiceLocator.StructureMapAdapter 1.1.0.3" Label="CommonServiceLocator.StructureMapAdapter 1.1.0.3" Category="Package" />
+    <Node Id="Facebook 6.0.20" Label="Facebook 6.0.20" Category="Package" />
+    <Node Id="fasterflect 2.1.0" Label="fasterflect 2.1.0" Category="Package" />
+    <Node Id="HtmlAgilityPack 1.4.6" Label="HtmlAgilityPack 1.4.6" Category="Package" />
+    <Node Id="jQuery 1.6.4" Label="jQuery 1.6.4" Category="Package" />
+    <Node Id="Microsoft.AspNet.Mvc 4.0.20505.0" Label="Microsoft.AspNet.Mvc 4.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Razor 2.0.20505.0" Label="Microsoft.AspNet.Razor 2.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi 4.0.20505.0" Label="Microsoft.AspNet.WebApi 4.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 4.0.20505.0" Label="Microsoft.AspNet.WebApi.Client 4.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 4.0.20505.0" Label="Microsoft.AspNet.WebApi.Core 4.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 4.0.20505.0" Label="Microsoft.AspNet.WebApi.WebHost 4.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebPages 2.0.20505.0" Label="Microsoft.AspNet.WebPages 2.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.Net.Http 2.0.20505.0" Label="Microsoft.Net.Http 2.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="Newtonsoft.Json 4.5.8" Label="Newtonsoft.Json 4.5.8" Category="Package" />
+    <Node Id="SignalR 0.5.2" Label="SignalR 0.5.2" Category="Package" />
+    <Node Id="SignalR.Hosting.AspNet 0.5.2" Label="SignalR.Hosting.AspNet 0.5.2" Category="Package" />
+    <Node Id="SignalR.Hosting.Common 0.5.2" Label="SignalR.Hosting.Common 0.5.2" Category="Package" />
+    <Node Id="SignalR.Js 0.5.2" Label="SignalR.Js 0.5.2" Category="Package" />
+    <Node Id="SignalR.Server 0.5.2" Label="SignalR.Server 0.5.2" Category="Package" />
+    <Node Id="SignalR.StructureMap 0.4.1" Label="SignalR.StructureMap 0.4.1" Category="Package" />
+    <Node Id="SNAP 1.7.7" Label="SNAP 1.7.7" Category="Package" />
+    <Node Id="SNAP.StructureMap 1.7.7" Label="SNAP.StructureMap 1.7.7" Category="Package" />
+    <Node Id="structuremap 2.6.4.1" Label="structuremap 2.6.4.1" Category="Package" />
+  </Nodes>
+  <Links>
+    <Link Source="CommonServiceLocator.StructureMapAdapter 1.1.0.3" Target="CommonServiceLocator 1.0" Category="Package Dependency" />
+    <Link Source="CommonServiceLocator.StructureMapAdapter 1.1.0.3" Target="structuremap 2.6.4.1" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 4.0.20505.0" Target="Microsoft.AspNet.WebPages 2.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 4.0.20505.0" Target="Microsoft.AspNet.Razor 2.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi 4.0.20505.0" Target="Microsoft.AspNet.WebApi.WebHost 4.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.20505.0" Target="Microsoft.Net.Http 2.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.20505.0" Target="Newtonsoft.Json 4.5.8" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 4.0.20505.0" Target="Microsoft.AspNet.WebApi.Client 4.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.20505.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.20505.0" Target="Microsoft.AspNet.WebApi.Core 4.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.20505.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.20505.0" Target="Microsoft.AspNet.Razor 2.0.20505.0" Category="Package Dependency" />
+    <Link Source="SignalR 0.5.2" Target="SignalR.Hosting.AspNet 0.5.2" Category="Package Dependency" />
+    <Link Source="SignalR 0.5.2" Target="SignalR.Js 0.5.2" Category="Package Dependency" />
+    <Link Source="SignalR.Hosting.AspNet 0.5.2" Target="SignalR.Hosting.Common 0.5.2" Category="Package Dependency" />
+    <Link Source="SignalR.Hosting.AspNet 0.5.2" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="SignalR.Hosting.Common 0.5.2" Target="SignalR.Server 0.5.2" Category="Package Dependency" />
+    <Link Source="SignalR.Js 0.5.2" Target="jQuery 1.6.4" Category="Package Dependency" />
+    <Link Source="SignalR.Server 0.5.2" Target="Newtonsoft.Json 4.5.8" Category="Package Dependency" />
+    <Link Source="SignalR.StructureMap 0.4.1" Target="structuremap 2.6.4.1" Category="Package Dependency" />
+    <Link Source="SignalR.StructureMap 0.4.1" Target="SignalR.Server 0.5.2" Category="Package Dependency" />
+    <Link Source="SNAP 1.7.7" Target="CommonServiceLocator 1.0" Category="Package Dependency" />
+    <Link Source="SNAP 1.7.7" Target="fasterflect 2.1.0" Category="Package Dependency" />
+    <Link Source="SNAP 1.7.7" Target="Castle.Core 3.1.0" Category="Package Dependency" />
+    <Link Source="SNAP.StructureMap 1.7.7" Target="structuremap 2.6.4.1" Category="Package Dependency" />
+    <Link Source="SNAP.StructureMap 1.7.7" Target="SNAP 1.7.7" Category="Package Dependency" />
+    <Link Source="TripleTriadWeb" Target="CommonServiceLocator.StructureMapAdapter 1.1.0.3" Category="Installed Package" />
+    <Link Source="TripleTriadWeb" Target="Facebook 6.0.20" Category="Installed Package" />
+    <Link Source="TripleTriadWeb" Target="HtmlAgilityPack 1.4.6" Category="Installed Package" />
+    <Link Source="TripleTriadWeb" Target="Microsoft.AspNet.Mvc 4.0.20505.0" Category="Installed Package" />
+    <Link Source="TripleTriadWeb" Target="Microsoft.AspNet.WebApi 4.0.20505.0" Category="Installed Package" />
+    <Link Source="TripleTriadWeb" Target="SignalR 0.5.2" Category="Installed Package" />
+    <Link Source="TripleTriadWeb" Target="SignalR.StructureMap 0.4.1" Category="Installed Package" />
+    <Link Source="TripleTriadWeb" Target="SNAP.StructureMap 1.7.7" Category="Installed Package" />
+  </Links>
+  <Categories>
+    <Category Id="Project" />
+    <Category Id="Package" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>

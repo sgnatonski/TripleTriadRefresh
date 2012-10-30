@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  This file contains basic settings needed for most web apps.
+  For full Combres settings (with explanation), refer to the sample definition file: combres_full_with_annotation.xml
+  Also, refer to Combres' documentation: http://combres.codeplex.com/documentation	
+-->
+<combres xmlns='urn:combres'>
+  <filters>
+    <filter type="Combres.Filters.FixUrlsInCssFilter, Combres" acceptedResourceSets="siteCss" />
+  </filters>
+  <resourceSets url="~/combres.axd"
+                defaultDuration="30"
+                defaultVersion="auto"
+                defaultDebugEnabled="auto"
+                defaultIgnorePipelineWhenDebug="true"
+                localChangeMonitorInterval="30"
+                remoteChangeMonitorInterval="60"
+                >
+    <resourceSet name="siteCss" type="css">
+      <resource path="~/styles/common.css" />
+      <resource path="~/styles/game.css" />
+    </resourceSet>
+    <resourceSet name="libJs" type="js">
+      <resource path="~/scripts/jquery-1.8.2.min.js" />
+      <resource path="~/scripts/jquery-ui-1.8.22.custom.min.js" />
+      <resource path="~/scripts/jquery.animate-enhanced.min.js" />
+      <resource path="~/scripts/jquery.signalR-0.5.3.min.js" />
+      <!--<resource path="~/scripts/underscore.js" />
+      <resource path="~/scripts/underscore.string.js" />-->
+      <resource path="~/scripts/purl.js" />
+      <resource path="~/scripts/knockout-2.2.0.debug.js" />
+      <resource path="~/scripts/knockoutmapping-2.0.js" />
+      <resource path="~/scripts/koExternalTemplateEngine_all.min.js" />
+    </resourceSet>
+    <resourceSet name="commonJs" type="js">
+      <resource path="~/scripts/app/common.js" />
+      <resource path="~/scripts/app/game-service.js" />
+      <resource path="~/scripts/dto/game-list-item.js" />
+      <resource path="~/scripts/dto/card.js" />
+      <resource path="~/scripts/dto/hand.js" />
+      <resource path="~/scripts/dto/player.js" />
+      <resource path="~/scripts/dto/game.js" />
+    </resourceSet>
+    <resourceSet name="appJs" type="js">
+      <resource path="~/scripts/app/view-factory.js" />
+      <resource path="~/scripts/app/app.js" />
+      <resource path="~/scripts/app/fb.js" />
+    </resourceSet>
+    <resourceSet name="uiJs" type="js">
+      <resource path="~/scripts/ui/button.js" />
+      <resource path="~/scripts/ui/menu.js" />
+      <resource path="~/scripts/ui/view.js" />
+      <resource path="~/scripts/ui/view/games-view.js" />
+      <resource path="~/scripts/ui/view/game-view.js" />
+      <resource path="~/scripts/ui/view/deck-view.js" />
+    </resourceSet>
+  </resourceSets>
+</combres>
