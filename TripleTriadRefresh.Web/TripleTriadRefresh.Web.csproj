@@ -162,6 +162,8 @@
     <Content Include="scripts\dto\game.js">
       <DependentUpon>game.ts</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\gnatonski.com - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\gnatonski.com - Web Deploy.pubxml" />
     <None Include="scripts\jquery-1.8.2.intellisense.js" />
     <TypeScriptCompile Include="scripts\dto\player.ts" />
     <TypeScriptCompile Include="scripts\dto\hand.ts" />
