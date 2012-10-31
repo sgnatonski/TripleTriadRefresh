@@ -37,6 +37,7 @@ public class Mind
         }
 
         options.AddRange(GetAttackOptions());
+        options.AddRange(GetProtectOptions());
 
         if (!options.Any())
         {
@@ -134,6 +135,25 @@ public class Mind
             }
         }
 
+        if (!options.Any())
+        {
+            // only single tiles are available that cannot be attacked or defended, so add all of them with value = 0
+            foreach (var emptyTile in emptyTiles)
+            {
+                foreach (var card in game.CurrentPlayer.Hand.PlayCards)
+                {
+                    options.Add(new CardAiCommand(card.Id, (int)emptyTile, 0));
+                }
+            }
+        }
+
+        return options;
+    }
+
+    protected IEnumerable<CardAiCommand> GetProtectOptions()
+    {
+        var options = new List<CardAiCommand>();
+        // TODO: add commands that will protect weaker cards
         return options;
     }
 

@@ -39,4 +39,10 @@
             </div>
         </div>
     </div>
+
+    <div class="overlay" data-bind="visible: game().winner()">
+        <div id="game-result-panel">
+            <div id="game-result-title" data-bind="text: gameResult"></div>
+        </div>        
+    </div>
 </div>

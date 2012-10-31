@@ -14,6 +14,7 @@ var GameView = (function (_super) {
         this.dragging = ko.observable(null);
         this.isReady = ko.observable(false);
         this.isStarted = ko.observable(false);
+        this.gameResult = ko.observable('');
         var leaveBtn = new Button('Leave game');
         leaveBtn.action = function () {
             return _this.connection.leaveGame();
@@ -32,6 +33,13 @@ var GameView = (function (_super) {
         this.gameId = gameId;
         this.connection.updateBoard = function (data) {
             _this.game(new Game(data));
+            if(_this.game().winner()) {
+                var result = _this.game().firstPlayerScore() === _this.game().secondPlayerScore() ? 'Draw' : undefined;
+                if(!result) {
+                    result = _this.game().firstPlayerScore() > _this.game().secondPlayerScore() ? 'Won' : 'Loose';
+                }
+                _this.gameResult(result);
+            }
         };
         this.connection.gameJoined = function (data) {
             window.history.pushState(data, "Game", app.getPathAbs() + data);

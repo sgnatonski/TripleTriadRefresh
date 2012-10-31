@@ -127,3 +127,11 @@ input[type=button]:active
     filter: gray; /* IE */
     -webkit-filter: grayscale(1); /* Old WebKit */
 }
+
+.overlay {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
