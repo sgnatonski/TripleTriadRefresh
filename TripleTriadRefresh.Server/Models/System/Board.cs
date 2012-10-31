@@ -9,18 +9,19 @@ namespace TripleTriadRefresh.Server.Models.System
     {
         public static IEnumerable<BoardTile> GetAdjacentTiles(BoardTile tile)
         {
-            var result = new List<int>();
-
-            var val = (int)tile;
-            result.AddRange(new[]
+            switch (tile)
             {
-                (val - 1),
-                (val + 1),
-                (val - 3),
-                (val + 3),
-            });
-
-            return result.Where(x => x > 0 && x < 9).Cast<BoardTile>();
+                case BoardTile.TopLeft: return new[] { BoardTile.TopCenter, BoardTile.CenterLeft };
+                case BoardTile.TopCenter: return new[] { BoardTile.TopLeft, BoardTile.TopRight, BoardTile.Center };
+                case BoardTile.TopRight: return new[] { BoardTile.TopCenter, BoardTile.CenterRight };
+                case BoardTile.CenterLeft: return new[] { BoardTile.TopLeft, BoardTile.Center, BoardTile.BottomLeft };
+                case BoardTile.Center: return new[] { BoardTile.TopCenter, BoardTile.CenterLeft, BoardTile.CenterRight, BoardTile.BottomCenter };
+                case BoardTile.CenterRight: return new[] { BoardTile.TopRight, BoardTile.Center, BoardTile.BottomRight };
+                case BoardTile.BottomLeft: return new[] { BoardTile.BottomCenter, BoardTile.CenterLeft };
+                case BoardTile.BottomCenter: return new[] { BoardTile.BottomLeft, BoardTile.BottomRight, BoardTile.Center };
+                case BoardTile.BottomRight: return new[] { BoardTile.BottomCenter, BoardTile.CenterRight };
+                default: return new BoardTile[] {};
+            }
         }
 
         public static Tuple<CardBorder, CardBorder> GetCardBorders(BoardTile tile1, BoardTile tile2)

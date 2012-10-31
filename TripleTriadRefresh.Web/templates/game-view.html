@@ -4,7 +4,7 @@
             <div class="window game-header">
                 <span data-bind="text: game().getPlayer().userName"></span>
             </div>
-            <ul data-bind="foreach: game().getPlayer().hand().playCards">
+            <ul data-bind="foreach: game().getPlayer().hand().playCards, css: { greyscale: !game().getPlayer().isReady() }">
                 <li class="card" data-bind="drag: {value: $parent.dragging}">
                     <img data-bind="attr: {src: image}"/>
                 </li>
@@ -12,7 +12,7 @@
         </div>
         <div id="board"> 
             <div class="window game-header" style="margin-bottom: 60px;">
-                <!-- ko if: game().isStarted -->
+                <!-- ko if: game().isStarted() -->
                 <span data-bind="text: game().getPlayerScore()"></span>:
                 <span data-bind="text: game().getEnemyScore()"></span>
                 <!-- /ko -->
@@ -32,7 +32,7 @@
             <div class="window game-header">
                 <span data-bind="text: game().getEnemy().userName"></span>
             </div>
-            <div data-bind="foreach: game().getEnemy().hand().playCards">
+            <div data-bind="foreach: game().getEnemy().hand().playCards, css: { greyscale: !game().getPlayer().isReady() }">
                 <div class="card">
                     <img data-bind="attr: {src: image}"/>
                 </div>

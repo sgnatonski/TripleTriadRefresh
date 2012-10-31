@@ -38,6 +38,11 @@ public class Mind
 
         options.AddRange(GetAttackOptions());
 
+        if (!options.Any())
+        {
+            options.AddRange(GetDefenceOptions());
+        }
+
         return options.OrderByDescending(x => x.Value);
     }
 
@@ -90,6 +95,41 @@ public class Mind
                 foreach (var card in attackCards)
                 {
                     options.Add(new CardAiCommand(card.Id, (int)tile, GetCommandValue(card, (int)tile)));
+                }
+            }
+        }
+
+        return options;
+    }
+
+    protected IEnumerable<CardAiCommand> GetDefenceOptions()
+    {
+        var options = new List<CardAiCommand>();
+
+        var emptyTiles = Enumerable.Range(1, 9).Except(from Card c in game.Board where c != null select c.Position).Cast<BoardTile>();
+
+        var opponentCards = game.GetOpponent().Hand.PlayCards;
+
+        foreach (var emptyTile in emptyTiles)
+        {
+            foreach (var card in game.CurrentPlayer.Hand.PlayCards)
+            {
+                var adjacentTiles = Board.GetAdjacentTiles(emptyTile);
+                foreach (var tile in adjacentTiles)
+                {
+                    if (game.Board[tile.Row(), tile.Col()] != null)
+                    {
+                        continue;
+                    }
+
+                    var borders = Board.GetCardBorders(emptyTile, tile);
+                    var opponentAttackCards = opponentCards.Where(c => c.Strength.GetBorderStrength(borders.Item2) > card.Strength.GetBorderStrength(borders.Item1));
+
+                    foreach (var opponentCard in opponentCards)
+                    {
+                        // computed command value refers to opponent card so when less value for opponent the greater value for ai
+                        options.Add(new CardAiCommand(card.Id, (int)emptyTile, -GetCommandValue(opponentCard, (int)tile)));
+                    }
                 }
             }
         }

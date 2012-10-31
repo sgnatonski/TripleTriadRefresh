@@ -3,7 +3,7 @@
 /// <reference path="hand.ts" />
 class Player {
     connectionId = ko.observable('');
-    isReady = ko.observable('');
+    isReady = ko.observable(false);
     userName = ko.observable('');
     hand = ko.observable(new Hand(null));
 

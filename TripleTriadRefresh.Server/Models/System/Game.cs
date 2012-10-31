@@ -41,21 +41,21 @@ namespace TripleTriadRefresh.Server.Models.System
         }
 
         [JsonProperty("gameId")]
-        public string GameId { get; set; }
+        public string GameId { get; private set; }
         [JsonProperty("firstPlayer")]
-        public IPlayer FirstPlayer { get; set; }
+        public IPlayer FirstPlayer { get; private set; }
         [JsonProperty("secondPlayer")]
         public IPlayer SecondPlayer { get; set; }
         [JsonProperty("currentPlayer")]
         public IPlayer CurrentPlayer { get; private set; }
         [JsonProperty("winner")]
-        public IPlayer Winner { get; set; }
+        public IPlayer Winner { get; private set; }
         [JsonProperty("tradeRule")]
         public TradeRules TradeRule { get; private set; }
         [JsonProperty("rules")]
         public Rules Rules { get; private set; }
         [JsonProperty("cardChain")]
-        public List<Card> CardChain { get; set; }
+        public List<Card> CardChain { get; private set; }
         [JsonProperty("firstPlayerScore")]
         public int FirstPlayerScore { get; private set; }
         [JsonProperty("secondPlayerScore")]
@@ -133,6 +133,15 @@ namespace TripleTriadRefresh.Server.Models.System
         public void NextPlayer()
         {
             CurrentPlayer = CurrentPlayer == FirstPlayer ? SecondPlayer : FirstPlayer;
+        }
+
+        public void MakeOwner(IPlayer player)
+        {
+            FirstPlayer = player;
+            if (player == SecondPlayer)
+            {
+                SecondPlayer = null;
+            }
         }
 
         public IEnumerable<Card> GetWonCards(IPlayer player)

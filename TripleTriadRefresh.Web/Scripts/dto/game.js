@@ -10,7 +10,7 @@ var Game = (function () {
         this.cardChain = ko.observableArray([]);
         this.firstPlayerScore = ko.observable(0);
         this.secondPlayerScore = ko.observable(0);
-        this.inProgress = ko.observable(0);
+        this.inProgress = ko.observable(false);
         this.isFull = ko.observable(false);
         this.canJoin = ko.observable(false);
         this.board = ko.observableArray([]);
@@ -19,6 +19,9 @@ var Game = (function () {
             ko.mapping.fromJS(data, {
             }, this);
         }
+        this.isStarted = ko.computed(function () {
+            return this.firstPlayer().isReady() && this.secondPlayer().isReady() && this.inProgress();
+        }, this);
     }
     Game.prototype.getPlayer = function () {
         return this.firstPlayer() && this.firstPlayer().connectionId() == app.getConnectionId() ? this.firstPlayer() : this.secondPlayer();

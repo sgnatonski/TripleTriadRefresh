@@ -110,8 +110,7 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
                 var gameChanged = false;
                 if (game.FirstPlayer.ConnectionId == Hub.Context.ConnectionId)
                 {
-                    game.FirstPlayer = game.SecondPlayer;
-                    game.SecondPlayer = null;
+                    game.MakeOwner(game.SecondPlayer);
                     gameChanged = true;
                 }
                 else if (game.SecondPlayer != null && game.SecondPlayer.ConnectionId == Hub.Context.ConnectionId)

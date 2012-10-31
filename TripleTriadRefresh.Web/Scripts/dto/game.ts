@@ -12,16 +12,21 @@ class Game {
     cardChain = ko.observableArray([]);
     firstPlayerScore = ko.observable(0);
     secondPlayerScore = ko.observable(0);
-    inProgress = ko.observable(0);
+    inProgress = ko.observable(false);
     isFull = ko.observable(false);
     canJoin = ko.observable(false);
     board = ko.observableArray([]);
     elementsOnBoard = ko.observableArray([]);
+    isStarted: () => bool;
 
     constructor (data: any) {
         if (data) {
             ko.mapping.fromJS(data, {}, this);
         }
+
+        this.isStarted = ko.computed(function () {
+            return this.firstPlayer().isReady() && this.secondPlayer().isReady() && this.inProgress();
+        }, this);
     }
 
     getPlayer() {

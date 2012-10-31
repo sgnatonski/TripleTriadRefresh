@@ -5,19 +5,19 @@
         </div>
         <div class="window" data-bind="foreach: games">
             <div>
-                <span data-bind="text: FirstName"></span>
-                (<span data-bind="text: FirstHandStr"></span>)
+                <span data-bind="text: firstName"></span>
+                (<span data-bind="text: firstHandStr"></span>)
                 <!-- ko if: SecondName -->
                 <span>VS</span>
-                <span data-bind="text: SecondName"></span>
-                (<span data-bind="text: SecondHandStr"></span>)
+                <span data-bind="text: secondName"></span>
+                (<span data-bind="text: secondHandStr"></span>)
                 <!-- /ko -->
                 <!-- ko if: CanJoin -->
-                <input type="button" data-bind="click: $parent.joinGame, enable: CanJoin" value="Join"/>
+                <input type="button" data-bind="click: $parent.joinGame, enable: canJoin" value="Join"/>
                 <!-- /ko -->
                 <!-- ko if: WinnerName -->
                 <span >Winner: </span>
-                <span data-bind="text: WinnerName"></span>
+                <span data-bind="text: winnerName"></span>
                 <!-- /ko -->
             </div>
         </div>
