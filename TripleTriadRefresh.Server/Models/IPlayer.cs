@@ -1,8 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TripleTriadRefresh.Data.Domain;
 using TripleTriadRefresh.Server.Models.System;
 
@@ -22,7 +18,11 @@ namespace TripleTriadRefresh.Server.Models
         string IpAddress { get; set; }
         [JsonIgnore]
         DbPlayer DbEntity { get; }
+        [JsonIgnore]
+        int CardsFlip { get; set; }
+
         void CreatePlayHand();
         void Play(Game game, CardCommand command);
+        void UpdateStanding(DbGameResult gameResult);
     }
 }

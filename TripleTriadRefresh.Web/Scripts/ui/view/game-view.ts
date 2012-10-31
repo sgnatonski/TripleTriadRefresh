@@ -47,6 +47,9 @@ class GameView extends View {
             app.currentGameId('');
             app.view(app.viewFac.createGamesView());
         };
+        this.connection.gameResolve = (data) => {
+            
+        };
 
         this.startConnection(() => {
             this.isLoading(true);
@@ -67,7 +70,12 @@ class GameView extends View {
             this.connection.placeCard(this.dragging().id(), index);
             this.dragging(null);
         }
+
+        this.resolveGame = () => {
+            this.connection.resolveGame(this.gameId);
+        }
     }
 
     placeCard: (index: number) => void;
+    resolveGame: () => void;
 }

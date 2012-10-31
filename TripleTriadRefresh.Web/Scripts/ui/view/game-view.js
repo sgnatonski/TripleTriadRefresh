@@ -51,6 +51,8 @@ var GameView = (function (_super) {
             app.currentGameId('');
             app.view(app.viewFac.createGamesView());
         };
+        this.connection.gameResolve = function (data) {
+        };
         this.startConnection(function () {
             _this.isLoading(true);
             if(!_this.gameId) {
@@ -66,6 +68,9 @@ var GameView = (function (_super) {
         this.placeCard = function (index) {
             _this.connection.placeCard(_this.dragging().id(), index);
             _this.dragging(null);
+        };
+        this.resolveGame = function () {
+            _this.connection.resolveGame(_this.gameId);
         };
     }
     return GameView;

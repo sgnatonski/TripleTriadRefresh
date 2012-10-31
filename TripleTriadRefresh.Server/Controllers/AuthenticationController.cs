@@ -1,12 +1,13 @@
 using System;
+using System.Diagnostics;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using Newtonsoft.Json.Linq;
+using TripleTriadRefresh.Data;
+using TripleTriadRefresh.Server.Controllers.Result;
 using TripleTriadRefresh.Server.Framework;
 using TripleTriadRefresh.Server.Models;
-using System.Diagnostics;
-using TripleTriadRefresh.Server.Controllers.Result;
 
 namespace TripleTriadRefresh.Server.Controllers
 {
@@ -23,7 +24,7 @@ namespace TripleTriadRefresh.Server.Controllers
         public JsonNetResult Login(FormCollection form)
         {
             var accessToken = form["accessToken"];
-             
+
             var fb = new Facebook.FacebookClient(accessToken);
             dynamic user = fb.Get("me");
 
@@ -56,19 +57,16 @@ namespace TripleTriadRefresh.Server.Controllers
 
         private void CreateUserIfNotExists(string id)
         {
-            if (Debugger.IsAttached)
+            IPlayer player = Debugger.IsAttached ? new Player(id) : new Player();
+
+            if (player.DbEntity == null)
             {
-                if (new Player(id).DbEntity == null)
-                {
-                    playerActivator.Activate(id);
-                }
+                playerActivator.Activate(id);
             }
             else
             {
-                if (new Player().DbEntity == null)
-                {
-                    playerActivator.Activate(id);
-                }
+                player.DbEntity.LastSeen = DateTime.Now;
+                DbRepository.Current.Update(player.DbEntity);
             }
         }
 

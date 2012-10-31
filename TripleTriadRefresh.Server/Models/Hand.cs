@@ -47,7 +47,7 @@ namespace TripleTriadRefresh.Server.Models
                     // the more spread values in cards the less relative strength
                     var spread = strengthList.StdDev() * 10;
 
-                    handStrength = strengthList.Sum() / spread;
+                    handStrength = strengthList.Average() + strengthList.Sum() / spread;
                 }
 
                 return handStrength;

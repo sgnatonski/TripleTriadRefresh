@@ -16,6 +16,8 @@
 
         void GetOwnedCards();
 
+        void ResolveGame(string gameId);
+
         void Disconnect();
 
         void Connect();

@@ -1,17 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Principal;
-using System.Web;
 using Newtonsoft.Json;
 using TripleTriadRefresh.Data;
 using TripleTriadRefresh.Data.Domain;
-using System.Diagnostics;
-using TripleTriadRefresh.Server.Models.System;
 using TripleTriadRefresh.Server.Models.Ai;
-using CSScriptLibrary;
-using System.Reflection;
-using System.Globalization;
+using TripleTriadRefresh.Server.Models.System;
 
 namespace TripleTriadRefresh.Server.Models
 {
@@ -27,12 +21,15 @@ namespace TripleTriadRefresh.Server.Models
             this.mind = new Mind().AlignToInterface<IMind>();
 
             this.strength = strength;
-            DbEntity = DbRepository.Current.Single<DbPlayer>(id);
+            DbEntity = new DbPlayer();
             this.ConnectionId = Guid.NewGuid().ToString();
         }
 
         [JsonIgnore]
         public DbPlayer DbEntity { get; private set; }
+
+        [JsonIgnore]
+        public int CardsFlip { get; set; }
 
         public string ConnectionId { get; set; }
         public string IpAddress { get; set; }
@@ -58,7 +55,7 @@ namespace TripleTriadRefresh.Server.Models
 
                 var cardId = cardIds.Any() ? cardIds[rnd.Next(0, cardIds.Length - 1)] : 1;
 
-                cards.Add(new Card(new DbCard() { CardId = cardId }) { OwnedOriginallyBy = this.ConnectionId });              
+                cards.Add(new Card(new DbCard() { CardId = cardId }) { OwnedOriginallyBy = this.ConnectionId });
             }
 
             Hand = new Hand(cards);
@@ -67,6 +64,10 @@ namespace TripleTriadRefresh.Server.Models
         public void Play(Game game, CardCommand command)
         {
             game.PlaceCard(this.ConnectionId, command.CardId, command.Position);
+        }
+
+        public void UpdateStanding(DbGameResult gameResult)
+        {
         }
 
         public CardCommand GetCommand(Game game)

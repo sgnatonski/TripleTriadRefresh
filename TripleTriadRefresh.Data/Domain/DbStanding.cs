@@ -1,6 +1,3 @@
-using System;
-using SubSonic.SqlGeneration.Schema;
-using System.Collections.Generic;
 using TripleTriadRefresh.Data.Models;
 
 namespace TripleTriadRefresh.Data.Domain
@@ -12,9 +9,11 @@ namespace TripleTriadRefresh.Data.Domain
         public int Lost { get; set; }
         public int Draw { get; set; }
         public int SeasonId { get; set; }
+        public int Experience { get; set; }
+        public int CardPoints { get; set; }
         public Rules UnlockedRules { get; set; }
         public TradeRules UnlockedTradeRules { get; set; }
-         
+
         public DbPlayer Player
         {
             get

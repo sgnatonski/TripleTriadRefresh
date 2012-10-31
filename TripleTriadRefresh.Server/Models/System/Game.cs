@@ -1,11 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System;
+using System.Threading.Tasks;
+using System.Timers;
 using Newtonsoft.Json;
 using TripleTriadRefresh.Data.Models;
 using TripleTriadRefresh.Server.Framework;
-using System.Threading.Tasks;
-using System.Timers;
 
 namespace TripleTriadRefresh.Server.Models.System
 {
@@ -19,7 +19,7 @@ namespace TripleTriadRefresh.Server.Models.System
             Rules = rules;
             TradeRule = tradeRules;
             GameEnded = endCallback;
-            
+
             ReconnectTimer = new Timer();
             ReconnectTimer.Enabled = false;
             ReconnectTimer.Elapsed += (s, ea) =>
@@ -246,7 +246,7 @@ namespace TripleTriadRefresh.Server.Models.System
             {
                 if (TakeCard(targetCard, currentCard.OwnedBy, chainStep) && Rules.HasFlag(Rules.Combo))
                 {
-                    ProcessInternal(targetCard, targetRow, targetCol, chainStep); 
+                    ProcessInternal(targetCard, targetRow, targetCol, chainStep);
                     return true;
                 }
             }
@@ -271,7 +271,10 @@ namespace TripleTriadRefresh.Server.Models.System
             if ((from Card val in Board where val == null select val).Count() == 0)
             {
                 InProgress = false;
-                Winner = FirstPlayerScore > SecondPlayerScore ? FirstPlayer : SecondPlayer;
+                if (FirstPlayerScore != SecondPlayerScore)
+                {
+                    Winner = FirstPlayerScore > SecondPlayerScore ? FirstPlayer : SecondPlayer;
+                }
                 GameEnded(this);
             }
         }
@@ -282,6 +285,7 @@ namespace TripleTriadRefresh.Server.Models.System
             {
                 card.OwnedBy = newOwner;
                 CardChain.Add(card);
+                CurrentPlayer.CardsFlip += 1;
                 return true;
             }
 

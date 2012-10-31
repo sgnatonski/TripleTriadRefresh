@@ -34,6 +34,9 @@ namespace TripleTriadRefresh.Server.Models
         [JsonIgnore]
         public IPrincipal User { get; set; }
 
+        [JsonIgnore]
+        public int CardsFlip { get; set; }
+
         [JsonProperty("connectionId")]
         public string ConnectionId { get; set; }
 
@@ -65,6 +68,52 @@ namespace TripleTriadRefresh.Server.Models
         public void Play(Game game, CardCommand command)
         {
             game.PlaceCard(this.ConnectionId, command.CardId, command.Position);
+        }
+
+        public void UpdateStanding(DbGameResult gameResult)
+        {
+            var standing = DbRepository.Current.Single<DbStanding>(s => s.PlayerId == DbEntity.Id && s.SeasonId == gameResult.Season.Id);
+            if (standing == null)
+            {
+                standing = new DbStanding();
+                standing.Id = (int)DbRepository.Current.Add(standing);
+            }
+
+            standing.Player = DbEntity;
+            standing.Season = gameResult.Season;
+
+            double expMod = gameResult.WinnerHandStrength - gameResult.DefeatedHandStrength;
+            if (expMod < 0)
+            {
+                expMod = 1 / Math.Abs(expMod);
+            }
+
+            if (gameResult.WinnerId == DbEntity.Id)
+            {
+                standing.Won += 1;
+                standing.CardPoints += gameResult.WinnerScore - 5;
+                standing.Experience += (int)(CardsFlip * 10 / expMod);
+            }
+            else if (gameResult.DefeatedId == DbEntity.Id)
+            {
+                standing.Lost += 1;
+                standing.Experience += (int)(CardsFlip / expMod);
+            }
+            else
+            {
+                standing.Draw += 1;
+                standing.Experience += (int)(CardsFlip * 5 / expMod);
+            }
+
+            if (standing.Experience < 0)
+            {
+                standing.Experience = 0;
+            }
+
+            standing.UnlockedRules = Data.Models.Rules.Open;
+            standing.UnlockedTradeRules = Data.Models.TradeRules.Direct;
+
+            DbRepository.Current.Update(standing);
         }
     }
 }

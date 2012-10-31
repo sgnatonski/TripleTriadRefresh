@@ -1,11 +1,12 @@
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SQLite;
 using System.Linq;
+using System.Reflection;
+using System.Transactions;
 using SubSonic.DataProviders;
 using SubSonic.Repository;
-using System.Collections.Generic;
-using System.Reflection;
 
 namespace TripleTriadRefresh.Data
 {
@@ -24,6 +25,26 @@ namespace TripleTriadRefresh.Data
         }
 
         public static SimpleRepository Current { get; set; }
+
+        public static void Transacted(Action execute)
+        {
+            using (var ts = new TransactionScope())
+            {
+                using (var scs = new SharedDbConnectionScope())
+                {
+                    try
+                    {
+                        execute();
+                        ts.Complete();
+                    }
+                    catch (Exception ex)
+                    {
+                        ts.Dispose();
+                        throw;
+                    }
+                }
+            }
+        }
 
         private static void InitializeTables()
         {
@@ -57,10 +78,10 @@ namespace TripleTriadRefresh.Data
         private static IEnumerable<Type> ScanFor<T>()
         {
             var baseType = typeof(T);
-            return Assembly.GetExecutingAssembly().GetTypes().Where(t => 
-                t != baseType && 
-                baseType.IsAssignableFrom(t) && 
-                !t.GetCustomAttributes(false).Any(x => x.GetType() == typeof(IgnoreCreateTableAttribute)) 
+            return Assembly.GetExecutingAssembly().GetTypes().Where(t =>
+                t != baseType &&
+                baseType.IsAssignableFrom(t) &&
+                !t.GetCustomAttributes(false).Any(x => x.GetType() == typeof(IgnoreCreateTableAttribute))
                 );
         }
     }

@@ -140,6 +140,9 @@
     <Content Include="scripts\app\app.js">
       <DependentUpon>app.ts</DependentUpon>
     </Content>
+    <Content Include="scripts\ui\view\game-view.js.map">
+      <DependentUpon>game-view.ts</DependentUpon>
+    </Content>
     <TypeScriptCompile Include="scripts\app\app.ts" />
     <TypeScriptCompile Include="scripts\ui\button.ts" />
     <TypeScriptCompile Include="scripts\dto\game.ts" />

@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using SignalR.Hubs;
 using StructureMap;
@@ -48,6 +46,11 @@ namespace TripleTriadRefresh.Server.Hubs
         public void GetOwnedCards()
         {
             this.GetHandler().GetOwnedCards();
+        }
+
+        public void ResolveGame(string gameId)
+        {
+            this.GetHandler().ResolveGame(gameId);
         }
 
         public Task Disconnect()

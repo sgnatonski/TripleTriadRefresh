@@ -1,13 +1,13 @@
 using System;
 using System.Linq;
-using TripleTriadRefresh.Data.Models;
-using TripleTriadRefresh.Server.Models;
-using TripleTriadRefresh.Data;
-using TripleTriadRefresh.Server.Framework.Aspects.Attributes;
-using TripleTriadRefresh.Data.Domain;
-using TripleTriadRefresh.Server.Models.System;
-using TripleTriadRefresh.Server.Framework;
 using System.Threading.Tasks;
+using TripleTriadRefresh.Data;
+using TripleTriadRefresh.Data.Domain;
+using TripleTriadRefresh.Data.Models;
+using TripleTriadRefresh.Server.Framework;
+using TripleTriadRefresh.Server.Framework.Aspects.Attributes;
+using TripleTriadRefresh.Server.Models;
+using TripleTriadRefresh.Server.Models.System;
 
 namespace TripleTriadRefresh.Server.Hubs.Handlers
 {
@@ -33,7 +33,7 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
             Games.AddGame(game);
 
             Hub.Groups.Add(Hub.Context.ConnectionId, game.GameId);
-            
+
             BroadcastGameList();
             Hub.Caller.updateBoard(game);
             Hub.Caller.gameJoined(game.GameId);
@@ -47,7 +47,7 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
 
             var ai = new AiPlayer(2, 4) { IsReady = true, ConnectionId = "ai_" + IdGenerator.GenerateId() };
             ai.CreatePlayHand();
-            
+
             var game = new Game(player, Rules.Open, TradeRules.One, GameEnded);
             game.SecondPlayer = ai;
             game.AiMove = AiMove;
@@ -189,6 +189,21 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
             }
         }
 
+        [RequireLogin]
+        public void ResolveGame(string gameId)
+        {
+            var game = Games.GetGame(Hub.Context);
+
+            if (game != null)
+            {
+                Hub.Caller.gameResolve(new { });
+            }
+            else
+            {
+                Hub.Caller.receiveError("Game doesn't exist");
+            }
+        }
+
         public void Disconnect()
         {
             var game = Games.GetGame(Hub.Context);
@@ -213,7 +228,7 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
         {
             game.ReconnectTimer.Stop();
             var player = game.GetCurrentPlayer(Hub.Context.ConnectionId);
-            if (player != null) 
+            if (player != null)
                 player.IsReady = true;
 
             Hub.Clients[game.GameId].updateBoard(game);
@@ -224,7 +239,7 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
         {
             var player = game.GetCurrentPlayer(Hub.Context.ConnectionId);
             if (player != null)
-                player.IsReady = false; 
+                player.IsReady = false;
             game.ReconnectTimer.Interval = reconnectTimeInSec * 1000;
             game.ReconnectTimer.Start();
 
@@ -234,19 +249,48 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
 
         private void GameEnded(Game game)
         {
-            var newResult = new DbGameResult()
+            DbRepository.Transacted(() =>
             {
-                Winner = game.Winner.DbEntity,
-                Defeated = game.GetOpponent(game.Winner).DbEntity,
-                WinnerScore = game.GetWinnerScore(),
-                Rules = game.Rules,
-                TradeRules = game.TradeRule,
-                DateCreated = DateTime.Now,
-                DateModified = DateTime.Now,
-                CreatedBy = game.GetCurrentPlayer(Hub.Context.ConnectionId).UserName,
-                ModifiedBy = game.GetCurrentPlayer(Hub.Context.ConnectionId).UserName
-            };
-            DbRepository.Current.Add(newResult);
+                var season = DbRepository.Current.Single<DbSeason>(s => true);
+
+                if (season == null)
+                {
+                    DbRepository.Current.Add(new DbSeason() { Name = "Season 1", CreatedBy = "SYSTEM", ModifiedBy = "SYSTEM" });
+                    season = DbRepository.Current.Single<DbSeason>(s => true);
+                }
+
+                var newResult = new DbGameResult()
+                {
+                    GameId = game.GameId,
+                    Rules = game.Rules,
+                    TradeRules = game.TradeRule,
+                    DateCreated = DateTime.Now,
+                    DateModified = DateTime.Now,
+                    CreatedBy = game.GetCurrentPlayer(Hub.Context.ConnectionId).UserName,
+                    ModifiedBy = game.GetCurrentPlayer(Hub.Context.ConnectionId).UserName,
+                    Resolved = false,
+                    Season = season
+                };
+
+                if (game.Winner != null)
+                {
+                    newResult.Winner = game.Winner.DbEntity;
+                    newResult.WinnerHandStrength = game.Winner.Hand.HandStrength;
+                    newResult.Defeated = game.GetOpponent(game.Winner).DbEntity;
+                    newResult.DefeatedHandStrength = game.GetOpponent(game.Winner).Hand.HandStrength;
+                    newResult.WinnerScore = game.GetWinnerScore();
+                }
+                else
+                {
+                    newResult.WinnerHandStrength = game.GetCurrentPlayer(Hub.Context.ConnectionId).Hand.HandStrength;
+                    newResult.DefeatedHandStrength = game.GetOpponent(Hub.Context.ConnectionId).Hand.HandStrength;
+                }
+
+                DbRepository.Current.Add(newResult);
+
+                game.FirstPlayer.UpdateStanding(newResult);
+                game.SecondPlayer.UpdateStanding(newResult);
+            });
 
             Games.RemoveGame(game);
             BroadcastGameList();
