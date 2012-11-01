@@ -1,10 +1,8 @@
-using System;
 using AspectMap;
 using SignalR;
+using TripleTriadRefresh.Server.Framework.Aspects.Attributes;
 using TripleTriadRefresh.Server.Framework.Aspects.Interceptors;
 using TripleTriadRefresh.Server.Hubs.Handlers;
-using TripleTriadRefresh.Server.Framework.Aspects.Attributes;
-using Newtonsoft.Json;
 
 namespace TripleTriadRefresh.Server.Framework
 {
@@ -14,6 +12,7 @@ namespace TripleTriadRefresh.Server.Framework
         {
             ForAspect<HandleErrorAttribute>().WithPriority(0).HandleWith<HandleErrorInterceptor>();
             ForAspect<RequireLoginAttribute>().WithPriority(1).HandleWith<RequireLoginInterceptor>();
+            ForAspect<GameInjectAttribute>().WithPriority(2).HandleWith<GameInjectInterceptor>();
 
             For<IDependencyResolver>().Use<StructureMapDependencyResolver>();
             For<IJsonSerializer>().Use<CamelCaseJsonSerializer>();

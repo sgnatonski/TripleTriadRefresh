@@ -16,6 +16,8 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
         private GameHub Hub { get; set; }
         private IGameContainer Games { get; set; }
 
+        public const string GameNotFoundError = "Game doesn't exist";
+
         public GameHubHandler(GameHub hub, IGameContainer games)
         {
             Hub = hub;
@@ -60,162 +62,118 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
             Hub.Caller.gameJoined(game.GameId);
         }
 
+        [GameInject(1, 0, GameHubHandler.GameNotFoundError)]
         [RequireLogin]
-        public void JoinGame(string gameId)
+        public void JoinGame(string gameId, Game game)
         {
-            var game = gameId == null ? Games.GetGame(Hub.Context) : Games.GetGame(gameId);
+            Hub.Groups.Add(Hub.Context.ConnectionId, game.GameId);
 
-            if (game != null)
+            if (game.CanJoin)
             {
-                Hub.Groups.Add(Hub.Context.ConnectionId, game.GameId);
-
-                if (game.CanJoin)
+                if (game.FirstPlayer.ConnectionId != Hub.Context.ConnectionId)
                 {
-                    //if (game.FirstPlayer.ConnectionId != Hub.Context.ConnectionId)
+                    game.SecondPlayer = new Player()
                     {
-                        game.SecondPlayer = new Player()
-                        {
-                            User = Hub.Context.User,
-                            ConnectionId = Hub.Context.ConnectionId
-                        };
-                        game.SecondPlayer.CreatePlayHand();
+                        User = Hub.Context.User,
+                        ConnectionId = Hub.Context.ConnectionId
+                    };
+                    game.SecondPlayer.CreatePlayHand();
 
-                        BroadcastGameList();
-                        Hub.Clients[game.GameId].updateBoard(game);
-                        Hub.Caller.gameJoined(game.GameId);
-                    }
-                }
-                else
-                {
-                    Hub.Caller.updateBoard(game);
+                    BroadcastGameList();
+                    Hub.Clients[game.GameId].updateBoard(game);
                     Hub.Caller.gameJoined(game.GameId);
                 }
             }
             else
             {
-                Hub.Caller.receiveError("Game doesn't exist");
+                Hub.Caller.updateBoard(game);
+                Hub.Caller.gameJoined(game.GameId);
             }
         }
 
+        [GameInject(0, GameHubHandler.GameNotFoundError)]
         [RequireLogin]
-        public void LeaveGame()
+        public void LeaveGame(Game game)
         {
-            var game = Games.GetGame(Hub.Context);
+            Hub.Groups.Remove(Hub.Context.ConnectionId, game.GameId);
 
-            if (game != null)
+            var gameChanged = false;
+            if (game.FirstPlayer.ConnectionId == Hub.Context.ConnectionId)
             {
-                Hub.Groups.Remove(Hub.Context.ConnectionId, game.GameId);
+                game.MakeOwner(game.SecondPlayer);
 
-                var gameChanged = false;
-                if (game.FirstPlayer.ConnectionId == Hub.Context.ConnectionId)
+                if (game.FirstPlayer is AiPlayer)
                 {
-                    game.MakeOwner(game.SecondPlayer);
-
-                    if (game.FirstPlayer is AiPlayer)
-                    {
-                        game.MakeOwner(null);
-                    }
-                    gameChanged = true;
+                    game.MakeOwner(null);
                 }
-                else if (game.SecondPlayer != null && game.SecondPlayer.ConnectionId == Hub.Context.ConnectionId)
+                gameChanged = true;
+            }
+            else if (game.SecondPlayer != null && game.SecondPlayer.ConnectionId == Hub.Context.ConnectionId)
+            {
+                game.SecondPlayer = null;
+                gameChanged = true;
+            }
+
+            if (gameChanged)
+            {
+                if (game.FirstPlayer == null && game.SecondPlayer == null)
                 {
-                    game.SecondPlayer = null;
-                    gameChanged = true;
+                    Games.RemoveGame(game);
                 }
 
-                if (gameChanged)
-                {
-                    if (game.FirstPlayer == null && game.SecondPlayer == null)
-                    {
-                        Games.RemoveGame(game);
-                    }
-
-                    BroadcastGameList();
-                    Hub.Clients[game.GameId].updateBoard(game);
-                }
+                BroadcastGameList();
+                Hub.Clients[game.GameId].updateBoard(game);
             }
 
             Hub.Caller.gameLeft();
         }
 
+        [GameInject(0, GameHubHandler.GameNotFoundError)]
         [RequireLogin]
-        public void DeclareReady()
+        public void DeclareReady(Game game)
         {
-            var game = Games.GetGame(Hub.Context);
-
-            if (game != null)
+            var player = game.GetCurrentPlayer(Hub.Context.ConnectionId);
+            if (!player.IsReady)
             {
-                var player = game.GetCurrentPlayer(Hub.Context.ConnectionId);
-                if (!player.IsReady)
+                player.IsReady = true;
+
+                if (new Random().Next(0, 10) > 5)
                 {
-                    player.IsReady = true;
-
-                    if (new Random().Next(0, 10) > 5)
-                    {
-                        game.NextPlayer();
-                    }
+                    game.NextPlayer();
                 }
+            }
 
-                Hub.Clients[game.GameId].updateBoard(game);
-            }
-            else
-            {
-                Hub.Caller.receiveError("Game doesn't exist");
-            }
+            Hub.Clients[game.GameId].updateBoard(game);
         }
 
+        [GameInject(2, GameHubHandler.GameNotFoundError)]
         [RequireLogin]
-        public void PlaceCard(string id, int position)
+        public void PlaceCard(string id, int position, Game game)
         {
-            var game = Games.GetGame(Hub.Context);
-
-            if (game != null)
+            if (game.CurrentPlayer != game.GetCurrentPlayer(Hub.Context.ConnectionId))
             {
-                if (game.CurrentPlayer != game.GetCurrentPlayer(Hub.Context.ConnectionId))
-                {
-                    Hub.Caller.receiveError("Wait for your turn");
-                    Hub.Caller.updateBoard(game);
-                    return;
-                }
-
-                game.CurrentPlayer.Play(game, new CardCommand(id, position));
-
-                Hub.Clients[game.GameId].updateBoard(game);
+                Hub.Caller.receiveError("Wait for your turn");
+                Hub.Caller.updateBoard(game);
+                return;
             }
-            else
-            {
-                Hub.Caller.receiveError("Game doesn't exist");
-            }
+
+            game.CurrentPlayer.Play(game, new CardCommand(id, position));
+
+            Hub.Clients[game.GameId].updateBoard(game);
         }
 
+        [GameInject(0, GameHubHandler.GameNotFoundError)]
         [RequireLogin]
-        public void GetOwnedCards()
+        public void GetOwnedCards(Game game)
         {
-            var game = Games.GetGame(Hub.Context);
-
-            if (game != null)
-            {
-                Hub.Caller.receiveWonCards(game.GetWonCards(game.Winner).ToList());
-            }
-            else
-            {
-                Hub.Caller.receiveError("Game doesn't exist");
-            }
+            Hub.Caller.receiveWonCards(game.GetWonCards(game.Winner).ToList());
         }
 
+        [GameInject(1, GameHubHandler.GameNotFoundError)]
         [RequireLogin]
-        public void ResolveGame(string gameId)
+        public void ResolveGame(string gameId, Game game)
         {
-            var game = Games.GetGame(Hub.Context);
-
-            if (game != null)
-            {
-                Hub.Caller.gameResolve(new { });
-            }
-            else
-            {
-                Hub.Caller.receiveError("Game doesn't exist");
-            }
+            Hub.Caller.gameResolve(new { });
         }
 
         public void Disconnect()
@@ -263,10 +221,12 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
 
         private void GameEnded(Game game)
         {
+            // TODO: if called by ai player error wont be handled by interceptor
             GameResult result = null;
             DbRepository.Transacted(() =>
             {
                 result = new GameResult(game);
+                DbRepository.Current.Add(result.DbEntity);
                 game.FirstPlayer.UpdateStanding(result.GetFor(game.FirstPlayer));
                 game.SecondPlayer.UpdateStanding(result.GetFor(game.SecondPlayer));
             });

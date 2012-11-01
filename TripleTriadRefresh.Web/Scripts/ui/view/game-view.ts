@@ -64,6 +64,13 @@ class GameView extends View {
         });
 
         this.placeCard = (index: number) => {
+            var row = parseInt(((index - 1) / 3).toString(), 10);
+            var col = (index - 1) % 3;
+            this.dragging().position(index);
+            this.dragging().confirmed(false);
+            this.game().board()[row]()[col] = this.dragging();
+            this.game().board()[row].valueHasMutated();
+
             this.connection.placeCard(this.dragging().id(), index);
             this.dragging(null);
         }

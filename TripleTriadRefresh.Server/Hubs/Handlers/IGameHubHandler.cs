@@ -1,4 +1,5 @@
-﻿namespace TripleTriadRefresh.Server.Hubs.Handlers
+﻿using TripleTriadRefresh.Server.Models.System;
+namespace TripleTriadRefresh.Server.Hubs.Handlers
 {
     public interface IGameHubHandler
     {
@@ -6,17 +7,17 @@
 
         void CreateGameWithAi();
 
-        void JoinGame(string gameId);
+        void JoinGame(string gameId, Game game = null);
 
-        void LeaveGame();
+        void LeaveGame(Game game = null);
 
-        void DeclareReady();
+        void DeclareReady(Game game = null);
 
-        void PlaceCard(string id, int position);
+        void PlaceCard(string id, int position, Game game = null);
 
-        void GetOwnedCards();
+        void GetOwnedCards(Game game = null);
 
-        void ResolveGame(string gameId);
+        void ResolveGame(string gameId, Game game = null);
 
         void Disconnect();
 

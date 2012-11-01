@@ -9,8 +9,9 @@ class Card {
     strength = ko.observable(0);
     elemental = ko.observable(0);
     image = ko.observable('');
+    confirmed = ko.observable(true);
 
     constructor (data: any) {
-        ko.mapping.fromJS(data, {}, this);            
+        ko.mapping.fromJS(data, {}, this);
     }
 }

@@ -27,8 +27,6 @@ namespace TripleTriadRefresh.Server.Models
             };
 
             Compute(game);
-
-            DbRepository.Current.Add(DbEntity);
         }
 
         public GameResult(int gameResultId, int playerId)

@@ -47,6 +47,12 @@
     <Reference Include="Facebook">
       <HintPath>..\packages\Facebook.6.0.24\lib\net40-client\Facebook.dll</HintPath>
     </Reference>
+    <Reference Include="Fasterflect">
+      <HintPath>..\packages\fasterflect.2.1.0\lib\net40\Fasterflect.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.11\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -130,10 +136,10 @@
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\Result\JsonNetResult.cs" />
     <Compile Include="Controllers\Result\LoginResult.cs" />
-    <Compile Include="Framework\Aspects\Attributes\GetMethodsAttribute.cs" />
+    <Compile Include="Framework\Aspects\Attributes\GameInjectAttribute.cs" />
     <Compile Include="Framework\Aspects\Attributes\HandleErrorAttribute.cs" />
     <Compile Include="Framework\Aspects\Attributes\RequireLoginAttribute.cs" />
-    <Compile Include="Framework\Aspects\Interceptors\GetMethodsInterceptor.cs" />
+    <Compile Include="Framework\Aspects\Interceptors\GameInjectInterceptor.cs" />
     <Compile Include="Framework\Aspects\Interceptors\HandleErrorInterceptor.cs" />
     <Compile Include="Framework\Aspects\Interceptors\RequireLoginInterceptor.cs" />
     <Compile Include="Framework\GameConnectionGenerator.cs" />

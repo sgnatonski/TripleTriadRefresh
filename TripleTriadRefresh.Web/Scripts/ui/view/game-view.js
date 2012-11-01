@@ -64,6 +64,12 @@ var GameView = (function (_super) {
             }
         });
         this.placeCard = function (index) {
+            var row = parseInt(((index - 1) / 3).toString(), 10);
+            var col = (index - 1) % 3;
+            _this.dragging().position(index);
+            _this.dragging().confirmed(false);
+            _this.game().board()[row]()[col] = _this.dragging();
+            _this.game().board()[row].valueHasMutated();
             _this.connection.placeCard(_this.dragging().id(), index);
             _this.dragging(null);
         };

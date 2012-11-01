@@ -1,6 +1,10 @@
 using System;
 using System.Diagnostics;
+using System.Text;
+using System.Web;
 using Castle.DynamicProxy;
+using Fasterflect;
+using TripleTriadRefresh.Server.Hubs;
 
 namespace TripleTriadRefresh.Server.Framework.Aspects.Interceptors
 {
@@ -16,8 +20,17 @@ namespace TripleTriadRefresh.Server.Framework.Aspects.Interceptors
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine(i.Method.Name + " throws exception: " + ex.Message);
-                    Debug.WriteLine(i.Method.Name + ": " + ex.StackTrace);
+                    var sb = new StringBuilder();
+                    sb.AppendLine(i.Method.Name + " throws exception: " + ex.Message);
+                    sb.AppendLine(HttpContext.Current.Request.UrlReferrer.ToString());
+                    sb.AppendLine(HttpContext.Current.Request.UserAgent);
+                    sb.AppendLine(HttpContext.Current.User.Identity.Name);
+
+                    Debug.WriteLine(sb.ToString());
+                    log4net.LogManager.GetLogger(i.TargetType.FullName).Error(sb.ToString(), ex);
+
+                    var hub = (GameHub)i.InvocationTarget.GetPropertyValue("Hub", Flags.AllMembers);
+                    hub.Caller.receiveError("Something bad happened.");
                 }
             };
         }

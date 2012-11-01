@@ -23,7 +23,7 @@
                     <ul data-bind="foreach: $data, attr: {index: $index}" class="boardContainer">
                         <li data-bind="if: $data, drop: {onDropComplete: $parents[1].placeCard}, attr: {index: $index}">
                             <div data-bind="css: { playerField: ownedBy() == app.getConnectionId(), enemyField: ownedBy() != app.getConnectionId() }">
-                                <img data-bind="attr: {src: image}"/>
+                                <img data-bind="attr: {src: image}, style: { opacity: confirmed() ? 1 : 0.5 }"/>
                             </div>
                         </li>
                     </ul>

@@ -9,6 +9,12 @@ class Hand {
     constructor (data: any) {
         if (data) {
             ko.mapping.fromJS(data, {}, this);
+            var cards = [];
+            ko.utils.arrayForEach(data.playCards, (value) => {
+                cards.push(new Card(value));
+            });
+
+            this.playCards(cards);
         }
     }
 }

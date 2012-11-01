@@ -8,6 +8,7 @@ var Card = (function () {
         this.strength = ko.observable(0);
         this.elemental = ko.observable(0);
         this.image = ko.observable('');
+        this.confirmed = ko.observable(true);
         ko.mapping.fromJS(data, {
         }, this);
     }

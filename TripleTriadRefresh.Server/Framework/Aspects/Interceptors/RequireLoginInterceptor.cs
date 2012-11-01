@@ -2,6 +2,8 @@ using System;
 using System.Web;
 using System.Web.Security;
 using Castle.DynamicProxy;
+using Fasterflect;
+using TripleTriadRefresh.Server.Hubs;
 
 namespace TripleTriadRefresh.Server.Framework.Aspects.Interceptors
 {
@@ -19,7 +21,9 @@ namespace TripleTriadRefresh.Server.Framework.Aspects.Interceptors
                 {
                     FormsAuthentication.SignOut();
                     HttpContext.Current.Request.Cookies.Remove(FormsAuthentication.FormsCookieName);
-                    throw new HttpException(401, "Unauthorized access");
+
+                    var hub = (GameHub)i.InvocationTarget.GetPropertyValue("Hub", Flags.AllMembers);
+                    hub.Caller.receiveError("Unauthorized access.");
                 }
             };
         }

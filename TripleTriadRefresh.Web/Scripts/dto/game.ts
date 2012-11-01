@@ -27,6 +27,21 @@ class Game {
     constructor (data: any) {
         if (data) {
             ko.mapping.fromJS(data, {}, this);
+            this.firstPlayer(new Player(data.firstPlayer));
+            this.secondPlayer(new Player(data.secondPlayer));
+
+            var boardRows = [];
+            ko.utils.arrayForEach(data.board, (value) => {
+                var row = [null, null, null];
+                ko.utils.arrayForEach(value, (tile) => {
+                    if (tile) {
+                        row[(tile.position - 1) % 3] = new Card(tile);
+                    }
+                });
+                boardRows.push(ko.observableArray(row));
+            });
+
+            this.board(boardRows);
         }
 
         this.isStarted = ko.computed(function () {

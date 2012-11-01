@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +17,9 @@ namespace TripleTriadRefresh.Server.Framework
 
         public Game GetGame(string gameId)
         {
-            return games[gameId];
+            Game game = null;
+            games.TryGetValue(gameId, out game);
+            return game;
         }
 
         public Game GetGame(HubCallerContext context)

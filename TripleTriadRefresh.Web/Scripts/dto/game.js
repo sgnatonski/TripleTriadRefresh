@@ -18,6 +18,23 @@ var Game = (function () {
         if(data) {
             ko.mapping.fromJS(data, {
             }, this);
+            this.firstPlayer(new Player(data.firstPlayer));
+            this.secondPlayer(new Player(data.secondPlayer));
+            var boardRows = [];
+            ko.utils.arrayForEach(data.board, function (value) {
+                var row = [
+                    null, 
+                    null, 
+                    null
+                ];
+                ko.utils.arrayForEach(value, function (tile) {
+                    if(tile) {
+                        row[(tile.position - 1) % 3] = new Card(tile);
+                    }
+                });
+                boardRows.push(ko.observableArray(row));
+            });
+            this.board(boardRows);
         }
         this.isStarted = ko.computed(function () {
             return this.firstPlayer().isReady() && this.secondPlayer().isReady() && this.inProgress();

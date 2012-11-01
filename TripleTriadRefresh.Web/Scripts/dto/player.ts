@@ -10,6 +10,7 @@ class Player {
     constructor (data: any) {
         if (data) {
             ko.mapping.fromJS(data, {}, this);
+            this.hand(new Hand(data.hand));
         }
     }
 }
