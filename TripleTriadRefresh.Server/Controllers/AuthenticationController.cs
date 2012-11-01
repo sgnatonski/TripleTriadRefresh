@@ -4,7 +4,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using Newtonsoft.Json.Linq;
-using TripleTriadRefresh.Data;
 using TripleTriadRefresh.Server.Controllers.Result;
 using TripleTriadRefresh.Server.Framework;
 using TripleTriadRefresh.Server.Models;
@@ -28,7 +27,7 @@ namespace TripleTriadRefresh.Server.Controllers
             var fb = new Facebook.FacebookClient(accessToken);
             dynamic user = fb.Get("me");
 
-            this.CreateUserIfNotExists(user.id);
+            this.ActivateUser(user.id);
             this.CreateAuthenticationCookie(accessToken, user);
 
             return new LoginResult(user.id);
@@ -39,7 +38,7 @@ namespace TripleTriadRefresh.Server.Controllers
         {
             if (Debugger.IsAttached)
             {
-                this.CreateUserIfNotExists(id);
+                this.ActivateUser(id);
                 this.CreateAuthenticationCookie(string.Empty, new { name = id, id = id });
 
                 return new LoginResult(id);
@@ -50,24 +49,22 @@ namespace TripleTriadRefresh.Server.Controllers
         [HttpPost]
         public void Logout()
         {
+            new Player().Logout();
             FormsAuthentication.SignOut();
             Response.Cookies.Remove(FormsAuthentication.FormsCookieName);
             Response.Redirect(Request.UrlReferrer.ToString(), false);
         }
 
-        private void CreateUserIfNotExists(string id)
+        private void ActivateUser(string id)
         {
             IPlayer player = Debugger.IsAttached ? new Player(id) : new Player();
 
             if (player.DbEntity == null)
             {
-                playerActivator.Activate(id);
+                player = playerActivator.Activate(id);
             }
-            else
-            {
-                player.DbEntity.LastSeen = DateTime.Now;
-                DbRepository.Current.Update(player.DbEntity);
-            }
+
+            player.Login();
         }
 
         private void CreateAuthenticationCookie(string accessToken, dynamic user)

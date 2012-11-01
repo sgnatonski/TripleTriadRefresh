@@ -1,19 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using TripleTriadRefresh.Data.Domain;
 using TripleTriadRefresh.Data;
+using TripleTriadRefresh.Data.Domain;
+using TripleTriadRefresh.Server.Models;
 
 namespace TripleTriadRefresh.Server.Framework
 {
     public class PlayerActivator : IPlayerActivator
     {
-        public void Activate(string id)
+        public IPlayer Activate(string id)
         {
-            var newPlayer = new DbPlayer() { ExternalId = id, ExternalType = "FB", LastSeen = DateTime.Now };
-            DbRepository.Current.Add(newPlayer);
+            DbRepository.Transacted(() =>
+            {
+                var newPlayer = new DbPlayer() { ExternalId = id, ExternalType = "FB" };
+                DbRepository.Current.Add(newPlayer);
 
-            CreateInitialDeck(newPlayer);
+                CreateInitialDeck(newPlayer);
+            });
+
+            return new Player(id);
         }
 
         private void CreateInitialDeck(DbPlayer newPlayer)

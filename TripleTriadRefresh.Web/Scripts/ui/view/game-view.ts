@@ -2,15 +2,19 @@
 /// <reference path="../view.ts" />
 /// <reference path="../../dto/card.ts" />
 /// <reference path="../../dto/game.ts" />
+/// <reference path="../../dto/game-result.ts" />
 
 class GameView extends View {
     viewName = "game-view";
     gameId = <string>null;
     game = ko.observable(new Game(null));
+    gameResult = ko.observable(new GameResult(null));
     dragging = ko.observable(<Card>null);
     isReady = ko.observable(false);
     isStarted = ko.observable(false);
-    gameResult = ko.observable('');
+    expDone = ko.observable(false);
+    cardPtsDone = ko.observable(false);
+    closeResultHidden = ko.observable(true);
 
     constructor (gameId? :string, withAi? :bool) {
         super();
@@ -28,14 +32,6 @@ class GameView extends View {
 
         this.connection.updateBoard = (data: any) => {
             this.game(new Game(data));
-
-            if (this.game().winner()) {
-                var result = this.game().firstPlayerScore() === this.game().secondPlayerScore() ? 'Draw' : undefined;
-                if (!result) {
-                    result = this.game().firstPlayerScore() > this.game().secondPlayerScore() ? 'Won' : 'Loose';
-                }
-                this.gameResult(result);
-            }
         };
         this.connection.gameJoined = (data) => {
             window.history.pushState(data, "Game", app.getPathAbs() + data);
@@ -47,8 +43,9 @@ class GameView extends View {
             app.currentGameId('');
             app.view(app.viewFac.createGamesView());
         };
-        this.connection.gameResolve = (data) => {
-            
+        this.connection.receiveResult = (data) => {
+            this.gameResult(new GameResult(data));
+            this.closeResultHidden(this.gameResult().expGain() && this.gameResult().cardPtsGain());
         };
 
         this.startConnection(() => {
@@ -72,10 +69,24 @@ class GameView extends View {
         }
 
         this.resolveGame = () => {
-            this.connection.resolveGame(this.gameId);
+            //this.connection.resolveGame(this.gameId);
         }
+
+        this.closeResult = () => {
+            this.closeResultHidden(true);
+            window.history.pushState(null, "Game list", app.getPathAbs());
+            app.currentGameId('');
+            app.view(app.viewFac.createGamesView());
+        }
+
+        this.cardPtsDone.subscribe((val) => {
+            if (val) {
+                this.closeResultHidden(false);
+            }
+        });
     }
 
     placeCard: (index: number) => void;
     resolveGame: () => void;
+    closeResult: () => void;
 }

@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using TripleTriadRefresh.Data;
-using TripleTriadRefresh.Data.Domain;
 using TripleTriadRefresh.Data.Models;
 using TripleTriadRefresh.Server.Framework;
 using TripleTriadRefresh.Server.Framework.Aspects.Attributes;
@@ -111,6 +110,11 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
                 if (game.FirstPlayer.ConnectionId == Hub.Context.ConnectionId)
                 {
                     game.MakeOwner(game.SecondPlayer);
+
+                    if (game.FirstPlayer is AiPlayer)
+                    {
+                        game.MakeOwner(null);
+                    }
                     gameChanged = true;
                 }
                 else if (game.SecondPlayer != null && game.SecondPlayer.ConnectionId == Hub.Context.ConnectionId)
@@ -141,7 +145,17 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
 
             if (game != null)
             {
-                game.GetCurrentPlayer(Hub.Context.ConnectionId).IsReady = true;
+                var player = game.GetCurrentPlayer(Hub.Context.ConnectionId);
+                if (!player.IsReady)
+                {
+                    player.IsReady = true;
+
+                    if (new Random().Next(0, 10) > 5)
+                    {
+                        game.NextPlayer();
+                    }
+                }
+
                 Hub.Clients[game.GameId].updateBoard(game);
             }
             else
@@ -249,52 +263,18 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
 
         private void GameEnded(Game game)
         {
+            GameResult result = null;
             DbRepository.Transacted(() =>
             {
-                var season = DbRepository.Current.Single<DbSeason>(s => true);
-
-                if (season == null)
-                {
-                    DbRepository.Current.Add(new DbSeason() { Name = "Season 1", CreatedBy = "SYSTEM", ModifiedBy = "SYSTEM" });
-                    season = DbRepository.Current.Single<DbSeason>(s => true);
-                }
-
-                var newResult = new DbGameResult()
-                {
-                    GameId = game.GameId,
-                    Rules = game.Rules,
-                    TradeRules = game.TradeRule,
-                    DateCreated = DateTime.Now,
-                    DateModified = DateTime.Now,
-                    CreatedBy = game.GetCurrentPlayer(Hub.Context.ConnectionId).UserName,
-                    ModifiedBy = game.GetCurrentPlayer(Hub.Context.ConnectionId).UserName,
-                    Resolved = false,
-                    Season = season
-                };
-
-                if (game.Winner != null)
-                {
-                    newResult.Winner = game.Winner.DbEntity;
-                    newResult.WinnerHandStrength = game.Winner.Hand.HandStrength;
-                    newResult.Defeated = game.GetOpponent(game.Winner).DbEntity;
-                    newResult.DefeatedHandStrength = game.GetOpponent(game.Winner).Hand.HandStrength;
-                    newResult.WinnerScore = game.GetWinnerScore();
-                }
-                else
-                {
-                    newResult.WinnerHandStrength = game.GetCurrentPlayer(Hub.Context.ConnectionId).Hand.HandStrength;
-                    newResult.DefeatedHandStrength = game.GetOpponent(Hub.Context.ConnectionId).Hand.HandStrength;
-                }
-
-                DbRepository.Current.Add(newResult);
-
-                game.FirstPlayer.UpdateStanding(newResult);
-                game.SecondPlayer.UpdateStanding(newResult);
+                result = new GameResult(game);
+                game.FirstPlayer.UpdateStanding(result.GetFor(game.FirstPlayer));
+                game.SecondPlayer.UpdateStanding(result.GetFor(game.SecondPlayer));
             });
 
             Games.RemoveGame(game);
             BroadcastGameList();
             Hub.Clients[game.GameId].updateBoard(game);
+            Hub.Caller.receiveResult(result.GetFor(game.GetCurrentPlayer(Hub.Context.ConnectionId)));
         }
 
         private Task AiMove(Game game)

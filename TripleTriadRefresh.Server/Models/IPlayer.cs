@@ -21,8 +21,10 @@ namespace TripleTriadRefresh.Server.Models
         [JsonIgnore]
         int CardsFlip { get; set; }
 
+        void Login();
+        void Logout();
         void CreatePlayHand();
         void Play(Game game, CardCommand command);
-        void UpdateStanding(DbGameResult gameResult);
+        void UpdateStanding(GameResult gameResult);
     }
 }

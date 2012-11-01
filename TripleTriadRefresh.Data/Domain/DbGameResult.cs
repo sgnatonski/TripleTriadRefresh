@@ -13,6 +13,10 @@ namespace TripleTriadRefresh.Data.Domain
         public double DefeatedHandStrength { get; set; }
         public double WinnerCardsFlip { get; set; }
         public double DefeatedCardsFlip { get; set; }
+        public int WinnerExpGain { get; set; }
+        public int DefeatedExpGain { get; set; }
+        public int WinnerCardPtsGain { get; set; }
+        public int DefeatedCardPtsGain { get; set; }
         public bool Resolved { get; set; }
         public Rules Rules { get; set; }
         public TradeRules TradeRules { get; set; }

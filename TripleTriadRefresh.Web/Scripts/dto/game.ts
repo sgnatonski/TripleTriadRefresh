@@ -1,6 +1,9 @@
 /// <reference path="../knockout-2.2.d.ts" />
 /// <reference path="../knockoutmapping-2.0.d.ts" />
 /// <reference path="player.ts" />
+
+declare var app;
+
 class Game {
     gameId = ko.observable(0);
     firstPlayer = ko.observable(new Player(null));
@@ -18,6 +21,8 @@ class Game {
     board = ko.observableArray([]);
     elementsOnBoard = ko.observableArray([]);
     isStarted: () => bool;
+    isFirstPlayerTurn: () => bool;
+    isSecondPlayerTurn: () => bool;
 
     constructor (data: any) {
         if (data) {
@@ -26,6 +31,14 @@ class Game {
 
         this.isStarted = ko.computed(function () {
             return this.firstPlayer().isReady() && this.secondPlayer().isReady() && this.inProgress();
+        }, this);
+
+        this.isFirstPlayerTurn = ko.computed(function () {
+            return this.isStarted() && this.firstPlayer().connectionId() === this.currentPlayer().connectionId();
+        }, this);
+
+        this.isSecondPlayerTurn = ko.computed(function () {
+            return this.isStarted() && this.secondPlayer().connectionId() === this.currentPlayer().connectionId();
         }, this);
     }
 

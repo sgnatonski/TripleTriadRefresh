@@ -8,14 +8,13 @@ interface GameHub extends HubConnection {
     leaveGame();
     declareReady();
     placeCard(id: string, position: number);
-    resolveGame(id: string);
     // client
     receiveError(data: string);
     receiveGames(data: any[]);
     updateBoard(data: any);
     gameJoined(data: any);
     gameLeft();
-    gameResolve(data: any);
+    receiveResult(data: any);
 }
 
 // extend SignalR interface

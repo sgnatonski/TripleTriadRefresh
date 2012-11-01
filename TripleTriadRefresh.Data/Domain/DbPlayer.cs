@@ -1,6 +1,6 @@
 using System;
-using SubSonic.SqlGeneration.Schema;
 using System.Collections.Generic;
+using SubSonic.SqlGeneration.Schema;
 
 namespace TripleTriadRefresh.Data.Domain
 {
@@ -11,6 +11,7 @@ namespace TripleTriadRefresh.Data.Domain
         [SubSonicNullString]
         public string ExternalType { get; set; }
         public DateTime LastSeen { get; set; }
+        public bool IsOnline { get; set; }
 
         public IList<DbCard> Deck
         {

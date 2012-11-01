@@ -39,6 +39,8 @@ interface KnockoutObservableArray extends KnockoutObservableArrayFunctions {
 
     (): KnockoutObservableArray;
     (value: any[]): KnockoutObservableArray;
+
+    valueHasMutated(): void;
 }
 
 interface KnockoutObservable {
@@ -50,6 +52,7 @@ interface KnockoutObservable {
 
     extend(source);
     subscribe(func: Function): KnockoutSubscription;
+    valueHasMutated(): void;
 }
 
 interface KnockoutComputed extends KnockoutObservable {

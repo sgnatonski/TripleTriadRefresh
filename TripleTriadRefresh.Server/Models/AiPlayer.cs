@@ -61,12 +61,20 @@ namespace TripleTriadRefresh.Server.Models
             Hand = new Hand(cards);
         }
 
+        public void Login()
+        {
+        }
+
+        public void Logout()
+        {
+        }
+
         public void Play(Game game, CardCommand command)
         {
             game.PlaceCard(this.ConnectionId, command.CardId, command.Position);
         }
 
-        public void UpdateStanding(DbGameResult gameResult)
+        public void UpdateStanding(GameResult gameResult)
         {
         }
 

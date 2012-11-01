@@ -70,9 +70,9 @@ namespace TripleTriadRefresh.Server.Models
             game.PlaceCard(this.ConnectionId, command.CardId, command.Position);
         }
 
-        public void UpdateStanding(DbGameResult gameResult)
+        public void UpdateStanding(GameResult gameResult)
         {
-            var standing = DbRepository.Current.Single<DbStanding>(s => s.PlayerId == DbEntity.Id && s.SeasonId == gameResult.Season.Id);
+            var standing = DbRepository.Current.Single<DbStanding>(s => s.PlayerId == DbEntity.Id && s.SeasonId == gameResult.DbEntity.SeasonId);
             if (standing == null)
             {
                 standing = new DbStanding();
@@ -80,29 +80,22 @@ namespace TripleTriadRefresh.Server.Models
             }
 
             standing.Player = DbEntity;
-            standing.Season = gameResult.Season;
+            standing.Season = gameResult.DbEntity.Season;
 
-            double expMod = gameResult.WinnerHandStrength - gameResult.DefeatedHandStrength;
-            if (expMod < 0)
-            {
-                expMod = 1 / Math.Abs(expMod);
-            }
+            standing.Experience += gameResult.ExpGain;
 
-            if (gameResult.WinnerId == DbEntity.Id)
+            if (gameResult.Score - 5 > 0)
             {
                 standing.Won += 1;
-                standing.CardPoints += gameResult.WinnerScore - 5;
-                standing.Experience += (int)(CardsFlip * 10 / expMod);
+                standing.CardPoints += gameResult.CardPtsGain;
             }
-            else if (gameResult.DefeatedId == DbEntity.Id)
+            else if (gameResult.Score - 5 < 0)
             {
                 standing.Lost += 1;
-                standing.Experience += (int)(CardsFlip / expMod);
             }
             else
             {
                 standing.Draw += 1;
-                standing.Experience += (int)(CardsFlip * 5 / expMod);
             }
 
             if (standing.Experience < 0)
@@ -114,6 +107,23 @@ namespace TripleTriadRefresh.Server.Models
             standing.UnlockedTradeRules = Data.Models.TradeRules.Direct;
 
             DbRepository.Current.Update(standing);
+        }
+
+        public void Logout()
+        {
+            DbEntity.LastSeen = DateTime.Now;
+            DbEntity.IsOnline = false;
+            DbRepository.Current.Update(DbEntity);
+        }
+
+        public void Login()
+        {
+            if (DbEntity != null)
+            {
+                DbEntity.LastSeen = DateTime.Now;
+                DbEntity.IsOnline = true;
+                DbRepository.Current.Update(DbEntity);
+            }
         }
     }
 }

@@ -22,6 +22,12 @@ var Game = (function () {
         this.isStarted = ko.computed(function () {
             return this.firstPlayer().isReady() && this.secondPlayer().isReady() && this.inProgress();
         }, this);
+        this.isFirstPlayerTurn = ko.computed(function () {
+            return this.isStarted() && this.firstPlayer().connectionId() === this.currentPlayer().connectionId();
+        }, this);
+        this.isSecondPlayerTurn = ko.computed(function () {
+            return this.isStarted() && this.secondPlayer().connectionId() === this.currentPlayer().connectionId();
+        }, this);
     }
     Game.prototype.getPlayer = function () {
         return this.firstPlayer() && this.firstPlayer().connectionId() == app.getConnectionId() ? this.firstPlayer() : this.secondPlayer();

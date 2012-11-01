@@ -154,6 +154,7 @@
     <Compile Include="Hubs\GameHub.cs" />
     <Compile Include="Hubs\Handlers\GameHubHandler.cs" />
     <Compile Include="Hubs\Handlers\IGameHubHandler.cs" />
+    <Compile Include="Models\GameResult.cs" />
     <Compile Include="Models\System\ExperienceLevels.cs" />
     <Compile Include="Scripts\Ai\Mind.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

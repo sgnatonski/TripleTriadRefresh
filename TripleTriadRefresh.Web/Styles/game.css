@@ -2,38 +2,38 @@
 @reference "common.css";
 */
 #game
-{    
-    position:absolute; 
-    top:0; 
-    bottom:0; 
-    left:0; 
-    right:0; 
-    margin:auto; 
-    height:580px; 
-    width:800px;
-    
-    -webkit-touch-callout: none;
+{
+	bottom: 0;
+	height: 580px;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	width: 800px;
 }
 
 #games
 {
-	position: relative;
-	margin: 0 auto;
-	width: 600px;
 	height: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
+	position: relative;
+	width: 600px;
 }
 
 #deck
 {
-	position: relative;
-	margin: 0 auto;
-	width: 600px;
 	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	width: 600px;
 }
 
 .deck ul
@@ -43,111 +43,203 @@
 
 .game-header
 {
-	height: 30px;
 	line-height: 30px;
+	min-height: 30px;
 	text-align: center;
 }
-    
-#board
+
+	.game-header ul,
+	.game-header #enemy-cards
+	{
+		height: 519px;
+	}
+
+#board-container
 {
-    position: absolute;
-    left: 150px;
-    right: 150px;
-}
-    
-#board > ul
-{
-    list-style-type: none;
-    padding-left: 80px;
-    height: 135px;
-	margin: 0px;
+	height: 578px;
+	left: 150px;
+	position: absolute;
+	right: 150px;
 }
 
-#board > ul > li
-{
-	display: inline-block;
-	width: 118px;
-	height: 100%;
-	vertical-align: top;
-	margin-left: -4px;
-	border: 1px solid black;
-}
+	#board-container > div#board
+	{
+		height: 486px;
+		padding-top: 40px;
+	}
 
-#board > ul > li > div
-{
-	width: 100%;
-	height: 100%;
-}
+		#board-container > div#board > div
+		{
+		}
 
-#board > ul > li > div.playerField
-{
-	background-color: rgba(0, 0, 255, 0.4);
-}
+	#board-container > div > div > ul
+	{
+		height: 150px;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
 
-#board > ul > li > div.enemyField
-{
-	background-color: rgba(255, 0, 0, 0.4);
-}
+		#board-container > div > div > ul > li
+		{
+			border: 2px ridge rgb(126, 126, 126);
+			-moz-box-shadow: inset 0px 0px 30px 18px #222;
+			-webkit-box-shadow: inset 0px 0px 30px 18px #222;
+			box-shadow: inset 0px 0px 30px 18px #222;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			display: inline-block;
+			height: 100%;
+			margin-left: -4px;
+			vertical-align: top;
+			width: 125px;
+		}
 
-#board > ul > li > div > img
-{
-	margin-left: 12px;
-	margin-top: 6px;
-}
+			#board-container > div > div > ul > li > div
+			{
+				height: 100%;
+				width: 100%;
+			}
+
+				#board-container > div > div > ul > li > div.playerField
+				{
+					background-color: rgba(0, 0, 255, 0.4);
+					-moz-box-shadow: 0px 0px 30px 12px rgba(0, 0, 255, 0.4);
+					-webkit-box-shadow: 0px 0px 30px 12px rgba(0, 0, 255, 0.4);
+					box-shadow: 0px 0px 30px 12px rgba(0, 0, 255, 0.4);
+				}
+
+				#board-container > div > div > ul > li > div.enemyField
+				{
+					background-color: rgba(255, 0, 0, 0.4);
+					-moz-box-shadow: 0px 0px 30px 12px rgba(255, 0, 0, 0.4);
+					-webkit-box-shadow: 0px 0px 30px 12px rgba(255, 0, 0, 0.4);
+					box-shadow: 0px 0px 30px 12px rgba(255, 0, 0, 0.4);
+				}
+
+				#board-container > div > div > ul > li > div > img
+				{
+					margin-top: 15px;
+				}
 
 .card-slot-over
 {
 	background-color: rgba(255, 255, 255, 0.4);
 }
-    
+
 #playerDeck
 {
-    position: absolute;
-    left: 10px;
-    width: 140px;
+	left: 10px;
+	position: absolute;
+	width: 140px;
 }
 
-#playerDeck > ul
-{
-	padding-left: 25px;
-}
-    
+	#playerDeck > div > ul
+	{
+		margin: 0px;
+		margin-top: 16px;
+		padding-left: 0px;
+	}
+
 #enemyDeck
 {
-    position: absolute;
-    right: 10px;
-    width: 140px;
+	position: absolute;
+	right: 10px;
+	width: 140px;
 }
-    
-#enemyDeck div.card
-{
-    margin-left: 25px;
-    float: left;
-}
+
+	#enemyDeck #enemy-cards
+	{
+		margin-top: 16px;
+	}
+
+	#enemyDeck div.card
+	{
+		float: left;
+		margin-left: 18px;
+	}
 
 .deck .card:not(:first-child)
 {
-    margin-top: -30px;
+	margin-top: -30px;
 }
 
 #deck .card:not(:first-child)
 {
-    margin-top: -60px;
+	margin-top: -60px;
 }
 
-#game-result-panel {
-    position: absolute;
-    top: 50px;
-    bottom: 50px;
-    background-color: pink;
-
-    opacity: 0.5;
-    left: 50px;
-    right: 50px;
+#game-result-panel
+{
+	background-color: rgba(75, 81, 104, 0.85);
+	bottom: 50px;
+	-moz-box-shadow: 0px 0px 30px 12px rgba(75, 81, 104, 0.85);
+	-webkit-box-shadow: 0px 0px 30px 12px rgba(75, 81, 104, 0.85);
+	box-shadow: 0px 0px 30px 12px rgba(75, 81, 104, 0.85);
+	left: 0px;
+	position: absolute;
+	right: 0px;
+	top: 50px;
+	color: #FFF;
+	-webkit-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-align: center;
+	font-size: 120%;
 }
 
-#game-result-title {
-    font-size: 160px;
-    font-family: fantasy;
-    text-align: center;
+#game-result-container
+{
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	margin: auto;
+	height: 440px;
 }
+
+#game-result-title
+{
+	font-family: fantasy;
+	font-size: 140px;
+	-webkit-text-shadow: -1px 0 black, 4px 4px black, 2px 0 black, 0 -1px black;
+	text-shadow: -1px 0 black, 4px 4px black, 2px 0 black, 0 -1px black;
+}
+
+#game-result-title:first-letter
+{
+	font-size: 160px;
+}
+
+#game-result-title.draw:first-letter
+{ 
+	color: blue;
+}
+
+#game-result-title.won:first-letter
+{ 
+	color: green;
+}
+
+#game-result-title.lost:first-letter
+{ 
+	color: red;
+}
+
+#game-result-content
+{
+
+}
+
+#game-result-buttons
+{
+	margin-top: 30px;
+}
+
+#game-result-buttons input[type=button]
+{
+	width: 80px;
+	height: 40px;
+}
+

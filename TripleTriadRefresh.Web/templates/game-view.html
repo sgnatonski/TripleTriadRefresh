@@ -1,48 +1,72 @@
 ﻿<div id="game-view">
     <div id="game" class="glass-panel">
         <div id="playerDeck" class="deck"> 
-            <div class="window game-header">
+            <div class="window game-header" data-bind="pulse: game().isFirstPlayerTurn">
                 <span data-bind="text: game().getPlayer().userName"></span>
+                <ul data-bind="foreach: game().getPlayer().hand().playCards, css: { greyscale: !game().getPlayer().isReady() }">
+                    <li class="card" data-bind="drag: {value: $parent.dragging}">
+                        <img data-bind="attr: {src: image}" />
+                    </li>
+                </ul>
             </div>
-            <ul data-bind="foreach: game().getPlayer().hand().playCards, css: { greyscale: !game().getPlayer().isReady() }">
-                <li class="card" data-bind="drag: {value: $parent.dragging}">
-                    <img data-bind="attr: {src: image}"/>
-                </li>
-            </ul>
         </div>
-        <div id="board"> 
-            <div class="window game-header" style="margin-bottom: 60px;">
+        <div id="board-container"> 
+            <div class="window game-header" >
                 <!-- ko if: game().isStarted() -->
                 <span data-bind="text: game().getPlayerScore()"></span>:
                 <span data-bind="text: game().getEnemyScore()"></span>
                 <!-- /ko -->
             </div>
-            <!-- ko foreach: game().board -->
-            <ul data-bind="foreach: $data, attr: {index: $index}" class="boardContainer">
-                <li data-bind="if: $data, drop: {onDropComplete: $parents[1].placeCard}, attr: {index: $index}">
-                    <div data-bind="css: { playerField: ownedBy() == app.getConnectionId(), enemyField: ownedBy() != app.getConnectionId() }">
-                        <img data-bind="attr: {src: image}"/>
-                    </div>
-                </li>
-            </ul>
-            <!-- /ko -->
-        
+            <div id="board" class="window game-header">
+                <div>
+                    <!-- ko foreach: game().board -->
+                    <ul data-bind="foreach: $data, attr: {index: $index}" class="boardContainer">
+                        <li data-bind="if: $data, drop: {onDropComplete: $parents[1].placeCard}, attr: {index: $index}">
+                            <div data-bind="css: { playerField: ownedBy() == app.getConnectionId(), enemyField: ownedBy() != app.getConnectionId() }">
+                                <img data-bind="attr: {src: image}"/>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- /ko -->
+                </div>
+            </div>
         </div>
         <div id="enemyDeck" class="deck"> 
-            <div class="window game-header">
+            <div class="window game-header" data-bind="pulse: game().isSecondPlayerTurn">
                 <span data-bind="text: game().getEnemy().userName"></span>
-            </div>
-            <div data-bind="foreach: game().getEnemy().hand().playCards, css: { greyscale: !game().getPlayer().isReady() }">
-                <div class="card">
-                    <img data-bind="attr: {src: image}"/>
+                <div id="enemy-cards" data-bind="foreach: game().getEnemy().hand().playCards, css: { greyscale: !game().getEnemy().isReady() }">
+                    <div class="card">
+                        <img data-bind="attr: {src: image}"/>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="overlay" data-bind="visible: game().winner()">
+    <div class="overlay" data-bind="visible: gameResult().gameId()">
         <div id="game-result-panel">
-            <div id="game-result-title" data-bind="text: gameResult, click: resolveGame"></div>
+            <div id="game-result-container">
+                <div id="game-result-title" data-bind="text: gameResult().result, click: resolveGame, css: { draw: gameResult().result() == 'Draw', won: gameResult().result() == 'Won', lost: gameResult().result() == 'Lost' }"></div>
+                <div id="game-result-content">
+                    <div data-bind="if: gameResult().expGain() > 0">
+                        <span>Experience gained:</span>
+                        <span data-bind="counter: { value: 0, max: gameResult().expGain, maxDuration: 1500, isDone: expDone }"></span>
+                    </div>            
+                    <div data-bind="if: gameResult().expGain() < 0">
+                        <span>Experience lost:</span>
+                        <span data-bind="counter: { value: 0, max: gameResult().expGain, maxDuration: 1500, isDone: expDone }"></span>
+                    </div>            
+                    <div data-bind="if: gameResult().cardPtsGain() > 0">
+                        <span>Card points gained:</span>
+                        <span data-bind="counter: { value: 0, max: gameResult().cardPtsGain, maxDuration: 1500, isDone: cardPtsDone }"></span>
+                    </div>
+                </div>
+                <div id="game-result-buttons">
+                    <!-- ko ifnot: closeResultHidden -->
+                   <input type="button" data-bind="click: closeResult" value="Close"/>
+                   <!-- /ko -->
+                </div>
+            </div>
         </div>        
     </div>
 </div>

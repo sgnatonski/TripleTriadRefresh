@@ -17,7 +17,7 @@ namespace TripleTriadRefresh.Server.Framework.Aspects.Interceptors
                 catch (Exception ex)
                 {
                     Debug.WriteLine(i.Method.Name + " throws exception: " + ex.Message);
-                    throw;
+                    Debug.WriteLine(i.Method.Name + ": " + ex.StackTrace);
                 }
             };
         }

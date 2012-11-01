@@ -1,8 +1,12 @@
 ﻿<div id="game-list-view">
     <div id="games" class="glass-panel">
-        <div class="window">
+        <div>
             <h1>Open games</h1>
         </div>
+        <!--  ko ifnot: games().lenght > 0 -->
+        <span>No open games</span>
+        <!-- /ko -->
+        <!--  ko if: games().lenght > 0 -->
         <div class="window" data-bind="foreach: games">
             <div>
                 <span data-bind="text: firstName"></span>
@@ -21,5 +25,6 @@
                 <!-- /ko -->
             </div>
         </div>
+        <!-- /ko -->
     </div>
 </div>

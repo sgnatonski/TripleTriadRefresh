@@ -11,10 +11,13 @@ var GameView = (function (_super) {
         this.viewName = "game-view";
         this.gameId = null;
         this.game = ko.observable(new Game(null));
+        this.gameResult = ko.observable(new GameResult(null));
         this.dragging = ko.observable(null);
         this.isReady = ko.observable(false);
         this.isStarted = ko.observable(false);
-        this.gameResult = ko.observable('');
+        this.expDone = ko.observable(false);
+        this.cardPtsDone = ko.observable(false);
+        this.closeResultHidden = ko.observable(true);
         var leaveBtn = new Button('Leave game');
         leaveBtn.action = function () {
             return _this.connection.leaveGame();
@@ -33,13 +36,6 @@ var GameView = (function (_super) {
         this.gameId = gameId;
         this.connection.updateBoard = function (data) {
             _this.game(new Game(data));
-            if(_this.game().winner()) {
-                var result = _this.game().firstPlayerScore() === _this.game().secondPlayerScore() ? 'Draw' : undefined;
-                if(!result) {
-                    result = _this.game().firstPlayerScore() > _this.game().secondPlayerScore() ? 'Won' : 'Loose';
-                }
-                _this.gameResult(result);
-            }
         };
         this.connection.gameJoined = function (data) {
             window.history.pushState(data, "Game", app.getPathAbs() + data);
@@ -51,7 +47,9 @@ var GameView = (function (_super) {
             app.currentGameId('');
             app.view(app.viewFac.createGamesView());
         };
-        this.connection.gameResolve = function (data) {
+        this.connection.receiveResult = function (data) {
+            _this.gameResult(new GameResult(data));
+            _this.closeResultHidden(_this.gameResult().expGain() && _this.gameResult().cardPtsGain());
         };
         this.startConnection(function () {
             _this.isLoading(true);
@@ -70,8 +68,18 @@ var GameView = (function (_super) {
             _this.dragging(null);
         };
         this.resolveGame = function () {
-            _this.connection.resolveGame(_this.gameId);
         };
+        this.closeResult = function () {
+            _this.closeResultHidden(true);
+            window.history.pushState(null, "Game list", app.getPathAbs());
+            app.currentGameId('');
+            app.view(app.viewFac.createGamesView());
+        };
+        this.cardPtsDone.subscribe(function (val) {
+            if(val) {
+                _this.closeResultHidden(false);
+            }
+        });
     }
     return GameView;
 })(View);

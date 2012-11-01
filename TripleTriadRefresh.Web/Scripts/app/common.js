@@ -130,6 +130,61 @@ ko.bindingHandlers.fadeVisible = {
     }
 };
 
+ko.bindingHandlers.pulse = {
+    update: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+        var value = ko.utils.unwrapObservable(valueAccessor());
+        if (value) {
+            //$(element).effect("pulsate", { times: 5 }, 2000);
+        }
+    }
+};
+
+ko.bindingHandlers.counter = {
+    update: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+        var value = ko.utils.unwrapObservable(valueAccessor()),
+            currentVal = ko.utils.unwrapObservable(value.value),
+            endVal = ko.utils.unwrapObservable(value.max),
+            maxDuration = ko.utils.unwrapObservable(value.maxDuration),
+            tick = 50, interval, duration, color,
+            jqElement = $(element);
+
+        jqElement.css('color', '#FFF');
+
+        if (endVal == currentVal) {
+            value.isDone(true);
+            return;
+        }
+        else if (endVal < 0) {
+            endVal = -endVal;
+            color = '#F00';
+        }
+        else {
+            color = '#0F0';
+        }
+
+        if (maxDuration < endVal * tick) {
+            tick = maxDuration / (endVal || 1);
+        }
+
+        duration = endVal * tick;
+
+        setTimeout(function () {
+            jqElement.animate({ 'color': color }, duration);
+
+            interval = setInterval(function () {
+                if (currentVal >= endVal) {
+                    clearInterval(interval);
+                    value.isDone(true);
+                }
+                else {
+                    currentVal++;
+                    jqElement.text(currentVal);
+                }
+            }, tick);
+        }, 500);
+    }
+};
+
 $.extendSignalR = function () {
     // TODO: this should be part of signalR library
     if ($.signalR.hub.clearProxy) {

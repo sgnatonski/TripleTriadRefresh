@@ -140,6 +140,20 @@
     <Content Include="scripts\app\app.js">
       <DependentUpon>app.ts</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="scripts\dto\game-result.ts" />
+    <Content Include="scripts\dto\game-result.js">
+      <DependentUpon>game-result.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\dto\game-result.min.js">
+      <DependentUpon>game-result.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\dto\game.min.js">
+      <DependentUpon>game.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\jquery-ui-1.9.1.custom.min.js" />
+    <Content Include="scripts\jquery.color.js" />
+    <Content Include="scripts\jquery.flip.js" />
+    <Content Include="scripts\jquery.flip.min.js" />
     <Content Include="scripts\ui\view\game-view.js.map">
       <DependentUpon>game-view.ts</DependentUpon>
     </Content>
@@ -167,6 +181,12 @@
     </Content>
     <None Include="Properties\PublishProfiles\gnatonski.com - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\gnatonski.com - Web Deploy.pubxml" />
+    <Content Include="scripts\dto\game.js.map">
+      <DependentUpon>game.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\dto\game-result.js.map">
+      <DependentUpon>game-result.ts</DependentUpon>
+    </Content>
     <None Include="scripts\jquery-1.8.2.intellisense.js" />
     <TypeScriptCompile Include="scripts\dto\player.ts" />
     <TypeScriptCompile Include="scripts\dto\hand.ts" />
@@ -199,6 +219,9 @@
     <Content Include="scripts\ui\view\deck-view.js">
       <DependentUpon>deck-view.ts</DependentUpon>
     </Content>
+    <Content Include="scripts\ui\view\game-view.min.js">
+      <DependentUpon>game-view.ts</DependentUpon>
+    </Content>
     <Content Include="scripts\ui\view\games-view.js">
       <DependentUpon>games-view.ts</DependentUpon>
     </Content>
@@ -207,7 +230,6 @@
     <Content Include="scripts\ui\view\game-view.js">
       <DependentUpon>game-view.ts</DependentUpon>
     </Content>
-    <Content Include="scripts\jquery-ui-1.8.22.custom.min.js" />
     <Content Include="scripts\jquery.animate-enhanced.min.js" />
     <Content Include="scripts\jquery.d.ts" />
     <Content Include="scripts\jquery.signalR-0.5.3.min.js" />

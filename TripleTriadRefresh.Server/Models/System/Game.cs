@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Timers;
 using Newtonsoft.Json;
+using TripleTriadRefresh.Data;
+using TripleTriadRefresh.Data.Domain;
 using TripleTriadRefresh.Data.Models;
 using TripleTriadRefresh.Server.Framework;
 
@@ -38,6 +40,14 @@ namespace TripleTriadRefresh.Server.Models.System
                 InProgress = false;
                 GameEnded(this);
             };
+
+            Season = DbRepository.Current.Single<DbSeason>(s => true);
+
+            if (Season == null)
+            {
+                DbRepository.Current.Add(new DbSeason() { Name = "Season 1", CreatedBy = "SYSTEM", ModifiedBy = "SYSTEM" });
+                Season = DbRepository.Current.Single<DbSeason>(s => true);
+            }
         }
 
         [JsonProperty("gameId")]
@@ -63,6 +73,8 @@ namespace TripleTriadRefresh.Server.Models.System
         [JsonProperty("inProgress")]
         public bool InProgress { get; private set; }
 
+        [JsonIgnore]
+        public DbSeason Season { get; set; }
         [JsonIgnore]
         public Timer ReconnectTimer { get; private set; }
         [JsonIgnore]
@@ -133,6 +145,17 @@ namespace TripleTriadRefresh.Server.Models.System
         public void NextPlayer()
         {
             CurrentPlayer = CurrentPlayer == FirstPlayer ? SecondPlayer : FirstPlayer;
+
+            if (this.CurrentPlayer is AiPlayer && this.InProgress)
+            {
+                if (AiMove == null)
+                {
+                    throw new ArgumentException("AiMove callback must be set when playing against AI");
+                }
+
+                Task.Factory.StartNew(() => global::System.Threading.Thread.Sleep(new Random().Next(1000, 2500)))
+                    .ContinueWith(t => AiMove(this));
+            }
         }
 
         public void MakeOwner(IPlayer player)
@@ -174,17 +197,6 @@ namespace TripleTriadRefresh.Server.Models.System
             else
             {
                 NextPlayer();
-
-                if (this.CurrentPlayer is AiPlayer && this.InProgress)
-                {
-                    if (AiMove == null)
-                    {
-                        throw new ArgumentException("AiMove callback must be set when playing against AI");
-                    }
-
-                    Task.Factory.StartNew(() => global::System.Threading.Thread.Sleep(new Random().Next(1000, 2500)))
-                        .ContinueWith(t => AiMove(this));
-                }
             }
         }
 

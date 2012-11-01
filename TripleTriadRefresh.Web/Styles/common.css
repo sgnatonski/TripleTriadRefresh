@@ -32,6 +32,12 @@ h1
 {
 	margin: 0px;
 	text-align: center;
+	color: #FFF;
+	
+}
+
+span{
+	color: #FFF;
 }
 
 .loader
@@ -41,6 +47,10 @@ h1
 	background-position: center;
 	width: 256px;
 	height: 24px;
+}
+
+.window{
+	margin-bottom: 1px;
 }
 
 .window, input[type=button]
@@ -62,12 +72,12 @@ h1
 
 	padding: 4px;
 	color: #FFF;
-	margin-bottom: 12px;
 }
 
 input[type=button]
 {
 	height: 100%;
+	margin-bottom: 12px;
 }
 
 input[type=button]:hover
