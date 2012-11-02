@@ -4,5 +4,21 @@
             <h1>Player standing</h1>
         </div>
         
+        <div style="margin: 20px 10px;">
+            <div>
+                <span>Experience:</span>
+                <span data-bind="text: standing().experience"></span>
+            </div>
+            <div>
+                <span>Card points:</span>
+                <span data-bind="text: standing().cardPoints"></span>
+            </div>
+            <span>Battles:</span>
+            <div>
+                <span data-bind="text: standing().won"></span>
+                <span data-bind="text: standing().draw"></span>
+                <span data-bind="text: standing().lost"></span>
+            </div>
+        </div>
     </div>
 </div>
