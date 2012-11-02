@@ -22,6 +22,14 @@ namespace TripleTriadRefresh.Server.Controllers
         }
 
         [Authorize]
+        public JsonNetResult GetStanding()
+        {
+            var standing = new PlayerStanding(new Player().DbEntity.Standings.First());
+            var json = new JsonNetResult() { Data = standing, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+            return json;
+        }
+
+        [Authorize]
         public JsonNetResult GetDeck()
         {
             var cards = new Player().DbEntity.Deck.Select(c => new Card(c)).ToList();

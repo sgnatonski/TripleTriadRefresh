@@ -1,6 +1,7 @@
 /// <reference path="../ui/view/games-view.ts" />
 /// <reference path="../ui/view/game-view.ts" />
 /// <reference path="../ui/view/deck-view.ts" />
+/// <reference path="../ui/view/standing-view.ts" />
 
 class ViewFactory {
     createGamesView() {
@@ -13,6 +14,10 @@ class ViewFactory {
 
     createDeckView() {
         return new DeckView();
+    }
+
+    createStandingView() {
+        return new StandingView();
     }
 }
 

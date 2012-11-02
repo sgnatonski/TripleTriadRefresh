@@ -41,6 +41,7 @@
       <resource path="~/scripts/dto/card.js" />
       <resource path="~/scripts/dto/hand.js" />
       <resource path="~/scripts/dto/player.js" />
+      <resource path="~/scripts/dto/standing.js" />
       <resource path="~/scripts/dto/game.js" />
       <resource path="~/scripts/dto/game-result.js" />
     </resourceSet>
@@ -56,6 +57,7 @@
       <resource path="~/scripts/ui/view/games-view.js" />
       <resource path="~/scripts/ui/view/game-view.js" />
       <resource path="~/scripts/ui/view/deck-view.js" />
+      <resource path="~/scripts/ui/view/standing-view.js" />
     </resourceSet>
   </resourceSets>
 </combres>

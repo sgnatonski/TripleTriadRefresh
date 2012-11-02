@@ -9,5 +9,8 @@ var ViewFactory = (function () {
     ViewFactory.prototype.createDeckView = function () {
         return new DeckView();
     };
+    ViewFactory.prototype.createStandingView = function () {
+        return new StandingView();
+    };
     return ViewFactory;
 })();

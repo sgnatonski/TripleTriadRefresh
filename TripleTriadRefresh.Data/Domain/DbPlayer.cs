@@ -20,5 +20,13 @@ namespace TripleTriadRefresh.Data.Domain
                 return GetForeignList<DbCard>(c => c.OwnerId == this.Id);
             }
         }
+
+        public IList<DbStanding> Standings
+        {
+            get
+            {
+                return GetForeignList<DbStanding>(c => c.PlayerId == this.Id);
+            }
+        }
     }
 }

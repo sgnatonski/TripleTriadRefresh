@@ -1,5 +1,8 @@
 var GameService = (function () {
     function GameService() { }
+    GameService.prototype.getStanding = function (completeCallback) {
+        $.get('standing', null, completeCallback);
+    };
     GameService.prototype.getDeck = function (completeCallback) {
         $.get('deck', null, completeCallback);
     };

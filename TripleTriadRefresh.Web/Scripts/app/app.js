@@ -22,7 +22,11 @@ var App = (function () {
             if(path == 'cards') {
                 this.view(this.viewFac.createDeckView());
             } else {
-                this.view(this.viewFac.createGameView(path));
+                if(path == 'standing') {
+                    this.view(this.viewFac.createStandingView());
+                } else {
+                    this.view(this.viewFac.createGameView(path));
+                }
             }
         }
     };
@@ -31,6 +35,10 @@ var App = (function () {
     };
     App.prototype.getPathAbs = function () {
         return this.pathAbs;
+    };
+    App.prototype.showStanding = function () {
+        window.history.pushState(null, 'Standing', this.pathAbs + 'standing');
+        this.view(this.viewFac.createStandingView());
     };
     App.prototype.showGames = function () {
         window.history.pushState(null, 'Game list', this.pathAbs);

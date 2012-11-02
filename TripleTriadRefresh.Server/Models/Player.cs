@@ -72,15 +72,7 @@ namespace TripleTriadRefresh.Server.Models
 
         public void UpdateStanding(GameResult gameResult)
         {
-            var standing = DbRepository.Current.Single<DbStanding>(s => s.PlayerId == DbEntity.Id && s.SeasonId == gameResult.DbEntity.SeasonId);
-            if (standing == null)
-            {
-                standing = new DbStanding();
-                standing.Id = (int)DbRepository.Current.Add(standing);
-            }
-
-            standing.Player = DbEntity;
-            standing.Season = gameResult.DbEntity.Season;
+            var standing = this.DbEntity.Standings.First(s => s.SeasonId == gameResult.DbEntity.SeasonId);
 
             standing.Experience += gameResult.ExpGain;
 
@@ -104,7 +96,6 @@ namespace TripleTriadRefresh.Server.Models
             }
 
             standing.UnlockedRules = Data.Models.Rules.Open;
-            standing.UnlockedTradeRules = Data.Models.TradeRules.Direct;
 
             DbRepository.Current.Update(standing);
         }

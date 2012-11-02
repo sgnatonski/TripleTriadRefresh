@@ -159,6 +159,10 @@
     <Content Include="scripts\dto\player.min.js">
       <DependentUpon>player.ts</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="scripts\dto\standing.ts" />
+    <Content Include="scripts\dto\standing.js">
+      <DependentUpon>standing.ts</DependentUpon>
+    </Content>
     <Content Include="scripts\jquery-ui-1.9.1.custom.min.js" />
     <Content Include="scripts\jquery.color.js" />
     <Content Include="scripts\jquery.flip.js" />
@@ -256,11 +260,16 @@
     <Content Include="scripts\koExternalTemplateEngine_all.js" />
     <Content Include="scripts\purl.d.ts" />
     <Content Include="scripts\purl.js" />
+    <TypeScriptCompile Include="scripts\ui\view\standing-view.ts" />
+    <Content Include="scripts\ui\view\standing-view.js">
+      <DependentUpon>standing-view.ts</DependentUpon>
+    </Content>
     <Content Include="scripts\underscore.browser.d.ts" />
     <Content Include="scripts\underscore.js" />
     <Content Include="scripts\underscore.min.js" />
     <Content Include="scripts\underscore.string.d.ts" />
     <Content Include="scripts\underscore.string.js" />
+    <Content Include="templates\standing-view.html" />
     <Content Include="x64\SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

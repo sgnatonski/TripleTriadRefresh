@@ -1,6 +1,7 @@
 /// <reference path="../../jquery.d.ts" />
 /// <reference path="../view.ts" />
 /// <reference path="../../app/game-service.ts" />
+/// <reference path="../../dto/card.ts" />
 class DeckView extends View { 
     viewName = 'deck-view';
     cards = ko.observableArray(<Card[]>[]);

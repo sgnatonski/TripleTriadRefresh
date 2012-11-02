@@ -1,6 +1,9 @@
-﻿using System;
+﻿using SubSonic.Query;
+using System;
+using System.Linq;
 using TripleTriadRefresh.Data;
 using TripleTriadRefresh.Data.Domain;
+using TripleTriadRefresh.Data.Models;
 using TripleTriadRefresh.Server.Models;
 
 namespace TripleTriadRefresh.Server.Framework
@@ -12,7 +15,13 @@ namespace TripleTriadRefresh.Server.Framework
             DbRepository.Transacted(() =>
             {
                 var newPlayer = new DbPlayer() { ExternalId = id, ExternalType = "FB" };
-                DbRepository.Current.Add(newPlayer);
+                newPlayer.Id = (int)DbRepository.Current.Add(newPlayer);
+
+                var standing = new DbStanding();
+                standing.Player = newPlayer;
+                standing.Season = DbRepository.Current.Single<DbSeason>(s => s.DateCreated == DbRepository.Current.All<DbSeason>().Max(max => max.DateCreated).Date);
+                standing.UnlockedRules = Rules.Open;
+                DbRepository.Current.Add(standing);
 
                 CreateInitialDeck(newPlayer);
             });
