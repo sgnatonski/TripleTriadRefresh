@@ -6,10 +6,10 @@
 /// <reference path="../app/game-hub.d.ts" />
 /// <reference path="./menu.ts" />
 class View {
-    viewName: string;
-    connection: GameHub;
-    isLoading = ko.observable(false);
-    menu = ko.observable(Menu);
+    public viewName = ko.observable(<string>null);
+    public isLoading = ko.observable(false);
+    public menu = ko.observable(Menu);
+    public connection: GameHub;
     constructor () {
         $.extendSignalR();
         $.connection.hub.clearProxy();
@@ -23,7 +23,7 @@ class View {
         };
     }
 
-    startConnection(connectedCallback: () => any) {
+    public startConnection(connectedCallback: () => any) {
         $.connection.hub.recreateProxy();
         if ($.connection.hub.state == 1) {
             //already started
@@ -37,6 +37,6 @@ class View {
         }
     }
 
-    receive(data) {
+    private receive(data) {
     }
 }

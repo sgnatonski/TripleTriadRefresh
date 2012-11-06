@@ -1,742 +1,800 @@
-2012-11-02 11:38:24,903 [66] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,908 [66] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/scripts/dto/game-result.js
- - ~/scripts/dto/standing.js
+2012-11-02 23:28:40,720 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:28:40,735 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
  - ~/scripts/ui/button.js
  - ~/scripts/ui/menu.js
  - ~/scripts/ui/view.js
- - ~/scripts/dto/game-list-item.js
- - ~/scripts/ui/view/games-view.js
- - ~/scripts/dto/card.js
- - ~/scripts/dto/hand.js
- - ~/scripts/dto/player.js
- - ~/scripts/dto/game.js
- - ~/scripts/ui/view/game-view.js
-
-2012-11-02 11:38:24,919 [67] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,919 [67] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/scripts/dto/game-result.js
- - ~/scripts/dto/standing.js
- - ~/scripts/ui/button.js
- - ~/scripts/ui/menu.js
- - ~/scripts/ui/view.js
- - ~/scripts/dto/game-list-item.js
- - ~/scripts/ui/view/games-view.js
- - ~/scripts/dto/card.js
- - ~/scripts/dto/hand.js
- - ~/scripts/dto/player.js
- - ~/scripts/dto/game.js
- - ~/scripts/ui/view/game-view.js
-
-2012-11-02 11:38:24,919 [69] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,919 [69] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/scripts/dto/game-result.js
- - ~/scripts/dto/standing.js
- - ~/scripts/ui/button.js
- - ~/scripts/ui/menu.js
- - ~/scripts/ui/view.js
- - ~/scripts/dto/game-list-item.js
- - ~/scripts/ui/view/games-view.js
- - ~/scripts/dto/card.js
- - ~/scripts/dto/hand.js
- - ~/scripts/dto/player.js
- - ~/scripts/dto/game.js
- - ~/scripts/ui/view/game-view.js
  - ~/scripts/app/game-service.js
-
-2012-11-02 11:38:24,920 [68] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,920 [68] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/scripts/dto/game-result.js
- - ~/scripts/dto/standing.js
- - ~/scripts/ui/button.js
- - ~/scripts/ui/menu.js
- - ~/scripts/ui/view.js
- - ~/scripts/dto/game-list-item.js
- - ~/scripts/ui/view/games-view.js
  - ~/scripts/dto/card.js
- - ~/scripts/dto/hand.js
- - ~/scripts/dto/player.js
- - ~/scripts/dto/game.js
- - ~/scripts/ui/view/game-view.js
- - ~/scripts/app/game-service.js
  - ~/scripts/ui/view/deck-view.js
-
-2012-11-02 11:38:24,921 [67] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,921 [67] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/scripts/dto/game-result.js
- - ~/scripts/dto/standing.js
- - ~/scripts/ui/button.js
- - ~/scripts/ui/menu.js
- - ~/scripts/ui/view.js
- - ~/scripts/dto/game-list-item.js
- - ~/scripts/ui/view/games-view.js
- - ~/scripts/dto/card.js
  - ~/scripts/dto/hand.js
  - ~/scripts/dto/player.js
  - ~/scripts/dto/game.js
- - ~/scripts/ui/view/game-view.js
- - ~/scripts/app/game-service.js
- - ~/scripts/ui/view/deck-view.js
-
-2012-11-02 11:38:24,925 [67] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,925 [67] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
  - ~/scripts/dto/game-result.js
- - ~/scripts/dto/standing.js
- - ~/scripts/ui/button.js
- - ~/scripts/ui/menu.js
- - ~/scripts/ui/view.js
- - ~/scripts/dto/game-list-item.js
- - ~/scripts/ui/view/games-view.js
- - ~/scripts/dto/card.js
- - ~/scripts/dto/hand.js
- - ~/scripts/dto/player.js
- - ~/scripts/dto/game.js
  - ~/scripts/ui/view/game-view.js
- - ~/scripts/app/game-service.js
- - ~/scripts/ui/view/deck-view.js
-
-2012-11-02 11:38:24,925 [68] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,925 [68] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/scripts/dto/game-result.js
  - ~/scripts/dto/standing.js
- - ~/scripts/ui/button.js
- - ~/scripts/ui/menu.js
- - ~/scripts/ui/view.js
- - ~/scripts/dto/game-list-item.js
- - ~/scripts/ui/view/games-view.js
- - ~/scripts/dto/card.js
- - ~/scripts/dto/hand.js
- - ~/scripts/dto/player.js
- - ~/scripts/dto/game.js
- - ~/scripts/ui/view/game-view.js
- - ~/scripts/app/game-service.js
- - ~/scripts/ui/view/deck-view.js
- - ~/scripts/ui/view/standing-view.js
-
-2012-11-02 11:38:24,926 [67] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,926 [66] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,926 [67] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/scripts/dto/game-result.js
- - ~/scripts/dto/standing.js
- - ~/scripts/ui/button.js
- - ~/scripts/ui/menu.js
- - ~/scripts/ui/view.js
- - ~/scripts/dto/game-list-item.js
- - ~/scripts/ui/view/games-view.js
- - ~/scripts/dto/card.js
- - ~/scripts/dto/hand.js
- - ~/scripts/dto/player.js
- - ~/scripts/dto/game.js
- - ~/scripts/ui/view/game-view.js
- - ~/scripts/app/game-service.js
- - ~/scripts/ui/view/deck-view.js
  - ~/scripts/ui/view/standing-view.js
  - ~/scripts/app/view-factory.js
-
-2012-11-02 11:38:24,927 [66] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/scripts/dto/game-result.js
- - ~/scripts/dto/standing.js
- - ~/scripts/ui/button.js
- - ~/scripts/ui/menu.js
- - ~/scripts/ui/view.js
  - ~/scripts/dto/game-list-item.js
  - ~/scripts/ui/view/games-view.js
- - ~/scripts/dto/card.js
- - ~/scripts/dto/hand.js
- - ~/scripts/dto/player.js
- - ~/scripts/dto/game.js
- - ~/scripts/ui/view/game-view.js
- - ~/scripts/app/game-service.js
- - ~/scripts/ui/view/deck-view.js
- - ~/scripts/ui/view/standing-view.js
- - ~/scripts/app/view-factory.js
-
-2012-11-02 11:38:24,930 [66] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,930 [66] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/scripts/dto/game-result.js
- - ~/scripts/dto/standing.js
- - ~/scripts/ui/button.js
- - ~/scripts/ui/menu.js
- - ~/scripts/ui/view.js
- - ~/scripts/dto/game-list-item.js
- - ~/scripts/ui/view/games-view.js
- - ~/scripts/dto/card.js
- - ~/scripts/dto/hand.js
- - ~/scripts/dto/player.js
- - ~/scripts/dto/game.js
- - ~/scripts/ui/view/game-view.js
- - ~/scripts/app/game-service.js
- - ~/scripts/ui/view/deck-view.js
- - ~/scripts/ui/view/standing-view.js
- - ~/scripts/app/view-factory.js
-
-2012-11-02 11:38:24,930 [67] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,930 [67] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/scripts/dto/game-result.js
- - ~/scripts/dto/standing.js
- - ~/scripts/ui/button.js
- - ~/scripts/ui/menu.js
- - ~/scripts/ui/view.js
- - ~/scripts/dto/game-list-item.js
- - ~/scripts/ui/view/games-view.js
- - ~/scripts/dto/card.js
- - ~/scripts/dto/hand.js
- - ~/scripts/dto/player.js
- - ~/scripts/dto/game.js
- - ~/scripts/ui/view/game-view.js
- - ~/scripts/app/game-service.js
- - ~/scripts/ui/view/deck-view.js
- - ~/scripts/ui/view/standing-view.js
- - ~/scripts/app/view-factory.js
  - ~/scripts/app/app.js
 
-2012-11-02 11:38:24,945 [67] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 11:38:24,945 [67] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/scripts/dto/game-result.js
- - ~/scripts/dto/standing.js
+2012-11-02 23:28:40,737 [229] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:28:40,737 [229] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
  - ~/scripts/ui/button.js
  - ~/scripts/ui/menu.js
  - ~/scripts/ui/view.js
- - ~/scripts/dto/game-list-item.js
- - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/game-service.js
  - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
  - ~/scripts/dto/hand.js
  - ~/scripts/dto/player.js
  - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
  - ~/scripts/ui/view/game-view.js
- - ~/scripts/app/game-service.js
- - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/standing.js
  - ~/scripts/ui/view/standing-view.js
  - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
  - ~/scripts/app/app.js
 
-2012-11-02 11:38:28,310 [70] DEBUG Combres.Configuration - Reload Combres settings
-2012-11-02 11:38:28,310 [58] DEBUG Combres.ChangeMonitor - Dynamic resource change monitor thread starts...
-2012-11-02 11:38:28,324 [70] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set siteCss.  Current hash: 
-2012-11-02 11:38:28,324 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 11:38:28,325 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 11:38:28,327 [70] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -421925707
-2012-11-02 11:38:28,328 [70] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set libJs.  Current hash: 
-2012-11-02 11:38:28,328 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 11:38:28,329 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 11:38:28,331 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 11:38:28,332 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 11:38:28,333 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 11:38:28,333 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 11:38:28,334 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 11:38:28,335 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 11:38:28,337 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 11:38:28,340 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 11:38:28,341 [70] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -1451123460
-2012-11-02 11:38:28,341 [70] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set commonJs.  Current hash: 
-2012-11-02 11:38:28,341 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 11:38:28,342 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 11:38:28,344 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 11:38:28,344 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 11:38:28,344 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 11:38:28,344 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 11:38:28,345 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 11:38:28,345 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 11:38:28,345 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 11:38:28,345 [70] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: 2099574990
-2012-11-02 11:38:28,345 [70] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set appJs.  Current hash: 
-2012-11-02 11:38:28,345 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 11:38:28,345 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 11:38:28,346 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 11:38:28,346 [70] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: 1113926612
-2012-11-02 11:38:28,346 [70] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set uiJs.  Current hash: 
-2012-11-02 11:38:28,346 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 11:38:28,347 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 11:38:28,347 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 11:38:28,347 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 11:38:28,347 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 11:38:28,347 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 11:38:28,348 [70] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 11:38:28,348 [70] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -965424373
-2012-11-02 11:38:28,348 [70] DEBUG Combres.ChangeMonitor - Watch new settings
-2012-11-02 11:38:28,352 [70] DEBUG Combres.Configuration - Elapsed time for 'ReloadSettings': 41 ms
-2012-11-02 11:38:28,353 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 11:38:28,355 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 11:38:28,355 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 11:38:28,361 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 11:38:28,375 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 11:38:28,376 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 11:38:28,376 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 11:38:28,377 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 11:38:28,378 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 11:38:28,378 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 11:38:28,392 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 11:38:28,393 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 11:38:28,394 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 11:38:28,394 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 11:38:28,394 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 11:38:28,394 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 11:38:28,394 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 11:38:28,395 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 11:38:28,395 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 11:38:28,395 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 11:38:28,395 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 11:38:28,395 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 11:38:28,395 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 11:38:28,395 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 11:38:28,395 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 11:38:28,396 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 11:38:28,396 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 11:38:28,396 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 11:38:28,396 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 11:38:28,396 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 11:38:28,396 [70] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 11:38:33,741 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 11:38:33,742 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 11:38:33,743 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 11:38:33,755 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 11:38:33,772 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 11:38:33,772 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 11:38:33,773 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 11:38:33,774 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 11:38:33,775 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 11:38:33,776 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 11:38:33,787 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 11:38:33,787 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 11:38:33,788 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 11:38:33,789 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 11:38:33,789 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 11:38:33,789 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 11:38:33,789 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 11:38:33,789 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 11:38:33,789 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 11:38:33,789 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 11:38:33,790 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 11:38:33,790 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 11:38:33,790 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 11:38:33,790 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 11:38:33,790 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 11:38:33,790 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 11:38:33,791 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 11:38:33,791 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 11:38:33,791 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 11:38:33,791 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 11:38:33,791 [60] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 11:48:32,446 [110] DEBUG Combres.ChangeMonitor - Dynamic resource change monitor thread starts...
-2012-11-02 11:48:32,446 [108] DEBUG Combres.Configuration - Reload Combres settings
-2012-11-02 11:48:32,473 [108] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set siteCss.  Current hash: 
-2012-11-02 11:48:32,474 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 11:48:32,476 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 11:48:32,478 [108] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -421925707
-2012-11-02 11:48:32,479 [108] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set libJs.  Current hash: 
-2012-11-02 11:48:32,479 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 11:48:32,481 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 11:48:32,484 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 11:48:32,485 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 11:48:32,486 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 11:48:32,487 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 11:48:32,488 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 11:48:32,489 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 11:48:32,492 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 11:48:32,493 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 11:48:32,494 [108] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -1451123460
-2012-11-02 11:48:32,495 [108] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set commonJs.  Current hash: 
-2012-11-02 11:48:32,495 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 11:48:32,495 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 11:48:32,495 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 11:48:32,495 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 11:48:32,495 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 11:48:32,496 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 11:48:32,496 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 11:48:32,496 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 11:48:32,496 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 11:48:32,496 [108] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: 2099574990
-2012-11-02 11:48:32,496 [108] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set appJs.  Current hash: 
-2012-11-02 11:48:32,496 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 11:48:32,497 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 11:48:32,497 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 11:48:32,498 [108] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: 1113926612
-2012-11-02 11:48:32,498 [108] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set uiJs.  Current hash: 
-2012-11-02 11:48:32,498 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 11:48:32,498 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 11:48:32,498 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 11:48:32,498 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 11:48:32,499 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 11:48:32,499 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 11:48:32,499 [108] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 11:48:32,499 [108] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -965424373
-2012-11-02 11:48:32,500 [108] DEBUG Combres.ChangeMonitor - Watch new settings
-2012-11-02 11:48:32,506 [108] DEBUG Combres.Configuration - Elapsed time for 'ReloadSettings': 51 ms
-2012-11-02 11:48:32,508 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 11:48:32,510 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 11:48:32,511 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 11:48:32,517 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 11:48:32,533 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 11:48:32,533 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 11:48:32,534 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 11:48:32,535 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 11:48:32,536 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 11:48:32,537 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 11:48:32,548 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 11:48:32,549 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 11:48:32,549 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 11:48:32,550 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 11:48:32,550 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 11:48:32,550 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 11:48:32,550 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 11:48:32,550 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 11:48:32,550 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 11:48:32,550 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 11:48:32,551 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 11:48:32,551 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 11:48:32,551 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 11:48:32,551 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 11:48:32,551 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 11:48:32,551 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 11:48:32,551 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 11:48:32,552 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 11:48:32,552 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 11:48:32,552 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 11:48:32,552 [108] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 11:50:48,545 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 11:50:48,546 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 11:50:48,547 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 11:50:48,554 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 11:50:48,570 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 11:50:48,571 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 11:50:48,571 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 11:50:48,572 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 11:50:48,574 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 11:50:48,574 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 11:50:48,586 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 11:50:48,587 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 11:50:48,588 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 11:50:48,588 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 11:50:48,588 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 11:50:48,589 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 11:50:48,589 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 11:50:48,589 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 11:50:48,589 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 11:50:48,589 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 11:50:48,589 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 11:50:48,589 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 11:50:48,589 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 11:50:48,589 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 11:50:48,590 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 11:50:48,590 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 11:50:48,590 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 11:50:48,590 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 11:50:48,590 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 11:50:48,591 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 11:50:48,591 [98] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 16:10:42,105 [8] DEBUG Combres.ChangeMonitor - Dynamic resource change monitor thread starts...
-2012-11-02 16:10:42,105 [12] DEBUG Combres.Configuration - Reload Combres settings
-2012-11-02 16:10:42,138 [12] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set siteCss.  Current hash: 
-2012-11-02 16:10:42,141 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 16:10:42,143 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 16:10:42,146 [12] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -421925707
-2012-11-02 16:10:42,146 [12] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set libJs.  Current hash: 
-2012-11-02 16:10:42,146 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 16:10:42,150 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 16:10:42,153 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 16:10:42,157 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 16:10:42,159 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 16:10:42,162 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 16:10:42,164 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 16:10:42,167 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 16:10:42,171 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 16:10:42,173 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 16:10:42,175 [12] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -1451123460
-2012-11-02 16:10:42,176 [12] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set commonJs.  Current hash: 
-2012-11-02 16:10:42,176 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 16:10:42,177 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 16:10:42,177 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 16:10:42,177 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 16:10:42,177 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 16:10:42,177 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 16:10:42,178 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 16:10:42,178 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 16:10:42,178 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 16:10:42,178 [12] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: 2099574990
-2012-11-02 16:10:42,178 [12] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set appJs.  Current hash: 
-2012-11-02 16:10:42,178 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 16:10:42,179 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 16:10:42,179 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 16:10:42,181 [12] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: 1113926612
-2012-11-02 16:10:42,181 [12] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set uiJs.  Current hash: 
-2012-11-02 16:10:42,181 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 16:10:42,182 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 16:10:42,182 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 16:10:42,182 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 16:10:42,182 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 16:10:42,183 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 16:10:42,183 [12] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 16:10:42,183 [12] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -965424373
-2012-11-02 16:10:42,183 [12] DEBUG Combres.ChangeMonitor - Watch new settings
-2012-11-02 16:10:42,189 [12] DEBUG Combres.Configuration - Elapsed time for 'ReloadSettings': 76 ms
-2012-11-02 16:10:42,192 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 16:10:42,197 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 16:10:42,197 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 16:10:42,203 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 16:10:42,217 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 16:10:42,218 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 16:10:42,218 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 16:10:42,220 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 16:10:42,221 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 16:10:42,221 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 16:10:42,233 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 16:10:42,233 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 16:10:42,235 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 16:10:42,236 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 16:10:42,236 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 16:10:42,236 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 16:10:42,236 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 16:10:42,236 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 16:10:42,236 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 16:10:42,236 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 16:10:42,236 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 16:10:42,237 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 16:10:42,237 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 16:10:42,237 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 16:10:42,237 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 16:10:42,237 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 16:10:42,237 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 16:10:42,237 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 16:10:42,238 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 16:10:42,238 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 16:10:42,238 [12] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 16:11:45,509 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 16:11:45,510 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 16:11:45,510 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 16:11:45,520 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 16:11:45,535 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 16:11:45,535 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 16:11:45,536 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 16:11:45,537 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 16:11:45,538 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 16:11:45,538 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 16:11:45,549 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 16:11:45,550 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 16:11:45,551 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 16:11:45,551 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 16:11:45,551 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 16:11:45,551 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 16:11:45,551 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 16:11:45,552 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 16:11:45,552 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 16:11:45,552 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 16:11:45,552 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 16:11:45,552 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 16:11:45,552 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 16:11:45,552 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 16:11:45,552 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 16:11:45,552 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 16:11:45,553 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 16:11:45,553 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 16:11:45,553 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 16:11:45,553 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 16:11:45,553 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 16:13:56,801 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 16:13:56,802 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 16:13:56,802 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 16:13:56,813 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 16:13:56,835 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 16:13:56,836 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 16:13:56,836 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 16:13:56,837 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 16:13:56,839 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 16:13:56,839 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 16:13:56,851 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 16:13:56,852 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 16:13:56,853 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 16:13:56,853 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 16:13:56,853 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 16:13:56,853 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 16:13:56,853 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 16:13:56,854 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 16:13:56,854 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 16:13:56,854 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 16:13:56,854 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 16:13:56,854 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 16:13:56,854 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 16:13:56,854 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 16:13:56,854 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 16:13:56,854 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 16:13:56,855 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 16:13:56,855 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 16:13:56,855 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 16:13:56,855 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 16:13:56,855 [28] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 16:15:30,698 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 16:15:30,699 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 16:15:30,699 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 16:15:30,712 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 16:15:30,736 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 16:15:30,737 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 16:15:30,737 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 16:15:30,739 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 16:15:30,740 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 16:15:30,741 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 16:15:30,753 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 16:15:30,754 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 16:15:30,755 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 16:15:30,756 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 16:15:30,756 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 16:15:30,756 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 16:15:30,756 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 16:15:30,756 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 16:15:30,756 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 16:15:30,756 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 16:15:30,756 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 16:15:30,757 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 16:15:30,757 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 16:15:30,757 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 16:15:30,757 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 16:15:30,757 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 16:15:30,757 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 16:15:30,758 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 16:15:30,758 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 16:15:30,758 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 16:15:30,758 [20] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 16:15:59,119 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 16:15:59,120 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 16:15:59,121 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 16:15:59,132 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 16:15:59,154 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 16:15:59,154 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 16:15:59,155 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 16:15:59,156 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 16:15:59,158 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 16:15:59,158 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 16:15:59,173 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 16:15:59,174 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 16:15:59,175 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 16:15:59,176 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 16:15:59,176 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 16:15:59,176 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 16:15:59,176 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 16:15:59,176 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 16:15:59,176 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 16:15:59,176 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 16:15:59,177 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 16:15:59,177 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 16:15:59,177 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 16:15:59,177 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 16:15:59,177 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 16:15:59,177 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 16:15:59,178 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 16:15:59,178 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 16:15:59,178 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 16:15:59,178 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 16:15:59,178 [27] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 16:20:09,836 [56] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 16:20:09,839 [56] DEBUG Combres.Configuration - Change posted. Change Type: Resource - Affected resource list: 
- - ~/styles/game.css
+2012-11-02 23:28:40,737 [229] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:28:40,737 [229] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
 
-2012-11-02 16:20:09,849 [56] DEBUG Combres.ChangeMonitor - Static resources change count: 1
-2012-11-02 16:20:09,849 [56] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
- - ~/styles/game.css
+2012-11-02 23:28:40,738 [229] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:28:40,738 [229] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
 
-2012-11-02 16:23:13,421 [41] DEBUG Combres.Configuration - Apply changes
-2012-11-02 16:23:13,421 [41] DEBUG Combres.Configuration - Apply change: Change Type: Resource - Affected resource list: 
- - ~/styles/game.css
+2012-11-02 23:28:40,738 [229] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:28:40,738 [229] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
 
-2012-11-02 16:23:13,423 [41] DEBUG Combres.ResourceContentReader - Attempt to remove cached content for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 16:23:13,423 [41] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set siteCss.  Current hash: -421925707
-2012-11-02 16:23:13,423 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 16:23:13,423 [41] DEBUG Combres.ResourceContentReader - Retrieving new content for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 16:23:13,424 [41] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -1400189078
-2012-11-02 16:23:13,424 [41] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set libJs.  Current hash: -1451123460
-2012-11-02 16:23:13,424 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 16:23:13,424 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 16:23:13,424 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 16:23:13,424 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 16:23:13,424 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 16:23:13,424 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 16:23:13,424 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 16:23:13,424 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 16:23:13,424 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 16:23:13,424 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 16:23:13,425 [41] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -1451123460
-2012-11-02 16:23:13,425 [41] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set commonJs.  Current hash: 2099574990
-2012-11-02 16:23:13,425 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 16:23:13,425 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 16:23:13,425 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: 2099574990
-2012-11-02 16:23:13,426 [41] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set appJs.  Current hash: 1113926612
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: 1113926612
-2012-11-02 16:23:13,426 [41] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - Computing hash for set uiJs.  Current hash: -965424373
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 16:23:13,426 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 16:23:13,427 [41] DEBUG Combres.VersionGenerators.HashCodeVersionGenerator - New hash: -965424373
-2012-11-02 16:23:13,427 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 16:23:13,427 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 16:23:13,428 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 16:23:13,441 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 16:23:13,459 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 16:23:13,460 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 16:23:13,460 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 16:23:13,461 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 16:23:13,462 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 16:23:13,462 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 16:23:13,473 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 16:23:13,474 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 16:23:13,475 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 16:23:13,475 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 16:23:13,475 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 16:23:13,475 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 16:23:13,476 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 16:23:13,476 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 16:23:13,476 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 16:23:13,476 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 16:23:13,476 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 16:23:13,476 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 16:23:13,476 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 16:23:13,476 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 16:23:13,476 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 16:23:13,477 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 16:23:13,477 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 16:23:13,477 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 16:23:13,477 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 16:23:13,477 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 16:23:13,477 [41] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
-2012-11-02 16:32:33,874 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/common.css' (Mode: Static)
-2012-11-02 16:32:33,874 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/styles/game.css' (Mode: Static)
-2012-11-02 16:32:33,875 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-1.8.2.min.js' (Mode: Static)
-2012-11-02 16:32:33,883 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery-ui-1.9.1.custom.min.js' (Mode: Static)
-2012-11-02 16:32:33,900 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.animate-enhanced.min.js' (Mode: Static)
-2012-11-02 16:32:33,900 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.flip.min.js' (Mode: Static)
-2012-11-02 16:32:33,900 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.color.js' (Mode: Static)
-2012-11-02 16:32:33,902 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/jquery.signalR-0.5.3.min.js' (Mode: Static)
-2012-11-02 16:32:33,903 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/purl.js' (Mode: Static)
-2012-11-02 16:32:33,903 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockout-2.2.0.debug.js' (Mode: Static)
-2012-11-02 16:32:33,915 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/knockoutmapping-2.0.js' (Mode: Static)
-2012-11-02 16:32:33,916 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/koExternalTemplateEngine_all.min.js' (Mode: Static)
-2012-11-02 16:32:33,916 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/common.js' (Mode: Static)
-2012-11-02 16:32:33,917 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/game-service.js' (Mode: Static)
-2012-11-02 16:32:33,917 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-list-item.js' (Mode: Static)
-2012-11-02 16:32:33,917 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/card.js' (Mode: Static)
-2012-11-02 16:32:33,917 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/hand.js' (Mode: Static)
-2012-11-02 16:32:33,917 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/player.js' (Mode: Static)
-2012-11-02 16:32:33,917 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/standing.js' (Mode: Static)
-2012-11-02 16:32:33,917 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game.js' (Mode: Static)
-2012-11-02 16:32:33,918 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/dto/game-result.js' (Mode: Static)
-2012-11-02 16:32:33,918 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/button.js' (Mode: Static)
-2012-11-02 16:32:33,918 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/menu.js' (Mode: Static)
-2012-11-02 16:32:33,918 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view.js' (Mode: Static)
-2012-11-02 16:32:33,918 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/games-view.js' (Mode: Static)
-2012-11-02 16:32:33,918 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/game-view.js' (Mode: Static)
-2012-11-02 16:32:33,919 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/deck-view.js' (Mode: Static)
-2012-11-02 16:32:33,919 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/ui/view/standing-view.js' (Mode: Static)
-2012-11-02 16:32:33,919 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/view-factory.js' (Mode: Static)
-2012-11-02 16:32:33,919 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/app.js' (Mode: Static)
-2012-11-02 16:32:33,919 [94] DEBUG Combres.ResourceContentReader - Use content from content's cache for Resource '~/scripts/app/fb.js' (Mode: Static)
+2012-11-02 23:28:40,739 [229] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:28:40,739 [229] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,025 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,025 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,029 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,029 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,030 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,030 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,033 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,033 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,035 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,035 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,037 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,037 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,038 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,038 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,039 [227] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,039 [227] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,041 [227] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,041 [227] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,046 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,046 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,048 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,048 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,051 [227] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,051 [227] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,052 [227] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,052 [227] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,059 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,059 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,061 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,061 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,069 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,069 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,071 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,071 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,076 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,076 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,077 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,077 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,081 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,081 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,082 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,082 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,090 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,090 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,092 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,092 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,110 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,110 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,112 [228] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,112 [228] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,116 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,116 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,118 [227] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,118 [227] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,122 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,123 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,124 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,124 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,127 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,127 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,144 [233] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,145 [233] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,148 [227] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,148 [227] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,149 [227] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,150 [227] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+
+2012-11-02 23:29:00,159 [227] DEBUG Combres.ChangeMonitor - Static resources change count: 1
+2012-11-02 23:29:00,160 [227] DEBUG Combres.Configuration - Change merged. Change Type: Resource - Affected resource list: 
+ - ~/scripts/ui/button.js
+ - ~/scripts/ui/menu.js
+ - ~/scripts/ui/view.js
+ - ~/scripts/app/game-service.js
+ - ~/scripts/dto/card.js
+ - ~/scripts/ui/view/deck-view.js
+ - ~/scripts/dto/hand.js
+ - ~/scripts/dto/player.js
+ - ~/scripts/dto/game.js
+ - ~/scripts/dto/game-result.js
+ - ~/scripts/ui/view/game-view.js
+ - ~/scripts/dto/standing.js
+ - ~/scripts/ui/view/standing-view.js
+ - ~/scripts/app/view-factory.js
+ - ~/scripts/dto/game-list-item.js
+ - ~/scripts/ui/view/games-view.js
+ - ~/scripts/app/app.js
+

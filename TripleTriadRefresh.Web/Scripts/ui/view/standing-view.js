@@ -8,8 +8,8 @@ var StandingView = (function (_super) {
     function StandingView() {
         var _this = this;
         _super.call(this);
-        this.viewName = 'standing-view';
-        this.standing = ko.observable(null);
+        this.viewName = ko.observable('standing-view');
+        this.standing = ko.observable(new Standing(null));
         this.service = new GameService();
         this.menu().items([]);
         this.isLoading(true);

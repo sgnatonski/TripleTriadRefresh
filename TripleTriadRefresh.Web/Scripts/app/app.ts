@@ -25,7 +25,7 @@ class App {
             this.view(this.viewFac.createGamesView());
         else if (path == 'cards')
             this.view(this.viewFac.createDeckView());
-        else if (path == 'standing')
+        else if (path == 'me')
             this.view(this.viewFac.createStandingView());
         else
             this.view(this.viewFac.createGameView(path));
@@ -40,7 +40,7 @@ class App {
     }
 
     showStanding() {
-        window.history.pushState(null, 'Standing', this.pathAbs + 'standing');
+        window.history.pushState(null, 'Me', this.pathAbs + 'me');
         this.view(this.viewFac.createStandingView());
     }
 

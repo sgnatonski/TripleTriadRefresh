@@ -140,7 +140,25 @@
     <Content Include="scripts\app\app.js">
       <DependentUpon>app.ts</DependentUpon>
     </Content>
+    <Content Include="scripts\ui\view.js.map">
+      <DependentUpon>view.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\ui\view\deck-view.js.map">
+      <DependentUpon>deck-view.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\ui\view\games-view.js.map">
+      <DependentUpon>games-view.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\ui\view\games-view.min.js">
+      <DependentUpon>games-view.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\ui\view\standing-view.js.map">
+      <DependentUpon>standing-view.ts</DependentUpon>
+    </Content>
     <TypeScriptCompile Include="scripts\dto\game-result.ts" />
+    <Content Include="scripts\app\app.min.js">
+      <DependentUpon>app.ts</DependentUpon>
+    </Content>
     <Content Include="scripts\dto\card.min.js">
       <DependentUpon>card.ts</DependentUpon>
     </Content>
@@ -167,6 +185,12 @@
     <Content Include="scripts\jquery.color.js" />
     <Content Include="scripts\jquery.flip.js" />
     <Content Include="scripts\jquery.flip.min.js" />
+    <Content Include="scripts\ui\view.min.js">
+      <DependentUpon>view.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\ui\view\deck-view.min.js">
+      <DependentUpon>deck-view.ts</DependentUpon>
+    </Content>
     <Content Include="scripts\ui\view\game-view.js.map">
       <DependentUpon>game-view.ts</DependentUpon>
     </Content>
@@ -208,6 +232,9 @@
     </Content>
     <Content Include="scripts\dto\player.js.map">
       <DependentUpon>player.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\app\app.js.map">
+      <DependentUpon>app.ts</DependentUpon>
     </Content>
     <None Include="scripts\jquery-1.8.2.intellisense.js" />
     <TypeScriptCompile Include="scripts\dto\player.ts" />
@@ -262,6 +289,9 @@
     <Content Include="scripts\purl.js" />
     <TypeScriptCompile Include="scripts\ui\view\standing-view.ts" />
     <Content Include="scripts\ui\view\standing-view.js">
+      <DependentUpon>standing-view.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\ui\view\standing-view.min.js">
       <DependentUpon>standing-view.ts</DependentUpon>
     </Content>
     <Content Include="scripts\underscore.browser.d.ts" />

@@ -8,7 +8,7 @@ var GameView = (function (_super) {
     function GameView(gameId, withAi) {
         var _this = this;
         _super.call(this);
-        this.viewName = "game-view";
+        this.viewName = ko.observable('game-view');
         this.gameId = null;
         this.game = ko.observable(new Game(null));
         this.gameResult = ko.observable(new GameResult(null));

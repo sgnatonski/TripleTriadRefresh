@@ -8,7 +8,7 @@ var GamesView = (function (_super) {
     function GamesView() {
         var _this = this;
         _super.call(this);
-        this.viewName = "game-list-view";
+        this.viewName = ko.observable('game-list-view');
         this.games = ko.observableArray([]);
         this.selected = ko.observable(null);
         this.service = new GameService();

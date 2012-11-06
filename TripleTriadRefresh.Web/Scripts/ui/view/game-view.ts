@@ -4,8 +4,9 @@
 /// <reference path="../../dto/game.ts" />
 /// <reference path="../../dto/game-result.ts" />
 
+declare var app;
 class GameView extends View {
-    viewName = "game-view";
+    viewName = ko.observable('game-view');
     gameId = <string>null;
     game = ko.observable(new Game(null));
     gameResult = ko.observable(new GameResult(null));

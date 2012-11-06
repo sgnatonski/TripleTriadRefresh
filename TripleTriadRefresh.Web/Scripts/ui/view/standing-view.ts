@@ -3,9 +3,9 @@
 /// <reference path="../../app/game-service.ts" />
 /// <reference path="../../dto/standing.ts" />
 class StandingView extends View { 
-    viewName = 'standing-view';
-    standing = ko.observable(new Standing(null));
-    service = new GameService();
+    public viewName = ko.observable('standing-view');
+    public standing = ko.observable(new Standing(null));
+    private service = new GameService();
     constructor() {
         super();
 

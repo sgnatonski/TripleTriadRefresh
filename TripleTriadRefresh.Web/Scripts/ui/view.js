@@ -1,5 +1,6 @@
 var View = (function () {
     function View() {
+        this.viewName = ko.observable(null);
         this.isLoading = ko.observable(false);
         this.menu = ko.observable(Menu);
         $.extendSignalR();

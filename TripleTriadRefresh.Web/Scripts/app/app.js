@@ -22,7 +22,7 @@ var App = (function () {
             if(path == 'cards') {
                 this.view(this.viewFac.createDeckView());
             } else {
-                if(path == 'standing') {
+                if(path == 'me') {
                     this.view(this.viewFac.createStandingView());
                 } else {
                     this.view(this.viewFac.createGameView(path));
@@ -37,7 +37,7 @@ var App = (function () {
         return this.pathAbs;
     };
     App.prototype.showStanding = function () {
-        window.history.pushState(null, 'Standing', this.pathAbs + 'standing');
+        window.history.pushState(null, 'Me', this.pathAbs + 'me');
         this.view(this.viewFac.createStandingView());
     };
     App.prototype.showGames = function () {

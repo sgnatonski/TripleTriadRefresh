@@ -3,11 +3,12 @@
 /// <reference path="../../app/view-factory.ts" />
 /// <reference path="../../dto/game-list-item.ts" />
 
+declare var app;
 class GamesView extends View {
-    viewName = "game-list-view";
-    games = ko.observableArray(<GameListItem[]>[]);
-    selected = ko.observable(<GameListItem>null);
-    service = new GameService();
+    public viewName = ko.observable('game-list-view');
+    public games = ko.observableArray(<GameListItem[]>[]);
+    public selected = ko.observable(<GameListItem>null);
+    private service = new GameService();
     constructor () {
         super();
 
@@ -51,7 +52,7 @@ class GamesView extends View {
         }
     }
 
-    selectGame: (game: GameListItem) => void;
-    isSelected: (game: GameListItem) => void;
-    joinGame: (game: GameListItem) => void;
+    public selectGame: (game: GameListItem) => void;
+    public isSelected: (game: GameListItem) => void;
+    public joinGame: (game: GameListItem) => void;
 }
