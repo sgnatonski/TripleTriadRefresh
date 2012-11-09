@@ -27,12 +27,12 @@
       <resource path="~/scripts/jquery.flip.min.js" />
       <resource path="~/scripts/jquery.color.js" />
       <resource path="~/scripts/jquery.signalR-0.5.3.min.js" />
-      <!--<resource path="~/scripts/underscore.js" />
-      <resource path="~/scripts/underscore.string.js" />-->
       <resource path="~/scripts/purl.js" />
       <resource path="~/scripts/knockout-2.2.0.debug.js" />
       <resource path="~/scripts/knockoutmapping-2.0.js" />
       <resource path="~/scripts/koExternalTemplateEngine_all.min.js" />
+      <resource path="~/scripts/kinetic-v4.0.5.min.js" />
+      <resource path="~/scripts/knockout-kinetic.js" />
     </resourceSet>
     <resourceSet name="commonJs" type="js">
       <resource path="~/scripts/app/common.js" />

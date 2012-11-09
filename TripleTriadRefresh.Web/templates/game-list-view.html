@@ -1,30 +1,39 @@
 ﻿<div id="game-list-view">
-    <div id="games" class="window">
-        <div>
+    <div id="games">
+        <div class="window">
             <h1>Open games</h1>
         </div>
-        <!--  ko ifnot: games().lenght > 0 -->
-        <span>No open games</span>
-        <!-- /ko -->
-        <!--  ko if: games().lenght > 0 -->
-        <div class="window" data-bind="foreach: games">
-            <div>
-                <span data-bind="text: firstName"></span>
-                (<span data-bind="text: firstHandStr"></span>)
-                <!-- ko if: SecondName -->
-                <span>VS</span>
-                <span data-bind="text: secondName"></span>
-                (<span data-bind="text: secondHandStr"></span>)
-                <!-- /ko -->
-                <!-- ko if: CanJoin -->
-                <input type="button" data-bind="click: $parent.joinGame, enable: canJoin" value="Join"/>
-                <!-- /ko -->
-                <!-- ko if: WinnerName -->
-                <span >Winner: </span>
-                <span data-bind="text: winnerName"></span>
-                <!-- /ko -->
+        <div class="window">
+            <!--  ko ifnot: games().lenght > 0 -->
+            <span>No open games</span>
+            <!-- /ko -->
+            <!--  ko if: games().lenght > 0 -->
+            <div class="window" data-bind="foreach: games">
+                <div>
+                    <span data-bind="text: firstName"></span>
+                    (<span data-bind="text: firstHandStr"></span>)
+                    <!-- ko if: SecondName -->
+                    <span>VS</span>
+                    <span data-bind="text: secondName"></span>
+                    (<span data-bind="text: secondHandStr"></span>)
+                    <!-- /ko -->
+                    <!-- ko if: CanJoin -->
+                    <input type="button" data-bind="click: $parent.joinGame, enable: canJoin" value="Join"/>
+                    <!-- /ko -->
+                    <!-- ko if: WinnerName -->
+                    <span >Winner: </span>
+                    <span data-bind="text: winnerName"></span>
+                    <!-- /ko -->
+                </div>
             </div>
+            <!-- /ko -->
         </div>
-        <!-- /ko -->
     </div>
+    <!-- Look, ma! No JavaScript! -->
+    <!-- ko Kinetic.Stage: { width: 578, height: 200 } -->
+    <!--     ko Kinetic.Layer: { } -->
+    <!--         ko Kinetic.Rect: { x: 239, y: 75, width: 100, height: 50, fill: "#00D2FF", stroke: "black", strokeWidth: 4, draggable: true } -->
+    <!--         /ko -->
+    <!--     /ko -->
+    <!-- /ko -->
 </div>

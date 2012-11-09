@@ -106,6 +106,9 @@ ko.bindingHandlers.loadingWhen = {
             $childrenToHide = $element.children(":not(div.loader)"),
             $loader = $element.find("div.loader");
 
+        $loader.stop();
+        $loader.clearQueue();
+
         if (isLoading) {
             $childrenToHide.fadeOut("fast").attr("disabled", "disabled");
             $loader.show();
@@ -118,14 +121,10 @@ ko.bindingHandlers.loadingWhen = {
 };
 
 ko.bindingHandlers.fadeVisible = {
-    init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
-        // Initially set the element to be instantly visible/hidden depending on the value
-        var value = valueAccessor();
-        $(element).css('display', 'none');
-    },
     update: function (element, valueAccessor, allBindingsAccessor, viewModel) {
-        // Whenever the value subsequently changes, slowly fade the element in or out
         var value = valueAccessor();
+        $(element).stop();
+        $(element).clearQueue();
         $(element).fadeIn('fast');
     }
 };

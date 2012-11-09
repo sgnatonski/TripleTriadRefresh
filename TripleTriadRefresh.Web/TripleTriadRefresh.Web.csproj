@@ -140,6 +140,8 @@
     <Content Include="scripts\app\app.js">
       <DependentUpon>app.ts</DependentUpon>
     </Content>
+    <Content Include="scripts\kinetic-v4.0.5.min.js" />
+    <Content Include="scripts\knockout-kinetic.js" />
     <Content Include="scripts\ui\view.js.map">
       <DependentUpon>view.ts</DependentUpon>
     </Content>
