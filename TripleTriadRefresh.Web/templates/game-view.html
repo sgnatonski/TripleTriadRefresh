@@ -1,7 +1,7 @@
 ﻿<div id="game-view">
-    <div id="game" class="glass-panel">
+    <div id="game">
         <div id="playerDeck" class="deck"> 
-            <div class="window game-header" data-bind="pulse: game().isFirstPlayerTurn">
+            <div class="window" data-bind="pulse: game().isFirstPlayerTurn">
                 <span data-bind="text: game().getPlayer().userName"></span>
                 <ul data-bind="foreach: game().getPlayer().hand().playCards, css: { greyscale: !game().getPlayer().isReady() }">
                     <li class="card" data-bind="drag: {value: $parent.dragging}">
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div id="enemyDeck" class="deck"> 
-            <div class="window game-header" data-bind="pulse: game().isSecondPlayerTurn">
+            <div class="window" data-bind="pulse: game().isSecondPlayerTurn">
                 <span data-bind="text: game().getEnemy().userName"></span>
                 <div id="enemy-cards" data-bind="foreach: game().getEnemy().hand().playCards, css: { greyscale: !game().getEnemy().isReady() }">
                     <div class="card">

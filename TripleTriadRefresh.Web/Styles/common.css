@@ -6,15 +6,15 @@
 
 body
 {
-	background: #f6e6b4; /* Old browsers */
-	background-repeat: no-repeat;
-	background: -moz-radial-gradient(center, ellipse cover,  #f6e6b4 0%, #ed9017 100%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f6e6b4), color-stop(100%,#ed9017)); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover,  #f6e6b4 0%,#ed9017 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover,  #f6e6b4 0%,#ed9017 100%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover,  #f6e6b4 0%,#ed9017 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center,  #f6e6b4 0%,#ed9017 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background: rgb(167,207,223);
+background: -moz-linear-gradient(45deg,  rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%);
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(167,207,223,1)), color-stop(100%,rgba(35,83,138,1)));
+background: -webkit-linear-gradient(45deg,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+background: -o-linear-gradient(45deg,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+background: -ms-linear-gradient(45deg,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+background: linear-gradient(45deg,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 );
+
 	height: 100%;
 	margin: 0;	
 }
@@ -33,11 +33,14 @@ h1
 	margin: 0px;
 	text-align: center;
 	color: #FFF;
-	
+	-webkit-text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;	
 }
 
 span{
 	color: #FFF;
+    -webkit-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
 }
 
 .loader
@@ -51,12 +54,13 @@ span{
 
 .window{
 	margin-bottom: 1px;
+    -webkit-box-shadow:  8px 8px 12px 1px rgba(0, 0, 0, 0.5);
+        
+        box-shadow:  8px 8px 12px 1px rgba(0, 0, 0, 0.5);
 }
 
 .window, input[type=button]
 {
-	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 1);
-	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 1);
 	border-top: 2px #aaa solid;
 	border-left: 2px #aaa solid;
 	border-bottom: 2px #4f4f4f solid;
@@ -76,6 +80,8 @@ span{
 
 input[type=button]
 {
+	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 1);
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 1);
 	height: 100%;
 	margin-bottom: 12px;
 }
