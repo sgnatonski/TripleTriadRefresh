@@ -154,6 +154,11 @@
     <Content Include="scripts\ui\view\games-view.min.js">
       <DependentUpon>games-view.ts</DependentUpon>
     </Content>
+    <Content Include="Views\Home\Index.cshtml" />
+    <TypeScriptCompile Include="scripts\ui\view\home-view.ts" />
+    <Content Include="scripts\ui\view\home-view.js">
+      <DependentUpon>home-view.ts</DependentUpon>
+    </Content>
     <Content Include="scripts\ui\view\standing-view.js.map">
       <DependentUpon>standing-view.ts</DependentUpon>
     </Content>
@@ -301,6 +306,7 @@
     <Content Include="scripts\underscore.min.js" />
     <Content Include="scripts\underscore.string.d.ts" />
     <Content Include="scripts\underscore.string.js" />
+    <Content Include="templates\home-view.html" />
     <Content Include="templates\standing-view.html" />
     <Content Include="x64\SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

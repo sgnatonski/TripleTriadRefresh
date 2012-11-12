@@ -58,6 +58,7 @@
       <resource path="~/scripts/ui/view/game-view.js" />
       <resource path="~/scripts/ui/view/deck-view.js" />
       <resource path="~/scripts/ui/view/standing-view.js" />
+      <resource path="~/scripts/ui/view/home-view.js" />
     </resourceSet>
   </resourceSets>
 </combres>

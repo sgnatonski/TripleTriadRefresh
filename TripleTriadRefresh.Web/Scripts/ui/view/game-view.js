@@ -38,12 +38,12 @@ var GameView = (function (_super) {
             _this.game(new Game(data));
         };
         this.connection.gameJoined = function (data) {
-            window.history.pushState(data, "Game", app.getPathAbs() + data);
+            window.history.pushState(data, "Game", app.getPathAbs() + 'play/' + data);
             app.currentGameId(data);
             _this.isLoading(false);
         };
         this.connection.gameLeft = function () {
-            window.history.pushState(null, "Game list", app.getPathAbs());
+            window.history.pushState(null, "Game list", app.getPathAbs() + 'play/');
             app.currentGameId('');
             app.view(app.viewFac.createGamesView());
         };
@@ -77,7 +77,7 @@ var GameView = (function (_super) {
         };
         this.closeResult = function () {
             _this.closeResultHidden(true);
-            window.history.pushState(null, "Game list", app.getPathAbs());
+            window.history.pushState(null, "Game list", app.getPathAbs() + 'play/');
             app.currentGameId('');
             app.view(app.viewFac.createGamesView());
         };

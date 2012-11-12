@@ -41,7 +41,7 @@ window.fbAsyncInit = function () {
     FB.getLoginStatus(function (response) {
         if (response.status !== 'connected') {
             // the user isn't logged in to Facebook.
-            $.post(app.getPath() + 'logout', function () {
+            $.post(app.getPathAbs() + 'api/logout', function () {
                 app.authInitializing(false);
                 $('.fsm').hide();
             });
@@ -68,6 +68,6 @@ window.fbAsyncInit = function () {
 
 $(function () {
     app.launch();
-    infuser.defaults.templateUrl = app.path + 'templates';
+    infuser.defaults.templateUrl = app.getPathAbs() + 'templates';
     ko.applyBindings(app, $("body > .content").get(0));
 });

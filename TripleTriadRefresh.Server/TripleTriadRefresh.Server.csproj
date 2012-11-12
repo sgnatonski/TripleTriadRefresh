@@ -133,6 +133,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Bootstrap.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\Result\JsonNetResult.cs" />
     <Compile Include="Controllers\Result\LoginResult.cs" />

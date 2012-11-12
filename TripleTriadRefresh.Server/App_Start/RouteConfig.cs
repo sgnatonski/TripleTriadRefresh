@@ -16,43 +16,57 @@ namespace TripleTriadRefresh.Server
 
             routes.MapRoute(
                 name: "Deck",
-                url: "deck/{id}",
+                url: "api/deck/{id}",
                 defaults: new { controller = "Game", action = "GetDeck", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(
                 name: "Games",
-                url: "games",
+                url: "api/games",
                 defaults: new { controller = "Game", action = "GetGameList" }
             );
 
             routes.MapRoute(
                 name: "Standing",
-                url: "standing/{id}",
+                url: "api/standing/{id}",
                 defaults: new { controller = "Game", action = "GetStanding", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(
                 name: "AuthLogin",
-                url: "login",
+                url: "api/login",
                 defaults: new { controller = "Authentication", action = "Login" }
             );
             routes.MapRoute(
                 name: "AuthLoginDebug",
-                url: "logindebug",
+                url: "api/logindebug",
                 defaults: new { controller = "Authentication", action = "LoginDebug" }
             );
 
             routes.MapRoute(
                 name: "AuthLogout",
-                url: "logout",
+                url: "api/logout",
                 defaults: new { controller = "Authentication", action = "Logout" }
             );
 
+            // not starting with api
             routes.MapRoute(
                 name: "Main",
-                url: "{id}",
+                url: "{*url}",
+                defaults: new { controller = "Game", action = "Game", id = UrlParameter.Optional },
+                constraints: new { url = @"^(?!api)\w+$" }
+            );
+
+            routes.MapRoute(
+                name: "Play",
+                url: "play/{*url}",
                 defaults: new { controller = "Game", action = "Game", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Home",
+                url: "",
+                defaults: new { controller = "Home", action = "Index" }
             );
         }
     }

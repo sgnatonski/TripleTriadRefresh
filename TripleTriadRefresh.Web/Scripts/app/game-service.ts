@@ -1,12 +1,12 @@
 /// <reference path="../jquery.d.ts" />
 class GameService {
     getStanding(completeCallback : (data: any[]) => void) {
-        $.get('standing', null, completeCallback);
+        $.get('api/standing', null, completeCallback);
     }
     getDeck(completeCallback : (data: any[]) => void) {
-        $.get('deck', null, completeCallback);
+        $.get('api/deck', null, completeCallback);
     }
     getGames(completeCallback : (data: any[]) => void) {
-        $.get('games', null, completeCallback);
+        $.get('api/games', null, completeCallback);
     }
 }

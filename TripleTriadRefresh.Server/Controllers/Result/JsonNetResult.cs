@@ -8,6 +8,17 @@ namespace TripleTriadRefresh.Server.Controllers.Result
 {
     public class JsonNetResult : JsonResult
     {
+        public JsonNetResult()
+        {
+            JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+        }
+
+        public JsonNetResult(object data)
+        {
+            Data = data;
+            JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+        }
+
         public override void ExecuteResult(ControllerContext context)
         {
             if (context == null)

@@ -35,12 +35,12 @@ class GameView extends View {
             this.game(new Game(data));
         };
         this.connection.gameJoined = (data) => {
-            window.history.pushState(data, "Game", app.getPathAbs() + data);
+            window.history.pushState(data, "Game", app.getPathAbs() + 'play/' + data);
             app.currentGameId(data);
             this.isLoading(false);
         };
         this.connection.gameLeft = () => {
-            window.history.pushState(null, "Game list", app.getPathAbs());
+            window.history.pushState(null, "Game list", app.getPathAbs() + 'play/');
             app.currentGameId('');
             app.view(app.viewFac.createGamesView());
         };
@@ -82,7 +82,7 @@ class GameView extends View {
 
         this.closeResult = () => {
             this.closeResultHidden(true);
-            window.history.pushState(null, "Game list", app.getPathAbs());
+            window.history.pushState(null, "Game list", app.getPathAbs() + 'play/');
             app.currentGameId('');
             app.view(app.viewFac.createGamesView());
         }

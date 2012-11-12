@@ -18,17 +18,10 @@ class App {
         if (pathPart.charAt(pathPart.length - 1) != '/') {
             pathPart += '/';
         }
-        //this.path = _s.rtrim(pathPart, '/') + '/';
 
-        var path = $.url().attr('path').replace(pathPart, '');
-        if (!path || path == '/')
-            this.view(this.viewFac.createGamesView());
-        else if (path == 'cards')
-            this.view(this.viewFac.createDeckView());
-        else if (path == 'me')
-            this.view(this.viewFac.createStandingView());
-        else
-            this.view(this.viewFac.createGameView(path));
+        this.path = '/' + $.url().attr('path').replace(pathPart, '');
+        
+        this.view(this.viewFac.createViewFromUrl(this.path));
     }
 
     getPath() {
@@ -45,7 +38,7 @@ class App {
     }
 
     showGames() {
-        window.history.pushState(null, 'Game list', this.pathAbs);
+        window.history.pushState(null, 'Game list', this.pathAbs + 'play');
         this.view(this.viewFac.createGamesView());
     }
 
@@ -62,14 +55,14 @@ class App {
 
         var userId = $.url().param('userId');
         if (userId) {
-            $.ajax(this.path + 'logindebug', {
+            $.ajax(this.pathAbs + 'api/logindebug', {
                 type: 'POST',
                 data: { id: userId },
                 success: successfulLogin
             });
         }
         else {
-            $.ajax(this.path + 'login', {
+            $.ajax(this.pathAbs + 'api/login', {
                 type: 'POST',
                 data: $(form).serialize(),
                 success: successfulLogin
