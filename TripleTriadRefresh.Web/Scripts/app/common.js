@@ -138,6 +138,12 @@ ko.bindingHandlers.pulse = {
     }
 };
 
+ko.bindingHandlers.scrollbar = {
+    init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+        $(element).tinyscrollbar();
+    }
+};
+
 ko.bindingHandlers.counter = {
     update: function (element, valueAccessor, allBindingsAccessor, viewModel) {
         var value = ko.utils.unwrapObservable(valueAccessor()),

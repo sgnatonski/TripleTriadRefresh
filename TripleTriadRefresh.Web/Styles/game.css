@@ -19,6 +19,27 @@
 	width: 800px;
 }
 
+#home
+{
+	height: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
+	position: relative;
+	width: 800px;
+}
+
+#home-scrollbar { clear: both; width: 788px; }
+#home-scrollbar .viewport { height: 600px; width: 770px; overflow: hidden; position: relative; }
+#home-scrollbar .overview { list-style: none; position: absolute; left: 0; top: 0; }
+#home-scrollbar .thumb .end,
+#home-scrollbar .thumb { background-color: #003D5D; }
+#home-scrollbar .scrollbar { position: relative; float: right; width: 15px; }
+#home-scrollbar .track { background-color: #D8EEFD; height: 100%; width:13px; position: relative; padding: 0 1px; }
+#home-scrollbar .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#home-scrollbar .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+#home-scrollbar .disable{ display: none; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+
 #games
 {
 	height: 100%;
