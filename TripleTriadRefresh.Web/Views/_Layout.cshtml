@@ -35,6 +35,7 @@
                 <!-- /ko -->
             </div>
             <div class="glass-panel to-left" id="user-panel">
+                <input type="button" data-bind="click: showHome" value="<"/>
                 <input type="button" data-bind="click: showStanding" value="Standings"/>
                 <input type="button" data-bind="click: showGames" value="Games"/>
                 <input type="button" data-bind="click: showCards" value="Cards"/>
@@ -51,6 +52,9 @@
             </div>
             <!-- /ko -->
         </div>
+    </div>
+    <div class="version">
+        <span>ver. @System.Configuration.ConfigurationManager.AppSettings["AppVersion"]</span>
     </div>
 </body>
 </html>

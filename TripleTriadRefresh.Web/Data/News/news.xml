@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<messages>
+  <message version="0.1.0" type="change" title="Current state" date="10.11.2012">
+    - Player standings can be viewed
+    - Player deck can be viewed
+    - List of currently played games can be viewed
+    - Player can join a game
+    - Player can start a game with AI
+    - Experience and Card Points are granted according to game result
+  </message>
+  <message version="" type="news" title="Initial system rollout" date="10.11.2012">
+    Welcome to Triple Triad Refresh - a clone of popular mini-game introduced in Final Fantasy VIII.
+    This is initial game rolluot that should be considered an early alpha, so expect numerous bugs, regular data wipe and many other nice things ;). Also not every aspect of the game is yet functional.
+    When development progresses important changes will be announced, so stay tuned and feel free to use and enjoy those parts of Triple Triad Refresh that are currently playable.
+  </message>
+</messages>

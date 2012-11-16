@@ -28,20 +28,46 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', end
 	-moz-box-sizing: border-box;
 }
 
-h1
+h1, h2, h3
 {
 	margin: 0px;
 	text-align: center;
 	color: #FFF;
 	-webkit-text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-
 }
 
-span{
+h3 {
+    text-align: left;
+}
+
+p, span{
 	color: #FFF;
     -webkit-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+}
+
+div.version {
+    position: absolute; 
+    right: 3px; 
+    bottom: 2px;
+}
+
+.news {
+    margin-left: 20px;
+}
+
+div.news-version {
+    font-size: 11px;
+}
+
+div.news-version > span {
+    color: #CCC;
+}
+
+ul.news-change-list {
+    list-style-type: none;
+    margin-left: -40px;
 }
 
 .loader

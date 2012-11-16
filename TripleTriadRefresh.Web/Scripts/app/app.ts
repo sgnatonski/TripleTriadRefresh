@@ -32,6 +32,11 @@ class App {
         return this.pathAbs;
     }
 
+    showHome() {
+        window.history.pushState(null, '', this.pathAbs);
+        this.view(this.viewFac.createHomeView());
+    }
+
     showStanding() {
         window.history.pushState(null, 'Me', this.pathAbs + 'me');
         this.view(this.viewFac.createStandingView());

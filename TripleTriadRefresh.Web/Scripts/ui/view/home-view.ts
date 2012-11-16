@@ -1,24 +1,31 @@
 /// <reference path="../../jquery.d.ts" />
 /// <reference path="../view.ts" />
-/// <reference path="../../app/game-service.ts" />
+/// <reference path="../../app/home-service.ts" />
 
 declare var app;
 class HomeView extends View { 
     public viewName = ko.observable('home-view');
-    private service = new GameService();
+    public news = ko.observableArray(<string[]>[]);
+    private service = new HomeService();
     constructor() {
         super();
 
-        /*this.isLoading(true);
-        this.service.getDeck((data: any[]) => {
-            var cards = [];
+        this.isLoading(true);
+        this.service.getNews((data: any[]) => {
+            var news = [];
             ko.utils.arrayForEach(data, (value) => {
-                cards.push(new Card(value));
+                news.push({ 
+                    title: value['@title'],
+                    version: value['@version'],
+                    date: value['@date'],
+                    type: value['@type'],
+                    texts: value['texts']
+                });
             });
 
-            this.cards([]);
-            this.cards(cards);
+            this.news([]);
+            this.news(news);
             this.isLoading(false);
-        });*/
+        });
     }
 }

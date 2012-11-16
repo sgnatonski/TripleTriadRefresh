@@ -15,6 +15,12 @@ namespace TripleTriadRefresh.Server
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "News",
+                url: "api/news",
+                defaults: new { controller = "Home", action = "GetNews" }
+            );
+
+            routes.MapRoute(
                 name: "Deck",
                 url: "api/deck/{id}",
                 defaults: new { controller = "Game", action = "GetDeck", id = UrlParameter.Optional }

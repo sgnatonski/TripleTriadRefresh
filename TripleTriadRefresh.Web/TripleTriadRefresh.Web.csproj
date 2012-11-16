@@ -137,8 +137,13 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\combres_full_with_annotation.xml" />
+    <Content Include="Data\News\news.xml" />
     <Content Include="scripts\app\app.js">
       <DependentUpon>app.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="scripts\app\home-service.ts" />
+    <Content Include="scripts\app\home-service.js">
+      <DependentUpon>home-service.ts</DependentUpon>
     </Content>
     <Content Include="scripts\jquery.tinyscrollbar.min.js" />
     <Content Include="scripts\kinetic-v4.0.5.min.js" />

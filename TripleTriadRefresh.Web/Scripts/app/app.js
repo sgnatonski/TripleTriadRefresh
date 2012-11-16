@@ -24,6 +24,10 @@ var App = (function () {
     App.prototype.getPathAbs = function () {
         return this.pathAbs;
     };
+    App.prototype.showHome = function () {
+        window.history.pushState(null, '', this.pathAbs);
+        this.view(this.viewFac.createHomeView());
+    };
     App.prototype.showStanding = function () {
         window.history.pushState(null, 'Me', this.pathAbs + 'me');
         this.view(this.viewFac.createStandingView());

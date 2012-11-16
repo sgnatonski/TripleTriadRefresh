@@ -37,6 +37,7 @@
     </resourceSet>
     <resourceSet name="commonJs" type="js">
       <resource path="~/scripts/app/common.js" />
+      <resource path="~/scripts/app/home-service.js" />
       <resource path="~/scripts/app/game-service.js" />
       <resource path="~/scripts/dto/game-list-item.js" />
       <resource path="~/scripts/dto/card.js" />
