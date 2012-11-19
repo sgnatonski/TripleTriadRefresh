@@ -1,5 +1,5 @@
+using Microsoft.AspNet.SignalR.Hubs;
 using System.Collections.Generic;
-using SignalR.Hubs;
 using TripleTriadRefresh.Server.Models.System;
 
 namespace TripleTriadRefresh.Server.Framework

@@ -30,7 +30,7 @@ namespace TripleTriadRefresh.Server.Framework.Aspects.Interceptors
                     log4net.LogManager.GetLogger(i.TargetType.FullName).Error(sb.ToString(), ex);
 
                     var hub = (GameHub)i.InvocationTarget.GetPropertyValue("Hub", Flags.AllMembers);
-                    hub.Caller.receiveError("Something bad happened.");
+                    hub.Clients.Caller.receiveError("Something bad happened.");
                 }
             };
         }

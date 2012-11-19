@@ -34,8 +34,9 @@
     <Reference Include="ExtraLINQ">
       <HintPath>..\packages\ExtraLINQ.1.0.2\lib\ExtraLINQ.dll</HintPath>
     </Reference>
-    <Reference Include="MoreLinq">
-      <HintPath>..\packages\morelinq.1.0\lib\net35\MoreLinq.dll</HintPath>
+    <Reference Include="MoreLinq, Version=1.0.15416.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\morelinq.1.0.15416-beta\lib\net35\MoreLinq.dll</HintPath>
     </Reference>
     <Reference Include="SubSonic.Core">
       <HintPath>..\packages\SubSonic.3.0.0.4\lib\SubSonic.Core.dll</HintPath>

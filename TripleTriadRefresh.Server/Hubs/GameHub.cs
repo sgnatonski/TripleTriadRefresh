@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using SignalR.Hubs;
 using StructureMap;
 using TripleTriadRefresh.Server.Hubs.Handlers;
+using Microsoft.AspNet.SignalR.Hubs;
 
 namespace TripleTriadRefresh.Server.Hubs
 {
-    public class GameHub : Hub, IDisconnect, IConnected
+    public class GameHub : Hub
     {
         public IGameHubHandler GetHandler()
         {
@@ -53,19 +53,19 @@ namespace TripleTriadRefresh.Server.Hubs
             this.GetHandler().ResolveGame(gameId);
         }
 
-        public Task Disconnect()
+        public override Task OnDisconnected()
         {
             this.GetHandler().Disconnect();
             return null;
         }
 
-        public Task Connect()
+        public override Task OnConnected()
         {
             this.GetHandler().Connect();
             return null;
         }
 
-        public Task Reconnect(IEnumerable<string> groups)
+        public override Task OnReconnected()
         {
             return null;
         }

@@ -1,5 +1,6 @@
 using AspectMap;
-using SignalR;
+using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.SignalR.Infrastructure;
 using TripleTriadRefresh.Server.Framework.Aspects.Attributes;
 using TripleTriadRefresh.Server.Framework.Aspects.Interceptors;
 using TripleTriadRefresh.Server.Hubs.Handlers;
@@ -16,7 +17,7 @@ namespace TripleTriadRefresh.Server.Framework
 
             For<IDependencyResolver>().Use<StructureMapDependencyResolver>();
             For<IJsonSerializer>().Use<CamelCaseJsonSerializer>();
-            For<IConnectionIdGenerator>().Use<GameConnectionGenerator>();
+            For<IConnectionIdPrefixGenerator>().Use<GameConnectionIdPrefixGenerator>();
             For<IGameContainer>().Singleton().Use<GameContainer>();
             For<IPlayerActivator>().Singleton().Use<PlayerActivator>();
             For<IGameHubHandler>().EnrichAllWith(AddAspectsTo).Use<GameHubHandler>();

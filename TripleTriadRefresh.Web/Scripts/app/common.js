@@ -190,7 +190,7 @@ ko.bindingHandlers.counter = {
     }
 };
 
-$.extendSignalR = function () {
+/*$.extendSignalR = function () {
     // TODO: this should be part of signalR library
     if ($.signalR.hub.clearProxy) {
         return;
@@ -284,4 +284,4 @@ $.extendSignalR = function () {
             }
         }
     });
-}
+}*/

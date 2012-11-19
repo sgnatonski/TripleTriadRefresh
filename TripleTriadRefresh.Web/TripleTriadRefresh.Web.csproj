@@ -137,7 +137,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\combres_full_with_annotation.xml" />
-    <Content Include="Data\News\news.xml" />
+    <Content Include="Data\News\news.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="scripts\app\app.js">
       <DependentUpon>app.ts</DependentUpon>
     </Content>
@@ -145,9 +147,12 @@
     <Content Include="scripts\app\home-service.js">
       <DependentUpon>home-service.ts</DependentUpon>
     </Content>
+    <Content Include="scripts\jquery.signalR-1.0.0-alpha2.js" />
+    <Content Include="scripts\jquery.signalR-1.0.0-alpha2.min.js" />
     <Content Include="scripts\jquery.tinyscrollbar.min.js" />
     <Content Include="scripts\kinetic-v4.0.5.min.js" />
     <Content Include="scripts\knockout-kinetic.js" />
+    <Content Include="scripts\signalr-1.0.d.ts" />
     <Content Include="scripts\ui\view.js.map">
       <DependentUpon>view.ts</DependentUpon>
     </Content>
@@ -294,7 +299,6 @@
     </Content>
     <Content Include="scripts\jquery.animate-enhanced.min.js" />
     <Content Include="scripts\jquery.d.ts" />
-    <Content Include="scripts\jquery.signalR-0.5.3.min.js" />
     <Content Include="scripts\jqueryui.d.ts" />
     <Content Include="scripts\knockoutmapping-2.0.js" />
     <Content Include="scripts\koExternalTemplateEngine_all.js" />
@@ -487,7 +491,6 @@
   <ItemGroup>
     <TypeScriptCompile Include="scripts\ui\menu.ts" />
     <TypeScriptCompile Include="scripts\ui\view.ts" />
-    <Content Include="scripts\jquery.signalR-0.5.3.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="combres.readme" />

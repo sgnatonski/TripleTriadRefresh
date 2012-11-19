@@ -27,7 +27,7 @@
       <resource path="~/scripts/jquery.flip.min.js" />
       <resource path="~/scripts/jquery.color.js" />
       <resource path="~/scripts/jquery.tinyscrollbar.min.js" />
-      <resource path="~/scripts/jquery.signalR-0.5.3.min.js" />
+      <resource path="~/scripts/jquery.signalR-1.0.0-alpha2.js" />
       <resource path="~/scripts/purl.js" />
       <resource path="~/scripts/knockout-2.2.0.debug.js" />
       <resource path="~/scripts/knockoutmapping-2.0.js" />

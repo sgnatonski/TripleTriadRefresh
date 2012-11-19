@@ -21,30 +21,30 @@ class GameView extends View {
         super();
 
         var leaveBtn = new Button('Leave game');
-        leaveBtn.action = () => this.connection.leaveGame();
+        leaveBtn.action = () => this.connection.server.leaveGame();
 
         var readyBtn = new Button('Set ready');
-        readyBtn.action = () => this.connection.declareReady();
+        readyBtn.action = () => this.connection.server.declareReady();
         readyBtn.hidden = ko.computed(() => this.game().getPlayer().isReady());
 
         this.menu().items([leaveBtn, readyBtn]);
 
         this.gameId = gameId;
 
-        this.connection.updateBoard = (data: any) => {
+        this.connection.client.updateBoard = (data: any) => {
             this.game(new Game(data));
         };
-        this.connection.gameJoined = (data) => {
+        this.connection.client.gameJoined = (data) => {
             window.history.pushState(data, "Game", app.getPathAbs() + 'play/' + data);
             app.currentGameId(data);
             this.isLoading(false);
         };
-        this.connection.gameLeft = () => {
+        this.connection.client.gameLeft = () => {
             window.history.pushState(null, "Game list", app.getPathAbs() + 'play/');
             app.currentGameId('');
             app.view(app.viewFac.createGamesView());
         };
-        this.connection.receiveResult = (data) => {
+        this.connection.client.receiveResult = (data) => {
             this.gameResult(new GameResult(data));
             this.closeResultHidden(this.gameResult().expGain() && this.gameResult().cardPtsGain());
         };
@@ -53,14 +53,14 @@ class GameView extends View {
             this.isLoading(true);
             if (!this.gameId) {
                 if (withAi) {
-                    this.connection.createGameWithAi();
+                    this.connection.server.createGameWithAi();
                 }
                 else {
-                    this.connection.createGame();
+                    this.connection.server.createGame();
                 }
             }
             else {
-                this.connection.joinGame(this.gameId);
+                this.connection.server.joinGame(this.gameId);
             }
         });
 
@@ -72,7 +72,7 @@ class GameView extends View {
             this.game().board()[row]()[col] = this.dragging();
             this.game().board()[row].valueHasMutated();
 
-            this.connection.placeCard(this.dragging().id(), index);
+            this.connection.server.placeCard(this.dragging().id(), index);
             this.dragging(null);
         }
 

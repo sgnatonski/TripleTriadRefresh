@@ -1,20 +1,26 @@
-/// <reference path="../jquery.signalR-0.5.3.d.ts" />
+/// <reference path="../signalR-1.0.d.ts" />
 
-interface GameHub extends HubConnection {
-    // server
+interface GameHubServer {
     createGame();
     createGameWithAi();
     joinGame(gameId: string);
     leaveGame();
     declareReady();
     placeCard(id: string, position: number);
-    // client
+}
+
+interface GameHubClient {
     receiveError(data: string);
     receiveGames(data: any[]);
     updateBoard(data: any);
     gameJoined(data: any);
     gameLeft();
     receiveResult(data: any);
+}
+
+interface GameHub extends HubConnection {
+    server: GameHubServer;
+    client: GameHubClient;
 }
 
 // extend SignalR interface

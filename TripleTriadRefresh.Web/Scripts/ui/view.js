@@ -3,18 +3,19 @@ var View = (function () {
         this.viewName = ko.observable(null);
         this.isLoading = ko.observable(false);
         this.menu = ko.observable(Menu);
-        $.extendSignalR();
-        $.connection.hub.clearProxy();
         this.menu(new Menu());
         this.connection = this.connection ? this.connection : $.connection.gameHub;
         this.connection.logging = true;
-        this.connection.receiveError = function (data) {
+        this.connection.client.receiveError = function (data) {
             alert(data);
+        };
+        this.connection.error = function (error) {
+            alert(error);
+            return $.connection;
         };
     }
     View.prototype.startConnection = function (connectedCallback) {
-        $.connection.hub.recreateProxy();
-        if($.connection.hub.state == 1) {
+        if($.connection.connectionState == 1) {
             connectedCallback();
         } else {
             $.connection.hub.start().done(function () {

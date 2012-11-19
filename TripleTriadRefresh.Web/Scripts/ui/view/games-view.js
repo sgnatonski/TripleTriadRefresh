@@ -44,7 +44,7 @@ var GamesView = (function (_super) {
             _this.games(data);
             _this.isLoading(false);
         });
-        this.connection.receiveGames = function (data) {
+        this.connection.client.receiveGames = function (data) {
             _this.selected(null);
             _this.games(data);
         };

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using SignalR;
 using StructureMap;
+using Microsoft.AspNet.SignalR;
 
 namespace TripleTriadRefresh.Server.Framework
 {

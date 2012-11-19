@@ -20,11 +20,11 @@ var GameView = (function (_super) {
         this.closeResultHidden = ko.observable(true);
         var leaveBtn = new Button('Leave game');
         leaveBtn.action = function () {
-            return _this.connection.leaveGame();
+            return _this.connection.server.leaveGame();
         };
         var readyBtn = new Button('Set ready');
         readyBtn.action = function () {
-            return _this.connection.declareReady();
+            return _this.connection.server.declareReady();
         };
         readyBtn.hidden = ko.computed(function () {
             return _this.game().getPlayer().isReady();
@@ -34,20 +34,20 @@ var GameView = (function (_super) {
             readyBtn
         ]);
         this.gameId = gameId;
-        this.connection.updateBoard = function (data) {
+        this.connection.client.updateBoard = function (data) {
             _this.game(new Game(data));
         };
-        this.connection.gameJoined = function (data) {
+        this.connection.client.gameJoined = function (data) {
             window.history.pushState(data, "Game", app.getPathAbs() + 'play/' + data);
             app.currentGameId(data);
             _this.isLoading(false);
         };
-        this.connection.gameLeft = function () {
+        this.connection.client.gameLeft = function () {
             window.history.pushState(null, "Game list", app.getPathAbs() + 'play/');
             app.currentGameId('');
             app.view(app.viewFac.createGamesView());
         };
-        this.connection.receiveResult = function (data) {
+        this.connection.client.receiveResult = function (data) {
             _this.gameResult(new GameResult(data));
             _this.closeResultHidden(_this.gameResult().expGain() && _this.gameResult().cardPtsGain());
         };
@@ -55,12 +55,12 @@ var GameView = (function (_super) {
             _this.isLoading(true);
             if(!_this.gameId) {
                 if(withAi) {
-                    _this.connection.createGameWithAi();
+                    _this.connection.server.createGameWithAi();
                 } else {
-                    _this.connection.createGame();
+                    _this.connection.server.createGame();
                 }
             } else {
-                _this.connection.joinGame(_this.gameId);
+                _this.connection.server.joinGame(_this.gameId);
             }
         });
         this.placeCard = function (index) {
@@ -70,7 +70,7 @@ var GameView = (function (_super) {
             _this.dragging().confirmed(false);
             _this.game().board()[row]()[col] = _this.dragging();
             _this.game().board()[row].valueHasMutated();
-            _this.connection.placeCard(_this.dragging().id(), index);
+            _this.connection.server.placeCard(_this.dragging().id(), index);
             _this.dragging(null);
         };
         this.resolveGame = function () {

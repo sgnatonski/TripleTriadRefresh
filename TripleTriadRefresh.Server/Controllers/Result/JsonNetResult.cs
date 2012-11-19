@@ -2,7 +2,7 @@ using System;
 using System.Web.Mvc;
 using Newtonsoft.Json;
 using StructureMap;
-using SignalR;
+using Microsoft.AspNet.SignalR;
 
 namespace TripleTriadRefresh.Server.Controllers.Result
 {

@@ -34,7 +34,7 @@ class GamesView extends View {
             this.isLoading(false);
         });
 
-        this.connection.receiveGames = (data: any[]) => {
+        this.connection.client.receiveGames = (data: any[]) => {
             this.selected(null);
             this.games(data);
         };

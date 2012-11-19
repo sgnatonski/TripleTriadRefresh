@@ -23,7 +23,7 @@ namespace TripleTriadRefresh.Server.Framework.Aspects.Interceptors
                     HttpContext.Current.Request.Cookies.Remove(FormsAuthentication.FormsCookieName);
 
                     var hub = (GameHub)i.InvocationTarget.GetPropertyValue("Hub", Flags.AllMembers);
-                    hub.Caller.receiveError("Unauthorized access.");
+                    hub.Clients.Caller.receiveError("Unauthorized access.");
                 }
             };
         }

@@ -36,8 +36,8 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
             Hub.Groups.Add(Hub.Context.ConnectionId, game.GameId);
 
             BroadcastGameList();
-            Hub.Caller.updateBoard(game);
-            Hub.Caller.gameJoined(game.GameId);
+            Hub.Clients.Caller.updateBoard(game);
+            Hub.Clients.Caller.gameJoined(game.GameId);
         }
 
         [RequireLogin]
@@ -58,8 +58,8 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
             Hub.Groups.Add(Hub.Context.ConnectionId, game.GameId);
 
             BroadcastGameList();
-            Hub.Caller.updateBoard(game);
-            Hub.Caller.gameJoined(game.GameId);
+            Hub.Clients.Caller.updateBoard(game);
+            Hub.Clients.Caller.gameJoined(game.GameId);
         }
 
         [GameInject(1, 0, GameHubHandler.GameNotFoundError)]
@@ -80,14 +80,14 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
                     game.SecondPlayer.CreatePlayHand();
 
                     BroadcastGameList();
-                    Hub.Clients[game.GameId].updateBoard(game);
-                    Hub.Caller.gameJoined(game.GameId);
+                    Hub.Clients.Group(game.GameId).updateBoard(game);
+                    Hub.Clients.Caller.gameJoined(game.GameId);
                 }
             }
             else
             {
-                Hub.Caller.updateBoard(game);
-                Hub.Caller.gameJoined(game.GameId);
+                Hub.Clients.Caller.updateBoard(game);
+                Hub.Clients.Caller.gameJoined(game.GameId);
             }
         }
 
@@ -122,10 +122,10 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
                 }
 
                 BroadcastGameList();
-                Hub.Clients[game.GameId].updateBoard(game);
+                Hub.Clients.Group(game.GameId).updateBoard(game);
             }
 
-            Hub.Caller.gameLeft();
+            Hub.Clients.Caller.gameLeft();
         }
 
         [GameInject(0, GameHubHandler.GameNotFoundError)]
@@ -143,7 +143,7 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
                 }
             }
 
-            Hub.Clients[game.GameId].updateBoard(game);
+            Hub.Clients.Group(game.GameId).updateBoard(game);
         }
 
         [GameInject(2, GameHubHandler.GameNotFoundError)]
@@ -152,28 +152,28 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
         {
             if (game.CurrentPlayer != game.GetCurrentPlayer(Hub.Context.ConnectionId))
             {
-                Hub.Caller.receiveError("Wait for your turn");
-                Hub.Caller.updateBoard(game);
+                Hub.Clients.Caller.receiveError("Wait for your turn");
+                Hub.Clients.Caller.updateBoard(game);
                 return;
             }
 
             game.CurrentPlayer.Play(game, new CardCommand(id, position));
 
-            Hub.Clients[game.GameId].updateBoard(game);
+            Hub.Clients.Group(game.GameId).updateBoard(game);
         }
 
         [GameInject(0, GameHubHandler.GameNotFoundError)]
         [RequireLogin]
         public void GetOwnedCards(Game game)
         {
-            Hub.Caller.receiveWonCards(game.GetWonCards(game.Winner).ToList());
+            Hub.Clients.Caller.receiveWonCards(game.GetWonCards(game.Winner).ToList());
         }
 
         [GameInject(1, GameHubHandler.GameNotFoundError)]
         [RequireLogin]
         public void ResolveGame(string gameId, Game game)
         {
-            Hub.Caller.gameResolve(new { });
+            Hub.Clients.Caller.gameResolve(new { });
         }
 
         public void Disconnect()
@@ -203,8 +203,8 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
             if (player != null)
                 player.IsReady = true;
 
-            Hub.Clients[game.GameId].updateBoard(game);
-            Hub.Clients[game.GameId].playerConnected();
+            Hub.Clients.Group(game.GameId).updateBoard(game);
+            Hub.Clients.Group(game.GameId).playerConnected();
         }
 
         private void HoldGame(Game game, int reconnectTimeInSec)
@@ -215,8 +215,8 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
             game.ReconnectTimer.Interval = reconnectTimeInSec * 1000;
             game.ReconnectTimer.Start();
 
-            Hub.Clients[game.GameId].updateBoard(game);
-            Hub.Clients[game.GameId].playerDisconnected();
+            Hub.Clients.Group(game.GameId).updateBoard(game);
+            Hub.Clients.Group(game.GameId).playerDisconnected();
         }
 
         private void GameEnded(Game game)
@@ -233,8 +233,8 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
 
             Games.RemoveGame(game);
             BroadcastGameList();
-            Hub.Clients[game.GameId].updateBoard(game);
-            Hub.Caller.receiveResult(result.GetFor(game.GetCurrentPlayer(Hub.Context.ConnectionId)));
+            Hub.Clients.Group(game.GameId).updateBoard(game);
+            Hub.Clients.Caller.receiveResult(result.GetFor(game.GetCurrentPlayer(Hub.Context.ConnectionId)));
         }
 
         private Task AiMove(Game game)
@@ -242,13 +242,13 @@ namespace TripleTriadRefresh.Server.Hubs.Handlers
             return Task.Factory.StartNew(() =>
             {
                 game.CurrentPlayer.Play(game, ((AiPlayer)game.CurrentPlayer).GetCommand(game));
-                Hub.Clients[game.GameId].updateBoard(game);
+                Hub.Clients.Group(game.GameId).updateBoard(game);
             });
         }
 
         private void BroadcastGameList()
         {
-            Hub.Clients.receiveGames(Games.GetGameList().ToList());
+            Hub.Clients.All.receiveGames(Games.GetGameList().ToList());
         }
     }
 }

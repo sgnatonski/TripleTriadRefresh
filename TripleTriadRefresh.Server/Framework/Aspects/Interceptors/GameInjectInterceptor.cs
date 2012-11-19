@@ -36,8 +36,8 @@ namespace TripleTriadRefresh.Server.Framework.Aspects.Interceptors
                 }
                 else
                 {
-                    hub.Caller.gameLeft();
-                    hub.Caller.receiveError(attr.Error);
+                    hub.Clients.Caller.gameLeft();
+                    hub.Clients.Caller.receiveError(attr.Error);
                 }
             };
         }
